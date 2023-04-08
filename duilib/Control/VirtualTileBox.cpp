@@ -41,8 +41,8 @@ ui::CSize VirtualTileLayout::ArrangeChild(const std::vector<ui::Control*>& items
 {
   ui::CSize sz(rc.GetWidth(), rc.GetHeight());
 
-  VirtualTileBox* pList = dynamic_cast<VirtualTileBox*>(m_pOwner);
-  ASSERT(pList);
+  //VirtualTileBox* pList = dynamic_cast<VirtualTileBox*>(m_pOwner);
+  //ASSERT(pList);
 
 
   int nTotalHeight = GetElementsHeight(-1);
@@ -53,8 +53,8 @@ ui::CSize VirtualTileLayout::ArrangeChild(const std::vector<ui::Control*>& items
 
 ui::CSize VirtualTileLayout::AjustSizeByChild(const std::vector<ui::Control*>& items, ui::CSize szAvailable)
 {
-  VirtualTileBox* pList = dynamic_cast<VirtualTileBox*>(m_pOwner);
-  ASSERT(pList);
+  //VirtualTileBox* pList = dynamic_cast<VirtualTileBox*>(m_pOwner);
+  //ASSERT(pList);
 
   ui::CSize size = m_pOwner->Control::EstimateSize(szAvailable);
   if (size.cx == DUI_LENGTH_AUTO || size.cx == 0)
@@ -92,7 +92,7 @@ int VirtualTileLayout::GetElementsHeight(int nCount)
   VirtualTileBox* pList = dynamic_cast<VirtualTileBox*>(m_pOwner);
   ASSERT(pList);
 
-  bool total = nCount == -1;
+  //bool total = nCount == -1;
   if (nCount < 0)
     nCount = pList->GetElementCount();
 

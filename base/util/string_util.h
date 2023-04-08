@@ -91,6 +91,9 @@ BASE_EXPORT std::wstring& StringTrimLeft(std::wstring &input);
 BASE_EXPORT std::wstring& StringTrimRight(std::wstring &input);
 BASE_EXPORT std::wstring& StringTrim(std::wstring &input); /* both left and right */
 
+BASE_EXPORT std::wstring StringToWideString(const std::string& input);
+BASE_EXPORT std::string WideStringToString(const std::wstring& input);
+
 }
 
 #endif // BASE_UTIL_STRING_UTIL_H_

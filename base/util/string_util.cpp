@@ -13,6 +13,7 @@
 #include <memory.h>			/* for mem*** */
 #include <stdarg.h>			/* va_list, va_start, va_end */
 #include <ctype.h>
+#include <comdef.h>
 #include "base/macros.h"
 #include "base/third_party/convert_utf/ConvertUTF.h"
 
@@ -986,4 +987,13 @@ std::wstring& StringTrim(std::wstring &input) /* both left and right */
 	return input;
 }
 
+std::wstring StringToWideString(const std::string& input)
+{
+	return std::wstring(_bstr_t(input.data()));
+}
+
+std::string WideStringToString(const std::wstring& input)
+{
+	return std::string(_bstr_t(input.data()));
+}
 } // namespace nbase

@@ -644,9 +644,8 @@ Box* GlobalManager::CreateBoxWithCache(const std::wstring& strXmlPath, CreateCon
 void GlobalManager::FillBox(Box* pUserDefinedBox, const std::wstring& strXmlPath, CreateControlCallback callback)
 {
 	WindowBuilder winBuilder;
-	Box* box = winBuilder.Create(strXmlPath.c_str(), callback, pUserDefinedBox->GetWindow(), nullptr, pUserDefinedBox);
-	ASSERT(box);
-
+	winBuilder.Create(strXmlPath.c_str(), callback, pUserDefinedBox->GetWindow(), 
+		nullptr, pUserDefinedBox);
 	return;
 }
 

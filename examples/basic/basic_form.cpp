@@ -29,7 +29,7 @@ std::wstring BasicForm::GetWindowClassName() const
 
 void BasicForm::InitWindow()
 {
-
+	
 }
 
 LRESULT BasicForm::OnClose(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)

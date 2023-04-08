@@ -1,4 +1,4 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 
 namespace ui
 {
@@ -401,6 +401,7 @@ bool WindowImplBase::OnButtonClick(EventArgs* msg)
 		Close();
 	}
 	else if( sCtrlName == _T("minbtn")) { 
+		SendMessage(WM_MOUSELEAVE, 0, 0);
 		SendMessage(WM_SYSCOMMAND, SC_MINIMIZE, 0); 
 	}
 	else if( sCtrlName == _T("maxbtn"))	{
@@ -410,6 +411,7 @@ bool WindowImplBase::OnButtonClick(EventArgs* msg)
 			pMaxButton->SetVisible(false);
 			pRestoreButton->SetVisible(true);
 		}
+		SendMessage(WM_MOUSELEAVE, 0, 0);
 		SendMessage(WM_SYSCOMMAND, SC_MAXIMIZE, 0);
 	}
 	else if( sCtrlName == _T("restorebtn"))	{
@@ -419,6 +421,7 @@ bool WindowImplBase::OnButtonClick(EventArgs* msg)
 			pMaxButton->SetVisible(true);
 			pRestoreButton->SetVisible(false);
 		}
+		SendMessage(WM_MOUSELEAVE, 0, 0);
 		SendMessage(WM_SYSCOMMAND, SC_RESTORE, 0); 
 	}
 
