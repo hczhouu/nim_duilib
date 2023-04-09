@@ -96,7 +96,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IntDir>$(ProjectDir)..\..\tmp\$(PlatformName)\$(ProjectName)\$(Configuration)\</IntDir>
-    <OutDir>..\..\bin\</OutDir>
+    <OutDir>..\..\bin64\</OutDir>
     <IncludePath>..\..\;..\..\third_party\cef_wrapper\;$(IncludePath)</IncludePath>
     <LibraryPath>..\..\libs\x64\;$(LibraryPath)</LibraryPath>
     <TargetName>$(ProjectName)64</TargetName>
