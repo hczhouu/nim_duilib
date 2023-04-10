@@ -48,6 +48,7 @@ public:
 	{
 	public:
 		virtual CustomMessageLoop* CreateMessageLoop() = 0;
+		virtual ~CustomMessageLoopFactory() {};
 	};
 
 	explicit FrameworkThread(const char* name);

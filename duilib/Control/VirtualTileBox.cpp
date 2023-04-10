@@ -535,7 +535,7 @@ void VirtualTileBox::OnModelDataChanged(int nStartIndex, int nEndIndex)
   for (auto i = nStartIndex; i <= nEndIndex; i++)
   {
     int nItemIndex = ElementIndexToItemIndex(nStartIndex);
-    if (nItemIndex >= 0 && nItemIndex < m_items.size()) {
+    if (nItemIndex >= 0 && nItemIndex < (int)m_items.size()) {
       FillElement(m_items[nItemIndex], i);
     }
   }

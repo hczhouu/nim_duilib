@@ -843,7 +843,7 @@ void Control::HandleMessageTemplate(EventArgs& msg)
 		}
 
 		if (bRet) {
-			auto callback = OnXmlEvent.find(msg.Type);
+			callback = OnXmlEvent.find(msg.Type);
 			if (callback != OnXmlEvent.end()) {
 				bRet = callback->second(&msg);
 			}

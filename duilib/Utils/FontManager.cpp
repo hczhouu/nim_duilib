@@ -45,11 +45,14 @@ const std::vector<std::wstring>& FontManager::GetFontNames()
 
 void FontManager::Clear()
 {
-	for (auto &it : m_fontHandles) {
-		assert(RemoveFontMemResourceEx(it));
+	for (auto &it : m_fontHandles) 
+	{
+		RemoveFontMemResourceEx(it);
 	}
-	for (auto &it : m_fontPath) {
-		assert(RemoveFontResourceEx(it.c_str(), FR_PRIVATE, 0));
+
+	for (auto &it : m_fontPath) 
+	{
+		RemoveFontResourceEx(it.c_str(), FR_PRIVATE, 0);
 	}
 	m_fontHandles.clear();
 	m_fontPath.clear();

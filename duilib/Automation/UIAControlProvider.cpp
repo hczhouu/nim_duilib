@@ -316,7 +316,7 @@ IFACEMETHODIMP UIAControlProvider::GetRuntimeId(SAFEARRAY** pRetVal)
 	*pRetVal = SafeArrayCreateVector(VT_I4, 0, (ULONG)indexs.size());
 	if (*pRetVal != nullptr)
 	{
-		for (long n = 0; n < indexs.size(); n++)
+		for (long n = 0; n < (long)indexs.size(); n++)
 		{
 			SafeArrayPutElement(*pRetVal, &n, &indexs.at(n));
 		}

@@ -294,20 +294,25 @@ void Box::HandleMessageTemplate(EventArgs& msg)
 			return;
 		}
 
-		if (bRet) {
-			auto callback = OnXmlEvent.find(msg.Type);
-			if (callback != OnXmlEvent.end()) {
+		if (bRet) 
+		{
+			callback = OnXmlEvent.find(msg.Type);
+			if (callback != OnXmlEvent.end()) 
+			{
 				bRet = callback->second(&msg);
 			}
-			if (weakflag.expired()) {
+			if (weakflag.expired()) 
+			{
 				return;
 			}
 
 			callback = OnXmlEvent.find(kEventAll);
-			if (callback != OnXmlEvent.end()) {
+			if (callback != OnXmlEvent.end()) 
+			{
 				bRet = callback->second(&msg);
 			}
-			if (weakflag.expired()) {
+			if (weakflag.expired()) 
+			{
 				return;
 			}
 		}
@@ -330,7 +335,7 @@ void Box::HandleMessageTemplate(EventArgs& msg)
 	}
 
 	if (bRet) {
-		auto callback = OnXmlBubbledEvent.find(msg.Type);
+		callback = OnXmlBubbledEvent.find(msg.Type);
 		if (callback != OnXmlBubbledEvent.end()) {
 			bRet = callback->second(&msg);
 		}

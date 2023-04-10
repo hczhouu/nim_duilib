@@ -236,6 +236,7 @@ public:
 	virtual ui::IPath* CreatePath() = 0;
 	virtual ui::IBitmap* CreateBitmap() = 0;
 	virtual ui::IRenderContext* CreateRenderContext() = 0;
+	virtual ~IRenderFactory() {};
 };
 
 } // namespace ui

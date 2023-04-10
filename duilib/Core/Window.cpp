@@ -245,9 +245,9 @@ void Window::ShowModalFake(HWND parent_hwnd)
 {
 	ASSERT(::IsWindow(m_hWnd));
 	ASSERT(::IsWindow(parent_hwnd));
-	auto p_hwnd = GetWindowOwner(m_hWnd);
-	ASSERT(::IsWindow(p_hwnd));
-	ASSERT(p_hwnd == parent_hwnd);
+	//auto p_hwnd = GetWindowOwner(m_hWnd);
+	//ASSERT(::IsWindow(p_hwnd));
+	//ASSERT(p_hwnd == parent_hwnd);
 	::EnableWindow(parent_hwnd, FALSE);
 	ShowWindow();
 	m_bFakeModal = true;
