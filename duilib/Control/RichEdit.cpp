@@ -3196,6 +3196,11 @@ void RichEdit::RaiseUIAValueEvent(const std::wstring oldText, const std::wstring
 }
 
 
+void RichEdit::SetPassWordChar(WCHAR passChar)
+{
+	if (m_pTwh) m_pTwh->SetPasswordChar(passChar);
+}
+
 //----------------下面函数用作辅助 字节数限制
 bool IsAsciiChar(const wchar_t ch)
 {

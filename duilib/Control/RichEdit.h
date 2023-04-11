@@ -958,7 +958,7 @@ public:
 	 * @return 无
 	 */
 	void RaiseUIAValueEvent(const std::wstring oldText, const std::wstring newText);
-
+	void SetPassWordChar(WCHAR passChar);
 protected:
     CTxtWinHost* m_pTwh;
     bool m_bVScrollBarFixing;

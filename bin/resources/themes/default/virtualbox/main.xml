@@ -39,7 +39,7 @@
         <HBox height="30" childmargin="10">
             <Label font="system_bold_14" text="总数据:"  width="auto" height="auto" valign="center" />
             <Box bordersize="1" bordercolor="splitline_level1" width="180" >
-                <RichEdit name="edit_total" margin="10,0,10,0"  font="system_14" width="stretch" height="auto" valign="center" normaltextcolor="black" multiline="false" promptmode="true" prompttext="总数据" promptcolor="splitline_level1" autohscroll="true"  />                    
+                <RichEdit name="edit_total" margin="10,0,10,0"  font="system_14" width="stretch" height="auto" valign="center" normaltextcolor="black" multiline="false" promptmode="true" prompttext="总数据" promptcolor="splitline_level1" autohscroll="true" />                    
             </Box>
            
         </HBox>

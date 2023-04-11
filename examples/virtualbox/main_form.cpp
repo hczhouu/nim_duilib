@@ -39,7 +39,9 @@ void MainForm::InitWindow()
 	m_EditTaskName = dynamic_cast<ui::RichEdit*>(FindControl(L"edit_task_name"));
 	m_EditDelete = dynamic_cast<ui::RichEdit*>(FindControl(L"edit_delete"));
 	m_EditChildMargin = dynamic_cast<ui::RichEdit*>(FindControl(L"edit_child_margin"));
-
+	m_EditTotal->SetRich(true);
+	m_EditTotal->SetPassword(true);
+	m_EditTotal->SetPassWordChar(L'●');
 	m_pRoot->AttachBubbledEvent(ui::kEventClick, nbase::Bind(&MainForm::OnClicked, this, std::placeholders::_1));
 
 	// 设置提供者
