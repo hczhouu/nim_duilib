@@ -325,7 +325,8 @@ namespace ui
 		/* 一些属性 */
 		int m_defaultRowHeight = 24;
 		int m_defaultColWidth = 80;
-		std::wstring m_strFixedBkColor = L"splitline_level2";
+		//std::wstring m_strFixedBkColor = L"splitline_level2";
+		std::wstring m_strFixedBkColor = L"white";
 		std::wstring m_strSelForeColor = L"grid_sel_fore";
 		std::wstring m_strGridLineColor = L"grid_line";
 		std::wstring m_strGridFont = L"system_12";

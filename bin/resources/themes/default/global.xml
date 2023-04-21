@@ -40,9 +40,11 @@
 	<TextColor name="light_gray" value="#ffa8a8a8"/>
 	<TextColor name="dark_gray" value="#ff72797f"/>
 	<TextColor name="green" value="#ff00bb96"/>
+	<TextColor name="green_2" value="#ff32cd32"/>
 	<TextColor name="light_green" value="#ff21c7a6"/>
 	<TextColor name="blue" value="#ff006DD9"/>
 	<TextColor name="red" value="#ffC63535"/>
+	<TextColor name="red_2" value="#ffff0000"/>
 	<!--文字色值，不带透明层-->
 	<TextColor name="textdefaultcolor" value="#ff333333"/>
 	<TextColor name="textdefaultdisablecolor" value="#ffa1aebc"/>

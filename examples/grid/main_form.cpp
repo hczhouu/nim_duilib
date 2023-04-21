@@ -50,7 +50,7 @@ Control* MainForm::CreateControl(const std::wstring& pstrClass)
 void MainForm::InitWindow()
 {
 	Grid *grid = static_cast<Grid*>(FindControl(L"grid"));
-	grid->SetHeaderHeight(48);
+	grid->SetHeaderHeight(20);
 	std::wstring header[] = { L"代码", L"名称", L"类型", L"长度", L"顺序号",
 		L"编辑模式", L"是否显示", L"参数类型", L"参数值", L"默认值" };
 

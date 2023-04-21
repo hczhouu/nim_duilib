@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Window size="900,600" caption="0,0,0,35" sizebox="4,4,4,4">
-  <VBox bkcolor="bk_wnd_darkcolor">
+  <VBox bkcolor="bk_wnd_lightcolor">
     <HBox width="stretch" height="35" bkcolor="bk_wnd_lightcolor">
       <Control />
       <Button class="btn_wnd_min" name="minbtn" margin="4,6,0,0"/>

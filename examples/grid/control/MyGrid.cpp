@@ -59,35 +59,35 @@ GridHeaderItem* MyGridBody::AddCol(std::wstring text, int width)
 	int col_index = GetHeader()->size();
 	int margin_left = _SumIntList(m_hLayout);
 	GridHeaderItem *item = __super::AddCol(text, width);
-	if (item)
-	{
-		if (col_index > 0)
-		{
-			int col_width = GetColumnWidth(col_index);
-			Combo* combo = new Combo;
-			combo->SetFixedWidth(col_width - HEADER_COMBO_MARGIN_LEFT * 2);
-			combo->SetFixedHeight(GetHeaderHeight() / 2 - HEADER_COMBO_MARGIN_BOTTOM);
-			combo->SetMargin(ui::UiRect(margin_left + HEADER_COMBO_MARGIN_LEFT, GetHeaderHeight() / 2, 0, 0));
-			combo->SetClass(L"combo2");
-			combo->SetAttribute(L"cursortype", L"hand");
-			combo->SetFloat(true);
-			item->control_ = combo;
-			if (Add(combo) == false)
-			{
-				assert(0);
-			}
+	//if (item)
+	//{
+	//	if (col_index > 0)
+	//	{
+	//		int col_width = GetColumnWidth(col_index);
+	//		Combo* combo = new Combo;
+	//		combo->SetFixedWidth(col_width - HEADER_COMBO_MARGIN_LEFT * 2);
+	//		combo->SetFixedHeight(GetHeaderHeight() / 2 - HEADER_COMBO_MARGIN_BOTTOM);
+	//		combo->SetMargin(ui::UiRect(margin_left + HEADER_COMBO_MARGIN_LEFT, GetHeaderHeight() / 2, 0, 0));
+	//		combo->SetClass(L"combo2");
+	//		combo->SetAttribute(L"cursortype", L"hand");
+	//		combo->SetFloat(true);
+	//		item->control_ = combo;
+	//		if (Add(combo) == false)
+	//		{
+	//			assert(0);
+	//		}
 
 
-			for (size_t i = 0; i < 3; i++)
-			{
-				ListContainerElement *combo_item = new ListContainerElement;
-				combo_item->SetClass(L"listitem");
-				combo_item->SetUTF8Text("item0");
-				combo_item->SetFixedHeight(24);
-				combo->Add(combo_item);
-			}
-		}
-	}
+	//		for (size_t i = 0; i < 3; i++)
+	//		{
+	//			ListContainerElement *combo_item = new ListContainerElement;
+	//			combo_item->SetClass(L"listitem");
+	//			combo_item->SetUTF8Text("item0");
+	//			combo_item->SetFixedHeight(24);
+	//			combo->Add(combo_item);
+	//		}
+	//	}
+	//}
 
 	
 
