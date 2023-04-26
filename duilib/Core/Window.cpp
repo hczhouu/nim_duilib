@@ -1940,8 +1940,10 @@ void Window::Paint()
 	m_renderContext->SetWindowOrg(ptOldWindOrg);
 
 	// alpha修复
-	if (m_bIsLayeredWindow) {
-		if (m_shadow.IsShadowAttached() && m_renderOffset.x == 0 && m_renderOffset.y == 0) {
+	if (m_bIsLayeredWindow) 
+	{
+		if (m_shadow.IsShadowAttached() && m_renderOffset.x == 0 && m_renderOffset.y == 0) 
+		{
 			//补救由于Gdi绘制造成的alpha通道为0
 			UiRect rcNewPaint = rcPaint;
 			rcNewPaint.Intersect(m_pRoot->GetPaddingPos());
@@ -1955,7 +1957,8 @@ void Window::Paint()
 
 			m_renderContext->RestoreAlpha(rcNewPaint, rcRootPadding);
 		}
-		else {
+		else 
+		{
 			UiRect rcAlphaFixCorner = GetAlphaFixCorner();
 			if (rcAlphaFixCorner.left > 0 || rcAlphaFixCorner.top > 0 || rcAlphaFixCorner.right > 0 || rcAlphaFixCorner.bottom > 0)
 			{

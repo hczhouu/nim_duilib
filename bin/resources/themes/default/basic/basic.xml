@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Window size="1000,700" caption="0,0,0,35">
-  <VBox bkcolor="bk_wnd_lightcolor">
-    <HBox width="stretch" height="35" bkcolor="bk_wnd_lightcolor">
-      <Control />
-      <Button class="btn_wnd_min" name="minbtn" margin="4,6,0,0"/>
-      <Box width="21" margin="4,6,0,0">
-        <Button class="btn_wnd_max" name="maxbtn"/>
-        <Button class="btn_wnd_restore" name="restorebtn" visible="false"/>
-      </Box>
-      <Button class="btn_wnd_close" name="closebtn" margin="4,6,8,0"/>
-    </HBox>
-    <Box>
-      <VBox margin="0,0,0,0" valign="center" halign="center" width="auto" height="auto">
-        <Label name="tooltip" text="一个简单窗口" font="system_bold_22"/>
-      </VBox>
-    </Box>
+<Window  caption="0,0,0,104" shadowattached="false" custom_shadow="0,0,0,0">
+  <VBox bkimage="logo.png"  width="auto" height="auto">
+    <Control bkimage="logo.png" width="auto" height="auto"/>   
   </VBox>
 </Window>

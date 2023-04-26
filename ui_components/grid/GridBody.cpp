@@ -1487,6 +1487,7 @@ namespace ui
 				rcLineH.left = 0;
 				rcLineH.right = GetFixedWidth() - szOff.cx > grid_width ? grid_width : GetFixedWidth() - szOff.cx;
 				assert(m_nFixedRow <= m_vLayout.size());
+				pRender->DrawLine(rcLineH, 1, dwGridLineColor);
 				for (size_t i = 0; i < m_nFixedRow; i++)
 				{
 					posy += m_vLayout[i];
@@ -1510,6 +1511,7 @@ namespace ui
 				rcLineV.top = 0;
 				rcLineV.bottom = GetFixedHeight() - szOff.cy > grid_height ? grid_height : GetFixedHeight() - szOff.cy;
 				assert(m_nFixedCol <= m_hLayout.size());
+				pRender->DrawLine(rcLineV, 1, dwGridLineColor);
 				for (size_t i = 0; i < m_nFixedCol; i++)
 				{
 					posx += m_hLayout[i];
