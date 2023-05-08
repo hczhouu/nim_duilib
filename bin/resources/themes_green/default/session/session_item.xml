@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+    <ListContainerElement height="66" name="hor_container" hotcolor="session_list_hover_bk" pushedcolor="session_list_pushed_bk" selectednormalcolor="session_list_pushed_bk" fadehot="false">        
+        <HBox height="stretch" padding="8,0,14,0" mouse="false">
+            <Box valign="center" width="auto" height="auto" mouse="false" mousechild="false">
+                <Control name="session_head_image" width="38" height="38" borderround="38,38" margin="1,1,1,1"/>
+                <Control name="head_image_mask" hotimage="session_item_headimage_mask.png" pushedimage="session_item_team_headimage_mask.png"/>
+            </Box>
+            <Label name ="show_name" height="auto" width="stretch" valign="center" margin="8,0,8,0" mouse="false" font="1" normaltextcolor="darkcolor"/>
+            <Label name ="unread_num" width="auto" height="auto" halign="right" valign="center" mouse="false" font="1" normaltextcolor="white" align="vcenter" textpadding="0,0,0,2" 
+                    hotimage="file='../public/icon/icon_number.png' corner='8,0,8,0'" pushedimage="file='../public/icon/icon_number_gray.png' corner='8,0,8,0'" />
+            <!-- hotimage保存红色背景，pushedimage保存灰色背景，不会显示，仅用作保存 -->
+            <Button name="close" halign="right" valign="center" visible="false"
+                    normalimage="session_item_close_normal.png" hotimage="session_item_close_hovered.png" pushedimage="session_item_close_pushed.png"/>
+        </HBox>
+    </ListContainerElement>
+</Window>

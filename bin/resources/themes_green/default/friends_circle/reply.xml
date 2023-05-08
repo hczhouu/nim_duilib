@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <Box width="360" height="auto" minheight="24">
+        <VBox name="vbox_of_reply" height="auto" mouse="false" valign="bottom">
+            <RichEdit name="reply_text" font="1" multiline="true" vscrollbar="false" autovscroll="false" readonly="true" rich="true" height="auto"/>
+        </VBox>
+
+        <Button name="btn_reply" width="40" height="20" halign="right" valign="bottom" margin="0,0,2,2" bkimage="file='../public/button/btn_global_green_80x30_normal.png' corner='3,3,3,3'"
+                align="vcenter" font="1" normaltextcolor="white" text="回复" nofocus="true" visible="false"/>
+        <Button name="btn_delete" width="40" height="20" halign="right" valign="bottom" margin="0,0,2,2" bkimage="file='../public/button/btn_global_green_80x30_normal.png' corner='3,3,3,3'"
+                align="vcenter" font="1" normaltextcolor="white" text="删除" nofocus="true" visible="false"/>
+    </Box>
+</Window>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+    <ListContainerElement class="listitem" height="64">
+	    <BubbledEvent type="mouseenter" receiver=".\head_image_mask" applyattribute="state=&quot;hot&quot;"/>
+        <BubbledEvent type="mouseleave" receiver=".\head_image_mask" applyattribute="state=&quot;normal&quot;"/>
+        <HBox>
+            <Box width="auto" height="auto" margin="12,0,8,0" valign="center">
+                <Button name="head_image" width="46" height="46" margin="1,1,0,0" borderround="46,46,46,46" cursortype="hand"/>
+                <CheckBox class="checkbox_headimage_mask_48x48" name="head_image_mask" mouse="false"/>
+            </Box>
+
+            <VBox height="auto" valign="center" childmargin="4">
+                <Box width="stretch" height="auto">
+                    <RichEdit name="applicant_name" width="stretch" height="auto" mouse="false" 
+                          rich="true" multiline="false" readonly="true" font="2" normaltextcolor="darkcolor"/>
+                </Box>
+                <Box width="stretch" height="auto">
+				    <RichEdit name="apply_mode" width="stretch" height="auto" mouse="false" 
+                              rich="true" multiline="false" readonly="true" font="1" normaltextcolor="lightcolor"/>
+                </Box>
+                <Label name="ps" font="1" normaltextcolor="lightcolor" width="stretch" maxwidth="208" visible="false"/>
+            </VBox>
+
+			<Box width="auto" height="auto" valign="center" margin="0,0,16,0">
+                <HBox name="operation_box" width="auto" height="auto" halign="center" valign="center">
+                    <TabBox name="operation_tab" width="auto" height="auto">
+                        <Button name="pass" width="71" height="30" normaltextcolor="white" font="7" text="通过验证"
+                                normalimage="file='btn_operate0.png' corner='2,2,0,2'" hotimage="file='btn_operate1.png' corner='1,1,0,1'" pushedimage="file='btn_operate2.png' corner='1,1,0,1'" disabledimage="file='btn_operate0.png' corner='1,1,0,1' fade='80'"/>
+                        <Button name="reject" width="71" height="30" normaltextcolor="white" font="7" text="拒绝通过"
+                                normalimage="file='btn_operate0.png' corner='2,2,0,2'" hotimage="file='btn_operate1.png' corner='1,1,0,1'" pushedimage="file='btn_operate2.png' corner='1,1,0,1'" disabledimage="file='btn_operate0.png' corner='1,1,0,1' fade='80'"/>
+                    </TabBox>
+                    <Button name="select_operation" normalimage="select_operation0.png" hotimage="select_operation1.png" pushedimage="select_operation2.png" disabledimage="file='select_operation0.png' fade='80'" />
+                </HBox>
+				<Control name="animation" width="auto" height="auto" halign="center" valign="center" bkimage="../public/animation/ani_loading.gif" visible="false"/>
+				<Label name="result_tip" halign="center" valign="center" visible="false"/>
+			</Box>
+        </HBox>
+		<Control class="splitline_hor_level2" width="stretch" valign="bottom"/>
+    </ListContainerElement>
+</Window>

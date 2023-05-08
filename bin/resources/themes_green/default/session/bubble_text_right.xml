@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+	<Box name="text_container" width="auto" height="auto" minheight="36" >
+        <VBox name="bubble_text_bk" width="stretch" height="stretch" mouse="false" mousechild="false">
+            <Control width="stretch" height="auto" bkimage="file='../session/bubble_text_right_top.png' corner='15,0,23,0'"/>
+            <Control width="stretch" height="stretch" bkcolor="light_green" margin="0,0,6,0"/>
+            <Control width="stretch" height="auto" bkimage="file='../session/bubble_text_right_bottom.png' corner='15,0,23,0'"/>
+        </VBox>
+		<Button name="bubble_text" height="stretch" width="stretch" menu="false"/>
+		<RichEdit name="text_edit" height="auto" width="30" valign="center" margin="15,7,20,9" menu="true" font="2" align="vcenter" normaltextcolor="white" readonly="true"/>
+	</Box>
+</Window>

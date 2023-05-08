@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<!--按钮-->
+<Window>
+	<NormalMsgCell height="31">
+		<VBox name="cell_root_vertilayout" height="31" padding="15,10,25,0">
+			<HBox name="cell_time_horilayout" height="21">
+				<Control />
+				<Button name="show_msg_btn" width="170" normaltextcolor="message_tip"/>
+				<Control />
+			</HBox>
+			<HBox name="cell_msg_horilayout" visible="false"/>
+		</VBox>
+	</NormalMsgCell>
+</Window>

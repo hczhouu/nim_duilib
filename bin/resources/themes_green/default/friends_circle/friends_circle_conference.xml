@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="400,240" mininfo="400,240" caption="0,0,0,34" textid="STRID_FC_CONFERENCE_TITLE">
+    <VBox width="400" height="auto" bkcolor="bk_wnd_lightcolor">
+        <HBox class="caption">
+            <Label class="font_title" name="title" width="stretch" valign="center" normaltextcolor="darkcolor" textid="STRID_FC_CONFERENCE_TITLE"/>
+            <Button class="btn_wnd_min" name="minbtn" margin="4,6,0,0"/>
+            <Button class="btn_wnd_close" name="closebtn" margin="4,6,0,0"/>
+        </HBox>
+
+        <VBox name="box_of_content" height="206">
+            <HBox margin="10,10,10,0">
+                <RichEdit class="prompt" name="input_words" width="380" height="stretch" font="2" rich="false" multiline="true" 
+                          vscrollbar="true" autovscroll="true" wanttab="false" wantreturnmsg="false" menu="true"/>
+            </HBox>
+            
+            <HBox height="38" margin="10,5,8,2">
+                <CheckBox name="choose_emoj" width="30" height="30" valign="center" nofocus="true" 
+                          forenormalimage="file='btn_face.png' dest='5,5,25,25'" foredisabledimage="file='btn_face.png' dest='5,5,25,25' fade='80'"
+                          hotimage="icon_hover.png" pushedimage="icon_pushed.png" selectednormalimage="icon_pushed.png"
+                          selectedforenormalimage="file='btn_face.png' dest='5,5,25,25'" selectedforedisabledimage="file='btn_face.png' dest='5,5,25,25' fade='80'"/>
+                <Box width="38" height="38">
+                    <CheckBox name="choose_picture" width="30" height="30" halign="center" valign="center"
+                          forenormalimage="file='btn_image.png' dest='5,5,25,25'" foredisabledimage="file='btn_image.png' dest='5,5,25,25' fade='80'"
+                          hotimage="icon_hover.png" pushedimage="icon_pushed.png" selectednormalimage="icon_pushed.png"
+                          selectedforenormalimage="file='btn_image.png' dest='5,5,25,25'" selectedforedisabledimage="file='btn_image.png' dest='5,5,25,25' fade='80'"/>
+                    <Box name="box_of_number" width="18" height="18" halign="right" mousechild="false" mouse="false" bkimage="red_big.png" visible="false">
+                        <Label name="number_pic" halign="center" valign="center" text="9" font="17" normaltextcolor="white"/>
+                    </Box>
+                </Box>
+				<HBox name="chip_container" width="auto" height="auto" valign="center" hotimage="chip_container_hover.png" pushedimage="chip_container_hover.png">
+					<Button name="btn_clip" width="30" height="30" forenormalimage="file='btn_clip.png' dest='5,5,25,25'" foredisabledimage="file='btn_clip.png' dest='5,5,25,25' fade='80'"
+							hotimage="icon_hover.png" pushedimage="icon_pushed.png"/>
+					<Button name="btn_clip_popup" forenormalimage="file='clip_arrow_fore.png' dest='3,11,11,19'" foredisabledimage="file='clip_arrow_fore.png' dest='3,11,11,19' fade='80'" 
+                            hotimage="clip_arrow_hover.png" pushedimage="clip_arrow_pushed.png"/>
+				</HBox>
+                <Box width="auto" height="auto" halign="center" valign="center" margin="4">
+                    <CheckBox name="choose_file" width="30" height="30" visible="false"
+                              forenormalimage="file='btn_file.png' dest='5,5,25,25'" foredisabledimage="file='btn_file.png' dest='5,5,25,25' fade='80'"
+                              hotimage="icon_hover.png" pushedimage="icon_pushed.png" selectednormalimage="icon_pushed.png"
+                              selectedforenormalimage="file='btn_file.png' dest='5,5,25,25'" selectedforedisabledimage="file='btn_file.png' dest='5,5,25,25' fade='80'"/>
+                    <Control name="file_tip" width="auto" height="auto" halign="right" valign="top" margin="0,4,3,0" bkimage="../public/icon/red_small.png" mouse="false" visible="false"/>
+                </Box>
+                <Control />
+                <Label name="words_number" valign="center" normaltextcolor="lightcolor"/>
+                <Button name="btn_conference" width="50" height="24" valign="center" margin="10,0,0,0" text="发布" enabled="false" normaltextcolor="white" disabledtextcolor="white"
+                        normalimage="publish0.png" hotimage="publish1.png" pushedimage="publish2.png" disabledimage="file='publish0.png' fade='80'"/>
+            </HBox>
+        </VBox>
+        
+        <VBox name="vbox_of_picture" height="auto" visible="false">
+            <Control class="splitline_hor_level1"/>
+            <VBox height="auto" padding="10,10,10,10">
+                <TileListBox name="pictures_box" width="380" height="auto" itemsize="68,68" vscrollbar="false" childmargin="10"/>
+                <Label name="picture_number" margin="0,10,0,0" visible="false"/>
+            </VBox>
+        </VBox>
+
+        <VBox name="file_box" height="80" visible="false">
+            <Control class="splitline_hor_level1"/>
+            <HBox padding="10,0,10,0">
+                <Control name="file_icon" width="auto" height="auto" valign="center" mouse="false"/>
+                <VBox width="stretch" height="auto" valign="center" margin="10,0,10,0" mouse="false" mousechild="false">
+                    <Label name="file_name" width="stretch" height="auto" font="3" normaltextcolor="darkcolor"/>
+                    <Label name="file_size" width="stretch" height="auto" margin="0,4" font="2" normaltextcolor="lightcolor"/>
+                </VBox>
+                <Button name="remv_file" width="auto" height="auto" valign="center"
+                        normalimage="remove_file_normal.png" hotimage="remove_file_hover.png" pushedimage="remove_file_pushed.png"/>
+            </HBox>
+        </VBox>
+    </VBox>
+</Window>

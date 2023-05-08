@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="570,790" caption="0,0,0,34" textid="STRID_HOTKEY_TITLE">
+    <Class name="DetailLabel" value="font=&quot;2&quot; normaltextcolor=&quot;darkcolor&quot;"/>
+    <Class name="HotKeyControl" value="width=&quot;200&quot; height=&quot;30&quot; halign=&quot;right&quot; valign=&quot;center&quot; font=&quot;1&quot;"/>
+
+    <VBox>
+        <HBox class="caption">
+            <Label class="font_title" name="title" width="stretch" valign="center" normaltextcolor="darkcolor" textid="STRID_APPSET_TITLE"/>
+            <Button class="btn_wnd_min" name="minbtn" margin="10,6,0,0"/>
+            <Button class="btn_wnd_close" name="closebtn" margin="4,6,0,0"/>
+        </HBox>
+
+        <HBox bkcolor="bk_wnd_lightcolor">
+            <VBox name="tabset" width="138" padding="50">
+                <Label name="tipset" textid="STRID_APPSET_BASE" font="1"
+                        normaltextcolor="lightcolor" margin="0,20,0,0"/>
+                
+                <HBox margin="0,40,0,0" width="auto" height="auto">
+                    <Label name="msg_notify" textid="STRID_APPSET_MSG_NOTIFY" font="1" normaltextcolor="lightcolor"/>
+                    <Control name="new_func_tip" width="auto" height="auto" valign="center" mouse="false" visible="false" bkimage="../menu/update_new.png"/>
+                </HBox>
+                
+                <Label name="file_manage" textid="STRID_APPSET_FILE_MANAGE" font="1"
+                        normaltextcolor="lightcolor" margin="0,48,0,0"/>
+                
+                <Label name="clearcache" textid="STRID_APPSET_TITLE_CACHE" font="1" 
+                        normaltextcolor="lightcolor" margin="0,66,0,0"/>
+                <Label name="audio_video" textid="STRID_APPSET_TITLE_AUDIO_VIDEO" 
+                        font="1" normaltextcolor="lightcolor" margin="0,79,0,0"/>
+                <Label name="shortcutkeyset" textid="STRID_APPSET_HOTKEY_SET" font="1" 
+                        normaltextcolor="lightcolor" margin="0,45,0,0"/>
+            </VBox>
+            <VBox padding="0,0,50,0">
+                <HBox name="tipsetcontent" height="56" childmargin="50">
+                    <CheckBox class="checkbox_font14" name="voicenotify" valign="center" textid="STRID_APPSET_SOUND_TIP"/>
+                    <CheckBox class="checkbox_font14" name="autostart" valign="center" textid="STRID_APPSET_AUTOSTART_TIP"/>
+                </HBox>
+
+                <Control class="splitline_hor_level2" width="stretch"/>
+
+                <HBox name="msg_notify_styles" width="stretch" height="56">
+                    <Option group="msg_notify_group" name="auto_popup" valign="center" height="22"
+							normalimage="file='../public/option/option1_unselected.png' dest='0,5,14,19'" selectednormalimage="file='../public/option/option1_selected.png' dest='0,5,14,19'"
+							textpadding="20" normaltextcolor="darkcolor" font="2" text="直接弹出新消息会话"/>
+                    <Control width="40"/>
+                    <Option group="msg_notify_group" name="tray_icon_blink" valign="center" height="22"
+							normalimage="file='../public/option/option1_unselected.png' dest='0,5,14,19'" selectednormalimage="file='../public/option/option1_selected.png' dest='0,5,14,19'"
+							textpadding="20" normaltextcolor="darkcolor" font="2" text="任务栏小图标闪烁提醒"/>
+                </HBox>
+                
+                <Control class="splitline_hor_level2" width="stretch"/>
+                
+                <VBox name="file_manage_box" width="stretch" height="90">
+                    <HBox width="stretch" height="auto" margin="0,20,0,6">
+                        <Box width="stretch" height="30" bordersize="1" bordercolor="splitline_hor_level5">
+                            <RichEdit class="simple" name="file_path_edit" width="stretch" height="auto" valign="center" margin="4" readonly="true" font="1"/>
+                        </Box>
+                        <Button class="btn_global_white_80x30" name="change_path" width="auto" height="auto" margin="10" font="1" text="更改"/>
+                    </HBox>
+                    <Label textid="STRID_APPSET_FILE_MANAGE_TIP" width="auto" height="auto" font="1" normaltextcolor="lightcolor"/>
+                </VBox>
+
+                <Control class="splitline_hor_level2" width="stretch"/>
+
+                <VBox name="clearcachecontent" height="88">
+					<Box margin="0,16,0,0" valign="top">
+						<Label class="DetailLabel" name="statting" width="stretch" textid="STRID_APPSET_STATTING"/>
+						<HBox name="stat_result" visible="false">
+							<Label class="DetailLabel" name="record" width="auto" textid="STRID_APPSET_FINISH_RECORD"/>
+							<Label class="DetailLabel" name="cache" width="auto" textid="STRID_APPSET_FINISH_CACHE"/>
+						</HBox>
+					</Box>
+
+                    <HBox margin="0,0,0,15" valign="bottom" childmargin="10">
+						<Button class="btn_global_white_80x30" name="clear1" font="1" textid="STRID_APPSET_TITLE_RECORD"/>
+                        <Button class="btn_global_white_80x30" name="clear2" font="1" textid="STRID_APPSET_TITLE_CACHEFILE"/>
+                    </HBox>
+                </VBox>
+
+                <Control class="splitline_hor_level2"/>
+
+                <VBox name="audio_video_content" height="auto">
+                    <HBox height="auto" margin="0,15,0,15" childmargin="10">
+                        <Button class="btn_global_white_80x30" name="audio_setting" font="1" text="语音通话设置"/>
+                        <Button class="btn_global_white_80x30" name="video_setting" font="1" text="视频聊天设置"/>
+                    </HBox>
+                </VBox>
+                    
+                <Control class="splitline_hor_level2"/>
+
+                <VBox name="hotkeylayout" height="auto">
+                    <HBox name="group1" height="60">
+                        <CheckBox class="checkbox_font14" name="chkopenmsg" valign="center" textid="STRID_APPSET_OPEN_UNREAD"/>
+						<Control />
+                        <HotKeyControl class="HotKeyControl" name="openunreadmsg"/>
+                    </HBox>
+					
+					<Control class="splitline_hor_level2"/>
+					
+                    <HBox name="group2" height="60" >
+                        <CheckBox class="checkbox_font14" name="chkopenonelatest" valign="center" textid="STRID_APPSET_OPEN_LAST"/>
+						<Control />
+                        <HotKeyControl class="HotKeyControl" name="openlatestonemsg"/>
+                    </HBox>
+					
+					<Control class="splitline_hor_level2"/>
+					
+                    <HBox name="group3" height="60">
+                        <CheckBox class="checkbox_font14" name="chkopenmain" valign="center" textid="STRID_APPSET_POPUP_MAINFORM"/>
+						<Control />
+                        <HotKeyControl class="HotKeyControl" name="openmainwnd"/>
+                    </HBox>
+					
+					<Control class="splitline_hor_level2"/>
+					
+                    <HBox name="group4" height="60">
+                        <CheckBox class="checkbox_font14" name="chkshot" valign="center" textid="STRID_APPSET_SCREEN_SHOT"/>
+						<Control />
+                        <HotKeyControl class="HotKeyControl" name="screenshot"/>
+                    </HBox>
+					
+					<Control class="splitline_hor_level2"/>
+					
+                    <HBox height="60">
+                        <Label class="DetailLabel" valign="center" textid="STRID_APPSET_SEND_MSG"/>
+						<Control />
+						<HBox width="200">
+							<Option name="op_enter" group="send_msg_setting" halign="right" valign="center" height="18"
+								normalimage="file='../public/option/option1_unselected.png' dest='0,2,14,16'" selectednormalimage="file='../public/option/option1_selected.png' dest='0,2,14,16'" 
+								textpadding="20,0,0,0" normaltextcolor="darkcolor" font="1" text="按Enter键"/>
+							<Control />
+							<Option name="op_ctrl_and_enter" group="send_msg_setting" halign="right" valign="center" 
+								normalimage="file='../public/option/option1_unselected.png' dest='0,2,14,16'" selectednormalimage="file='../public/option/option1_selected.png' dest='0,2,14,16'" 
+								textpadding="20,0,0,0" normaltextcolor="darkcolor" font="1" text="按Ctrl+Enter键"/>
+						</HBox>
+					</HBox>
+                </VBox>
+				
+				<Control class="splitline_hor_level2"/>
+
+				<HBox name="shortcutkeysetcontent" margin="0,15,0,0">
+                    <Button class="btn_global_white_80x30" name="restoredefault" font="1" textid="STRID_APPSET_RESTORE_DEFAULT"/>
+					<Label class="DetailLabel" name="hotkeytip" halign="center" margin="100,7" font="1" normaltextcolor="obvious_tip"/>
+                </HBox>
+            </VBox>
+        </HBox>
+    </VBox>
+</Window>

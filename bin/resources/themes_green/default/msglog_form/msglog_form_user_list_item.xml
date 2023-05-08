@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+    <TreeNode class="listitem" width="stretch" height="56" mousechild="false">
+        <Event type="select" receiver=".\head_image_mask" applyattribute="selected=&quot;true&quot;"/>
+        <Event type="unselect" receiver=".\head_image_mask" applyattribute="selected=&quot;false&quot;"/>
+        <BubbledEvent type="mouseenter" receiver=".\head_image_mask" applyattribute="state=&quot;hot&quot;"/>
+        <BubbledEvent type="mouseleave" receiver=".\head_image_mask" applyattribute="state=&quot;normal&quot;"/>
+        
+        <Box width="auto" height="auto" valign="center" margin="8,0,0,0">
+            <Control name="head_image" width="38" height="38" margin="1,1,0,0" borderround="38,38" mouse="false"/>
+            <CheckBox class="checkbox_headimage_mask_40x40" name="head_image_mask" mouse="false"/>
+        </Box>
+        
+        <Label name="show_name" width="stretch" valign="center" margin="56,0,0,0" font="2" normaltextcolor="darkcolor"/>
+	</TreeNode>
+</Window>

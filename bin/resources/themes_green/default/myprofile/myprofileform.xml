@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window mininfo="200,100" size="340,100" caption="0,0,0,55" textid="STRID_UINFO_TITLE_DETAILPROFILE">
+    <Class name="TitleLabel" value="valign=&quot;center&quot; normaltextcolor=&quot;lightcolor&quot; font=&quot;2&quot;"/>
+    <Class name="MyEdit" value="width=&quot;stretch&quot; height=&quot;stretch&quot; padding=&quot;10,0,5,0&quot; align=&quot;vcenter&quot; font=&quot;2&quot;"/>
+    
+    <VBox bkcolor="bk_wnd_lightcolor" width="340" height="auto">
+        <VBox name="bkground" height="200" forenormalimage="../public/bk/bg_image_mask.png">
+			<HBox halign="right" height="55">
+				<Control width="stretch"/>
+				<Button class="btn_wnd_white_min" name="minbtn" margin="4,6,0,0" halign="right"/>
+				<Button class="btn_wnd_white_close" name="closebtn" margin="4,6,5,0" halign="right"/>
+			</HBox>
+            <Box width="auto" height="auto" halign="center">
+                <Button name="modify_photo" width="88" height="88" borderround="88,88,88,88" margin="3,3,0,0" cursortype="hand"/>
+                <Control width="94" height="94" normalimage="headimage_mask_94x94.png" mouse="false"/>
+            </Box>
+
+            <HBox height="32" margin="10,0,10,0">
+                <Control width="stretch"/>
+
+                <Label name="nick_label" width="auto" height="stretch" textpadding="10,5,10,0" cursortype="ibeam" tooltiptext="修改昵称" font="7" normaltextcolor="white" hottextcolor="darkcolor" hotimage="file='../public/edit/edit1.png' corner='10,10,10,10'"/>
+                <RichEdit class="simple edit" name="nick_edit" width="stretch" height="stretch" align="vcenter" padding="10,0,10,0" font="7" normaltextcolor="darkcolor" visible="false"/>
+                
+                <Control name="gender" width="auto" height="auto" valign="center" bkimage="male.png" visible="false"/>
+                <Control name="star" width="auto" height="auto" valign="center" bkimage="star.png" visible="false"/>
+
+                <Control width="stretch"/>
+            </HBox>
+
+            <Label name="team_name" width="auto" height="auto" halign="center" margin="20,0,20,5" font="1" normaltextcolor="white" mouse="false"/>
+        </VBox>
+
+        <VBox height="auto" margin="30,22,30,22">		
+            <HBox name="hor_yixin" height="30">
+				<HBox width="47">
+					<Label class="TitleLabel" text="易"/>
+					<Control width="stretch"/>
+					<Label class="TitleLabel" text="信"/>
+					<Control width="stretch"/>
+					<Label class="TitleLabel" text="号"/>
+				</HBox>
+                <RichEdit class="simple MyEdit" name="yixin_edit" font="12" margin="2"/>
+            </HBox>
+
+            <HBox name="hor_addr" height="30" margin="0,2,0,0">
+				<HBox width="47">
+					<Label class="TitleLabel" text="所"/>
+					<Control width="stretch"/>
+					<Label class="TitleLabel" text="在"/>
+					<Control width="stretch"/>
+					<Label class="TitleLabel" text="地"/>
+				</HBox>
+                <RichEdit class="simple MyEdit" name="addr_edit" margin="2"/>
+            </HBox>
+
+            <HBox name="hor_sig" height="30" margin="0,2,0,0">
+				<HBox width="47">
+					<Label text="签" valign="center" font="2" normaltextcolor="lightcolor"/>
+					<Control width="stretch"/>
+					<Label text="名" valign="center" font="2" normaltextcolor="lightcolor"/>
+				</HBox>
+                <RichEdit class="simple prompt edit MyEdit" name="sig_edit" margin="2,0,0,0"/>
+            </HBox>
+
+            <HBox name="hor_qrcode" height="30" margin="0,2,0,0">
+				<HBox width="47">
+					<Label class="TitleLabel" text="二"/>
+					<Control width="stretch"/>
+					<Label class="TitleLabel" text="维"/>
+					<Control width="stretch"/>
+					<Label class="TitleLabel" text="码"/>
+				</HBox>
+                <Button name="qrcode_btn" margin="14,0,0,0" valign="center" 
+                        normalimage="qrcode0.png" hotimage="file='qrcode0.png' fade='128'"/>
+            </HBox>
+
+            <HBox name="hor_alias" height="30" margin="0,2,0,0">
+				<HBox width="47">
+					<Label class="TitleLabel" text="备"/>
+					<Control width="stretch"/>
+					<Label class="TitleLabel" text="注"/>
+					<Control width="stretch"/>
+					<Label class="TitleLabel" text="名"/>
+				</HBox>
+                <RichEdit class="simple prompt edit MyEdit" name="alias_edit" margin="2"/>
+            </HBox>
+			
+            <HBox name="hor_messagenotify" height="30" margin="0,2,0,0">
+				<HBox width="47">
+					<Label text="消" valign="center" font="2" normaltextcolor="lightcolor"/>
+					<Control width="stretch"/>
+					<Label text="息" valign="center" font="2" normaltextcolor="lightcolor"/>
+				</HBox>
+                <CheckBox class="checkbox_font14" name="messagenotify" margin="13,0,0,0" valign="center" textid="STRID_TEAMINFO_MSGNOTIFY"/>
+            </HBox>
+            
+            <HBox name="hor_collect" height="30" margin="0,2,0,0">
+				<HBox width="47">
+					<Label text="收" valign="center" font="2" normaltextcolor="lightcolor"/>
+					<Control width="stretch"/>
+					<Label text="藏" valign="center" font="2" normaltextcolor="lightcolor"/>
+				</HBox>
+                <Button name="my_collect" width="18" height="18" margin="13,2,0,0" valign="center" tooltiptext="查看我的收藏"
+                        normalimage="collect.png" hotimage="file='collect.png' fade='128'"/>
+            </HBox>
+
+            <HBox name="hor_moment" height="30" margin="0,2,0,0">
+				<HBox width="47">
+					<Label text="主" valign="center" font="2" normaltextcolor="lightcolor"/>
+					<Control width="stretch"/>
+					<Label text="页" valign="center" font="2" normaltextcolor="lightcolor"/>
+				</HBox>
+                <Button name="btn_moment" width="18" height="18" margin="14,2,0,0" valign="center" tooltiptext="查看朋友圈主页" 
+                        normalimage="moment.png" hotimage="file='moment.png' fade='128'"/>
+            </HBox>
+        </VBox>
+		
+		
+		<VBox name="con_chat" width="stretch" height="auto">
+			<Control class="splitline_hor_level1" width="stretch"/>
+			<Box height="44">
+				<Button name="talkbtn" width="stretch" height="stretch" font="2" normaltextcolor="darkcolor" textpadding="30,0,0,4" text="聊天" align="center"
+					forenormalimage="file='icon_message.png' dest='141,11,163,33'" hotcolor="bk_btn1_hovered" pushedcolor="bk_btn1_pushed"/>
+					
+				<Button name="addfriendbtn" width="stretch" height="stretch" font="2" normaltextcolor="darkcolor" textpadding="30,0,0,4" text="加好友" align="center"
+					forenormalimage="file='icon_add.png' dest='134,11,156,33'" hotcolor="bk_btn1_hovered" pushedcolor="bk_btn1_pushed"/>
+					
+				<Button name="inblacklistbtn" enabled="false" width="stretch" height="stretch" 
+					font="2" normaltextcolor="darkcolor" textid="STRID_UINFO_INBLACKLIST" align="center"
+					hotcolor="bk_btn1_hovered" pushedcolor="bk_btn1_pushed"/>
+			</Box>
+		</VBox>
+		
+	</VBox>
+</Window>

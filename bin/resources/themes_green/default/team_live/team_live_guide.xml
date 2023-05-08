@@ -1,0 +1,24 @@
+<Window size="460, 434" textid="STRID_TEAMLIVE_TITLE">
+    <Class name="image_attrib" value="width=&quot;auto&quot; height=&quot;auto&quot; halign=&quot;center&quot;"/>
+    <VBox bkcolor="bk_wnd_lightcolor">
+        <HBox height="34" padding="10,0,5,0">
+            <Label class="font_title" width="stretch" valign="center" textid="STRID_TEAMLIVE_TITLE" normaltextcolor="darkcolor"/>
+            <Button class="btn_wnd_close" name="btn_close" margin="4,6,0,0"/>
+        </HBox>
+        <TabBox class="image_attrib" name="image_box" margin="0,8" >
+            <Control class="image_attrib" bkimage="live_area_emphasized.png"/>
+            <Control class="image_attrib" bkimage="discuss_area_emphasized.png"/>
+            <Control class="image_attrib" bkimage="team_live_thumbnail.png"/>
+            <Control class="image_attrib" bkimage="team_live_off.png"/>
+        </TabBox>
+
+        <Label name="pre_tip" width="auto" height="auto" halign="center" margin="0,10" normaltextcolor="dark2color" font="2" visible="false"/>
+        <Label name="tip" width="auto" height="auto" halign="center" margin="0,20" normaltextcolor="live_area_bar_text" font="1"/>
+        
+        <Control height="stretch"/>
+        <TabBox name="button_box" width="auto" height="auto" halign="center" margin="0,0,0,36">
+            <Button class="btn_global_green_80x30" name="enter" text="开始直播"/>
+            <Button class="btn_global_green_80x30" name="next_step" text="下一步"/>
+        </TabBox>
+    </VBox>
+</Window>

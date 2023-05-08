@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+    <ListContainerElement class="listitem" height="64">
+	    <BubbledEvent type="mouseenter" receiver=".\head_image_mask" applyattribute="state=&quot;hot&quot;"/>
+        <BubbledEvent type="mouseleave" receiver=".\head_image_mask" applyattribute="state=&quot;normal&quot;"/>
+        <HBox>
+            <Box width="auto" height="auto" margin="12,0,8,0" valign="center">
+                <Button name="head_image" width="46" height="46" margin="1,1,0,0" borderround="46,46,46,46"/>
+                <CheckBox class="checkbox_headimage_mask_48x48" name="head_image_mask" mouse="false"/>
+            </Box>
+
+            <VBox height="auto" valign="center">
+                <Label name="friend_name" font="2" normaltextcolor="darkcolor" width="stretch"/>
+				<HBox height="auto" margin="0,8,0,0">
+					<Label name="invite_words" font="1" normaltextcolor="lightcolor"  width="auto" maxwidth="153"/>
+					<Button name="reply" font="1" normaltextcolor="green" text="回复" width="auto" cursortype="hand" margin="4"/>
+				</HBox>
+            </VBox>
+            <Control width="30"/>
+            <Button class="btn_global_green_80x30" name="confirm" text="通过验证" valign="center" margin="0,0,20,0"/>
+        </HBox>
+		<Control class="splitline_hor_level2" width="stretch" valign="bottom"/>
+    </ListContainerElement>
+</Window>

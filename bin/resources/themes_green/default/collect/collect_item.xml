@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+    <ListContainerElement height="auto">
+        <VBox height="auto" mouse="false">           
+            <HBox height="auto" mouse="false">
+                <Box margin="10,10,0,0" width="40" height="40" mouse="false" mousechild="false">
+                    <Button name="sender_header" width="38" height="38" margin="1,1,0,0" borderround="38,38,38,38"/>
+                    <CheckBox class="icon_headimage_mask_40x40" name="head_image_mask"/>
+                </Box>
+                
+                <VBox height="auto" mouse="false">
+                    <HBox height="40" margin="10,10,0,5" mouse="false" mousechild="false">
+                        <Label name="sender_name" width="stretch" valign="center" font="2"/>
+                        <Label  name="show_time" margin="10,0,16,0" valign="center" normaltextcolor="lightcolor"/>
+                    </HBox>
+                    
+                    <Box name="content" width="stretch" height="auto" padding="10,0,50,0" mouse="false"/>
+                    
+                    <HBox height="26" margin="0,20,10,5" mouse="false">
+                        <ButtonBox name="expand" width="60" height="26" hotimage="btn_hover.png" pushedimage="btn_pushed.png" visible="false">
+                            <HBox width="auto" margin="10,0,0,0" height="26" mouse="false" mousechild="false">
+                                <Label name="expand_text" valign="center" textid="STRID_COLLECT_TEXT_EXPAND" normaltextcolor="gray"/>
+                                <Control width="4"/>
+                                <Control name="expand_icon" width="10" height="10" valign="center" normalimage="expand0.png"/>
+                            </HBox>
+                        </ButtonBox>
+
+                        <ButtonBox name="shrink" width="60" height="26" hotimage="btn_hover.png" pushedimage="btn_pushed.png" visible="false">
+                            <HBox width="auto" margin="10,0,0,0" height="26" mouse="false" mousechild="false">
+                                <Label name="shrink_text" valign="center" textid="STRID_COLLECT_TEXT_SHRINK" normaltextcolor="gray"/>
+                                <Control width="4"/>
+                                <Control name="shrink_icon" width="10" height="10" valign="center" normalimage="shrink0.png"/>
+                            </HBox>
+                        </ButtonBox>
+                        
+                        <Control mouse="false"/>
+
+                        <ButtonBox name="event_delete" width="60" height="26" hotimage="btn_hover.png" pushedimage="btn_pushed.png" visible="false">
+                            <Event type="mouseenter" receiver=".\delete_text" applyattribute="state=&quot;hot&quot;"/>
+                            <Event type="mouseleave" receiver=".\delete_text" applyattribute="state=&quot;normal&quot;"/>
+                            <Event type="mouseenter" receiver=".\delete_icon" applyattribute="state=&quot;hot&quot;"/>
+                            <Event type="mouseleave" receiver=".\delete_icon" applyattribute="state=&quot;normal&quot;"/>
+
+                            <HBox width="auto" margin="8,0,0,0" height="26" mouse="false" mousechild="false">
+                                <Control name="delete_icon" width="16" height="16" valign="center" normalimage="delete0.png" hotimage="delete1.png"/>
+                                <Control width="4"/>
+                                <Label name="delete_text" valign="center" text="删除" normaltextcolor="gray" hottextcolor="obvious_tip"/>
+                            </HBox>
+                        </ButtonBox>
+
+                        <ButtonBox name="event_send" width="60" height="26" hotimage="btn_hover.png" pushedimage="btn_pushed.png" visible="false">
+                            <HBox width="auto" margin="8,0,0,0" height="26" mouse="false" mousechild="false">
+                                <Control name="send_icon" width="16" height="16" valign="center" normalimage="send0.png"/>
+                                <Control width="4"/>
+                                <Label name="send_text" valign="center" text="发送" normaltextcolor="gray"/>
+                            </HBox>
+                        </ButtonBox>
+
+                        <ButtonBox name="event_forward" width="60" height="26" hotimage="btn_hover.png" pushedimage="btn_pushed.png" visible="false">
+                            <HBox width="auto" margin="8,0,0,0" height="26" mouse="false" mousechild="false">
+                                <Control name="forward_icon" width="16" height="16" valign="center" normalimage="send0.png"/>
+                                <Control width="4"/>
+                                <Label name="forward_text" valign="center" text="转发" normaltextcolor="gray"/>
+                            </HBox>
+                        </ButtonBox>
+                    </HBox>
+                </VBox>
+            </HBox>
+
+            <Control height="1" bordersize="0,0,0,1" bordercolor="bk_listitem_hovered" mouse="false"/>
+        </VBox>
+    </ListContainerElement>
+</Window>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="814,610" caption="0,0,0,34" textid="STRID_TEAMLIVE_ADD_MEMBER">
+    <VBox bkcolor="bk_wnd_lightcolor">
+        <HBox class="caption">
+            <Label class="font_title" name="title" width="stretch" valign="center"
+                   normaltextcolor="darkcolor" textid="STRID_TEAMLIVE_ADD_MEMBER"/>
+            <Button class="btn_wnd_min" name="minbtn" margin="4,6,0,0"/>
+            <Button class="btn_wnd_close" name="closebtn" margin="4,6,0,0"/>
+        </HBox>
+
+        <HBox>
+            <VBox width="614">
+                <HBox name="search_frame" height="32">
+                    <Control name="search_icon" width="auto" height="auto" valign="center" margin="10,0,0,0" bkimage="file='../public/icon/icon_search_gray.png'" mouse="false" nofocus="true"/>
+                    <RichEdit class="simple prompt" name="search" margin="10,0,10,0" height="stretch" valign="center" font="1" align="vcenter" prompttext="搜索群成员"/>
+                    <Button class="btn_del_search" name="clear_input" visible="false" valign="center" margin="0,0,10,0"/>
+                </HBox>
+
+                <Control class="splitline_hor_level1"/>
+
+                <Box>
+                    <Box>
+                        <TreeView name="user_list2" vscrollbar="true" vscrollunit="75"/>
+                    </Box>
+
+                    <TileListBox class="list" name="search_result" visible="false" columns="3" padding="0,0,14,0" vscrollunit="75"/>
+                    <VBox mouse="false">
+                        <Label name="tool_tip" visible="false" halign="center" margin="0,10,0,0" font="2" normaltextcolor="lightcolor"/>
+                    </VBox>
+                </Box>
+            </VBox>
+
+            <Control class="splitline_ver_level1"/>
+
+            <VBox width="200" bkcolor="bk_listitem_hovered">
+                <Label name="tip_of_number" width="stretch" height="32" textpadding="10,7,0,0" font="1" normaltextcolor="darkcolor" text="已选中0人"/>
+                <Box margin="6">
+                    <VListBox name="select_user_area" vscrollbar="true" vscrollunit="100" padding="0,10,0,10"/>
+                </Box>
+            </VBox>
+        </HBox>
+
+        <Control class="splitline_hor_level1"/>
+
+        <HBox bkcolor="bk_wnd_darkcolor" height="50">
+            <Control />
+            <Button class="btn_global_white_80x30" name="cancel" textid="STRING_NO" valign="center"/>
+            <Control width="10"/>
+            <Button class="btn_global_green_80x30" name="add" text="添加" valign="center" enabled="false"/>
+            <Control />
+        </HBox>
+    </VBox>
+</Window>

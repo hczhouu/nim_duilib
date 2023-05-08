@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+    <Box>
+        <HBox height="50" mouse="false">
+            <Box width="50" mouse="false">
+                <Button name="event_image" width="50" height="50" cursortype="hand" 
+                        normalimage="audio_play_0.png" hotimage="audio_play_1.png" pushedimage="audio_play_1.png"/>
+                <Control name="loading" width="auto" height="auto" halign="center" valign="center" mouse="false" bkimage="loading.gif" visible="false"/>
+            </Box>
+            <Label name="time" width="50" margin="10,0,0,0" font="12" valign="center" mouse="false"/>
+            <Control name="playing" width="auto" height="auto" valign="center" bkimage="audio_play_ing.gif" mouse="false"/>
+        </HBox>
+    </Box>
+</Window>

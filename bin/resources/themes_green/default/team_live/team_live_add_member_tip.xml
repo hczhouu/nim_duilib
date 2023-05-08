@@ -1,0 +1,19 @@
+<Window size="380, 180" caption="0,0,0,34" textid="STRID_TEAMLIVE_ADD_MEMBER">
+    <VBox bkcolor="bk_wnd_lightcolor">
+        <HBox class="caption">
+            <Label class="font_title" width="stretch" valign="center" textid="STRID_TEAMLIVE_ADD_MEMBER" normaltextcolor="darkcolor"/>
+            <Button class="btn_wnd_close" name="closebtn" margin="4,6,0,0"/>
+        </HBox>
+        <TabBox>
+            <HBox>
+                <Control bkimage="../msgbox/ok.png"/>
+                <Label text="成员添加成功"/>
+            </HBox>
+            <HBox>
+                <Control bkimage="../msgbox/warning.png"/>
+                <Label text="因网络或服务器原因，成员添加失败"/>
+            </HBox>
+        </TabBox>
+        <Button name="ok"/>
+    </VBox>
+</Window>

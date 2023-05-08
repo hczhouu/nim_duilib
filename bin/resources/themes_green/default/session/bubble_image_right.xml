@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+	<Box name="image_container" width="102" height="72" >
+		<Button name="bubble_image" height="stretch" width="stretch" bkimage="file='bubble1_right.png' corner='15,15,23,14'" menu="true" cursortype="hand"/>
+		<Control name="default_image" width="auto" height="auto" margin="7,7,13,7" bkimage="image_img_default.png" mouse="false"/>
+		<RichEdit name="image_edit" height="20" width="30" valign="center" halign="center" margin="7,7,13,7" padding="-1, -1, -1, -1" font="2" normaltextcolor="white" visible="false" readonly="true"/>
+		<Control margin="3,3,9,3" width="stretch" height="stretch" bkimage="file='image_img_foreimage_right.png' corner='11,11,11,11'" mouse="false"/>
+	</Box>
+</Window>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+    <ListContainerElement width="stretch" height="76" padding="10,6,16,6" mouse="false">
+        <Box width="64" height="auto" mouse="false">
+            <Box width="auto" height="auto" margin="8,8,0,8">
+                <Button name="headimage" width="46" height="46" margin="1,1,1,1" borderround="46,46,46,46" cursortype="hand" menu="true"/>
+                <Control class="icon_headimage_mask_48x48" mouse="false"/>
+            </Box>
+            <Control name="owner" width="auto" height="auto" margin="37,34,0,0" bkimage="../groupinfo/owner.png" visible="false" mouse="false"/>
+            <Control name="admin" width="auto" height="auto" margin="37,34,0,0" bkimage="../groupinfo/admin.png" visible="false" mouse="false"/>
+            <Button class="btn_delete" name="remove" width="26" height="26" margin="0,3" visible="false" fadealpha="true" cursortype="hand"/>
+        </Box>
+        <Button name="username" font="2" normaltextcolor="darkcolor" width="stretch" height="auto" valign="center" align="left" margin="64" cursortype="hand" menu="true"/>
+    </ListContainerElement>
+</Window>

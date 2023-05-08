@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+	<Box name="bubble_msg_box" width="auto" height="auto" >
+		<Button name="bubble_voice" width="100" height="38" bkimage="file='../session/bubble_left.png' corner='23,15,15,14'" menu="true" cursortype="hand"/>
+		<Control name="image_tel" mouse="false" width="28" height="28" margin="20,5,0,0" bkimage="../session/image_tel.png"/>
+		<Control name="voice_icon" width="28" height="28" margin="50,5,0,0" mouse="false" bkimage="../session/image_audio_left.png"/>
+		<Control name="play_icon" width="28" height="28" margin="50,5,0,0" mouse="false" bkimage="../session/ani_msg_audio_left.gif" visible="false"/>
+	</Box>
+</Window>

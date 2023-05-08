@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+    <Box>
+        <HBox height="50" mouse="false">
+            <Button name="card_header" width="50" height="50" cursortype="hand" bkimage="card.png"/>
+            <Label name="card_name" width="stretch" margin="10,0,0,0" font="3" mouse="false"/>
+        </HBox>
+    </Box>
+</Window>

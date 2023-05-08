@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window caption="0,0,0,34">
+    <Class name="TitleLabel" value="width=&quot;50&quot; valign=&quot;center&quot; normaltextcolor=&quot;lightcolor&quot; font=&quot;2&quot;"/>
+    <Class name="MyEdit" value="width=&quot;stretch&quot; height=&quot;stretch&quot; padding=&quot;10,0,5,0&quot; align=&quot;vcenter&quot; font=&quot;2&quot;"/>
+    
+    <VBox bkcolor="bk_wnd_lightcolor" width="564" height="auto">
+        <HBox class="caption">
+            <Label class="font_title" name="title" width="stretch" valign="center" normaltextcolor="darkcolor"/>
+            <Button class="btn_wnd_min" name="minbtn" margin="4,6,0,0"/>
+            <Button class="btn_wnd_close" name="closebtn" margin="4,6,0,0"/>
+        </HBox>
+
+		<HBox name="search_frame" height="32">
+			<Control name="search_icon" width="auto" height="auto" valign="center" margin="10,0,0,0" bkimage="file='../public/icon/icon_search_gray.png'"/>
+			<RichEdit class="simple prompt" name="search" margin="10,0,10,0" height="auto" valign="center" font="1" prompttext="搜索群成员"/>
+			<Button class="btn_del_search" name="clear_input" visible="false" valign="center" margin="0,0,10,0"/>
+		</HBox>
+		
+		<Control class="splitline_hor_level1"/>
+		
+        <Box height="auto">
+            <TileListBox name="groupmemberpanel" width="stretch" height="358" padding="8,6,14,30" 
+                         columns="3" vscrollbar="true" vscrollunit="100"/>
+			
+			<TileListBox class="list" name="search_result" height="358" visible="false" columns="3" padding="8,6,14,30" vscrollunit="100"/>
+        </Box>
+
+        <Control class="splitline_hor_level1"/>
+
+        <VBox height="auto" margin="20,20,20,20">
+            <HBox height="30" margin="0,5,0,0">
+                <Label class="TitleLabel" textid="STRID_TEAMINFO_TEAMNAME"/>
+                <RichEdit class="simple prompt edit MyEdit" name="groupname"/>
+            </HBox>
+
+            <HBox height="30" margin="0,5,0,0">
+                <Label class="TitleLabel" textid="STRID_TEAMINFO_TEAM_NICKNAME"/>
+                <RichEdit class="simple prompt edit MyEdit" name="groupnick"/>
+            </HBox>
+			
+            <HBox name="hbox_type" height="30" margin="0,5,0,0" visible="false">
+                <Label class="TitleLabel" text="群类型"/>
+                <Label class="TitleLabel" normaltextcolor="darkcolor" name="group_type" margin="10,0,0,0" valign="center" textid="STRID_TEAMTYPE_ECP"/>
+            </HBox>
+
+            <HBox name="hbox_dimencode" height="30" margin="0,5,0,0">
+                <Label class="TitleLabel" textid="STRID_TEAMINFO_TQRCODE"/>
+                <Button name="getdimenbtn" margin="10,0,0,0" valign="center" tooltiptext="查看二维码" 
+                        normalimage="../myprofile/qrcode0.png" hotimage="../myprofile/qrcode1.png" pushedimage="../myprofile/qrcode1.png"/>
+            </HBox>
+
+            <HBox name="hbox_saveteam" height="30" margin="0,5,0,0">
+                <Label class="TitleLabel" text="保存群"/>
+                <CheckBox class="checkbox_font14" name="savetoaddressbook" margin="10,0,0,0" valign="center" textid="STRID_TEAMINFO_SAVETOAB"/>
+            </HBox>
+
+            <HBox height="30" margin="0,5,0,0">
+                <Label class="TitleLabel" text="手机号"/>
+                <CheckBox class="checkbox_font14" name="show_phone" margin="10,0,0,0" valign="center" text="显示我的手机号"/>
+                <RichEdit class="simple edit" name="edit_phone" width="120" height="stretch" margin="10,0,0,0" padding="10,0,10,0" align="vcenter" font="2" number="true" visible="false"/>
+            </HBox>
+			
+            <HBox height="30" margin="0,5,0,0">
+                <HBox width="50" >
+                    <Label text="消" valign="center" font="2" normaltextcolor="lightcolor"/>
+                    <Control width="15"/>
+                    <Label text="息" valign="center" font="2" normaltextcolor="lightcolor"/>
+                </HBox>
+                <CheckBox class="checkbox_font14" name="messagenotify" margin="10,0,0,0" valign="center" textid="STRID_TEAMINFO_MSGNOTIFY"/>
+            </HBox>
+            
+            <HBox height="30" name="team_mute_box" margin="0,5,0,0">
+                <HBox width="50" >
+                    <Label text="禁" valign="center" font="2" normaltextcolor="lightcolor"/>
+                    <Control width="15"/>
+                    <Label text="言" valign="center" font="2" normaltextcolor="lightcolor"/>
+                </HBox>
+                <CheckBox class="checkbox_font14" name="team_mute" margin="10,0,0,0" valign="center" text="全员禁言"/>
+                <Label name="team_mute_tip" font="2" margin="10,1,0,0" valign="center" text="已开启" normaltextcolor="lightcolor" visible="false"/>
+            </HBox>
+            
+            <HBox name="group_board_box" height="auto" >
+				<Box height="30" width="auto" margin="0,5,0,0" >
+					<Label class="TitleLabel" text="群公告"/>
+				</Box>
+                <RichEdit class="prompt edit" name="group_board" width="474" maxheight="90" minheight="30" vscrollbar="true" autovscroll="true" wantreturnmsg="true" enabled="true" wanttab="false" normaltextcolor="darkcolor" disabledtextcolor="textdefaultdisablecolor" margin="0,5,0,0" padding="10,5,0,5" scrollbarpadding="0,5,5,5" font="2" rich="false" fadehot="false"/>
+            </HBox>
+        </VBox>
+
+    </VBox>
+
+</Window>

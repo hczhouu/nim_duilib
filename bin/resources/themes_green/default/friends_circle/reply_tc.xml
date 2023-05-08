@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<Box height="auto">
+		<HBox height="auto" width="stretch" margin="0,7,0,13">
+			<Box width="42" height="42" valign="top">
+				<Button name="CircleItemHeader" width="40" height="40" borderround="40,40,40,40" margin="1,1,1,1" cursortype="hand"/>
+				<Control width="42" height="42" mouse="false" bkimage="mask_42_42.png"/>
+			</Box>
+			<VBox height="auto" width="stretch" margin="7,2" mouse="false">
+				<Label name="feed_friend_name" width="stretch" valign="center" text="好友名字" font="2" normaltextcolor="green"/>
+                <VBox name="vbox_of_reply" height="auto" mouse="false" margin="0,4,0,4">
+				    <RichEdit name="reply_text" font="1" multiline="true" vscrollbar="false" autovscroll="false" readonly="true" rich="true" height="auto"/>
+                </VBox>
+				<HBox height="auto">
+					<Label name="conference_time" maxwidth="100" valign="center" text="1分钟前" font="1" normaltextcolor="lightcolor"/>			
+					<Control width="stretch"/>
+                    <HBox name="box_delete" width="auto" height="auto" visible="false">
+                        <Button name="btn_delete" normaltextcolor="link_green" cursortype="hand" font="1" text="删除"/>
+                        <Control class="splitline_ver_level1" name="ver_split" height="12" margin="9,0,9,0" valign="center"/>
+                    </HBox>
+                    <Button name="btn_reply" normaltextcolor="link_green" cursortype="hand" font="1" text="回复"/>
+				</HBox>
+			</VBox>
+		</HBox>
+	    <Control name="comment_spliter" height="1" valign="bottom" bkcolor="splitline_hor_level6"/>
+	</Box>
+</Window>

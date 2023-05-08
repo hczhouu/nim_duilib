@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="400,0" mininfo="400,500" heightpercent="0.8" caption="0,0,0,130" sizebox="0,4,0,4" roundcorner="2,2,2,2" textid="STRID_FC_WINDOW_TITLE">
+    <VBox bkcolor="bk_wnd_lightcolor">
+        <Box name="caption" width="stretch" height="auto">
+            <!-- 朋友圈主页标题栏 -->
+            <VBox name="friends_circle_header_box" height="130" forenormalimage="bk_mask.png">
+                <HBox width="auto" height="21" margin="10,6,5,0">
+                    <Control width="16" height="16" valign="center" bkimage="fc_icon.png"/>
+                    <Label name="title" margin="3,0,0,0" valign="center" normaltextcolor="white" textid="STRID_FC_WINDOW_TITLE"/>
+                </HBox>
+                
+                <Control />
+                
+                <HBox width="stretch" height="auto" margin="10,0,4,10">
+                    <Box width="64" height="64">
+                        <ButtonBox name="btn_header" width="62" height="62" margin="1,1,1,1" borderround="62,62,62,62" cursortype="hand"/>
+                        <Control bkimage="../public/headmask/icon_headimage_mask_64x64.png" mouse="false"/>
+                    </Box>
+                    <Label name="friend_name" width="stretch" margin="10,0,0,0" valign="center" mouse="false" font="7" normaltextcolor="white"/>
+                    <Box name="fc_box_new_msg" width="32" height="32" valign="center">
+                        <Button name="fc_btn_new_msg" width="24" height="24" halign="center" valign="center" tooltiptext="消息列表" 
+                                hotimage="hovered.png" pushedimage="pushed.png" forenormalimage="file='new_msg.png' dest='4,4,20,20'"/>
+                        <Box name="fc_box_number_tip" width="18" height="18" halign="right" mousechild="false" mouse="false" bkimage="red_big.png" visible="false">
+                            <Label name="fc_number_tip" margin="1,0,0,2" halign="center" valign="center" normaltextcolor="white" font="2"/>
+                        </Box>
+                    </Box>
+                    <Button name="fc_btn_write" width="24" height="24" margin="3,0,3,0" valign="center" tooltiptext="发布动态" 
+                            hotimage="hovered.png" pushedimage="pushed.png" forenormalimage="file='write_fc.png' dest='4,4,20,20'"/>
+                    <Box width="32" height="32" valign="center">
+                        <Button name="fc_btn_refresh" width="24" height="24" halign="center" valign="center" tooltiptext="刷新动态" 
+                                hotimage="hovered.png" pushedimage="pushed.png" forenormalimage="file='refresh_fc.png' dest='4,4,20,20'"/>
+                        <Control name="fc_red_tip" width="8" height="8" margin="0,4,4,0" mouse="false" halign="right" bkimage="red_small.png" visible="false"/>
+                    </Box>
+                </HBox>
+            </VBox>
+            
+            <!-- 群空间主页标题栏 -->
+			<HBox name="team_circle_header_box" height="80" padding="10,0,1,0" bkimage="file='../public/caption/caption_public.png' corner='0,0,0,1'" visible="false">
+				<Label name="team_circle_title" width="stretch" height="auto" valign="center" font="2" normaltextcolor="textdefaultcolor"/>
+                <HBox width="auto" height="auto" valign="bottom" margin="0,0,0,11">
+                    <Button name="tc_btn_write" width="36" height="20" valign="bottom" text="发布" font="1" normaltextcolor="btn_team_live_text" normalimage="btn_tc_top_normal.png" hotimage="btn_tc_top_hover.png" pushedimage="btn_tc_top_pushed.png"/>
+                    <Box name="tc_box_new_msg" width="44" height="29" valign="bottom" margin="10">
+					    <Button name="tc_btn_new_msg" width="36" height="20" valign="bottom" text="消息" font="1" normaltextcolor="btn_team_live_text" normalimage="btn_tc_top_normal.png" hotimage="btn_tc_top_hover.png" pushedimage="btn_tc_top_pushed.png" />
+                        <Box name="tc_box_number_tip" width="18" height="18" halign="right" mousechild="false" mouse="false" bkimage="red_big.png" visible="false">
+                            <Label name="tc_number_tip" margin="1,0,0,2" halign="center" valign="center" normaltextcolor="white" font="2"/>
+                        </Box>
+                    </Box>
+                </HBox>
+			</HBox>
+            
+            <!-- 群空间详情页标题栏 -->
+            <Box class="caption" name="team_circle_information_title" height="34" visible="false">
+                <Button class="btn_word_border" name="back_to_frontpage" forenormalimage="file='back_to_frontpage.png' dest='5,5,15,15'" foredisabledimage="file='back_to_frontpage.png' dest='5,5,15,15' fade='80'" width="20" height="20" valign="center"/>
+                <Label class="font_title" name="title" width="auto" halign="center" valign="center" normaltextcolor="darkcolor" textid="STRID_FC_INFORMATION_TITLE"/>
+            </Box>
+        
+            <!-- 最小化和关闭按钮 -->
+            <HBox width="auto" height="auto" halign="right" margin="0,6,5,0">
+                <Button class="btn_wnd_white_min" name="minbtn"/>
+                <Button class="btn_wnd_white_close" name="closebtn" margin="4,0,0,0"/>
+            </HBox>
+        </Box>
+
+        <VBox name="box_of_content" bkcolor="bk_moment">
+            <VListBox name="friends_circle_list" vscrollbar="true" hscrollbar="false" vscrollunit="200" margin="0,10">
+                <VBox name="top_feed_box" width="stretch" height="auto" margin="10,0,10,10"
+                    bordersize="1,1,1,1" bordercolor="splitline_hor_level5" childmargin="1" visible="false"/>
+                <VBox name="draft_box" width="stretch" height="auto" margin="10,0,10,0" visible="false"/>
+            </VListBox>
+            <VListBox name="tc_information_box" vscrollbar="true" hscrollbar="false" vscrollunit="50" margin="0,10" visible="false" float="true"/>
+            <!--提示通过动态加载显示-->
+        </VBox>
+    </VBox>
+</Window>

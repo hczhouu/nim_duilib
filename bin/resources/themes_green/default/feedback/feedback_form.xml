@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="390,300" caption="0,0,0,34" textid="STRID_FEEDBACKFORM_CAPTION">
+    <VBox bkcolor="bk_wnd_lightcolor">
+        <HBox class="caption">
+            <Label class="font_title" name="title" width="stretch" valign="center" normaltextcolor="darkcolor" textid="STRID_FEEDBACKFORM_CAPTION"/>
+            <Button class="btn_wnd_min" name="minbtn" margin="10,6,0,0"/>
+            <Button class="btn_wnd_close" name="closebtn" margin="4,6,0,0"/>
+        </HBox>
+        
+        <VBox padding="10,10,10,0">
+            <RichEdit class="prompt" name="input" margin="2,2,2,2" padding="5,2,2,2" font="1" bkimage="file='bk_edit.png' corner='5,5,5,5'" normaltextcolor="darkcolor" 
+                      prompttext="亲爱的用户，为了更好为你提供服务，请在此输入关于PC端的意见建议，其它版本问题请到相应的移动端中提交" 
+                      multiline="true" rich="false" vscrollbar="true" autovscroll="true" wantreturnmsg="false"/>
+            <Label name="limit_tip" margin="0,2,0,0" halign="right" font="11" normaltextcolor="lightcolor"/>
+        </VBox>
+
+        <HBox height="30" margin="0,10,10,10">
+            <Control />
+            <Button class="btn_global_white_80x30" name="cancel" textid="STRID_FEEDBACKFORM_BTN_CANCEL"/>
+            <Control width="10"/>
+            <Button class="btn_global_green_80x30" name="commit" textid="STRID_FEEDBACKFORM_BTN_COMMIT"/>
+        </HBox>
+    </VBox>
+</Window>

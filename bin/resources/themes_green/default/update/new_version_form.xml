@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="480,450" caption="0,0,0,34" textid="STRID_NEW_VERSION_LABEL">
+    <VBox bkcolor="bk_wnd_lightcolor">
+        <HBox width="stretch" height="34">
+            <Label class="font_title" width="stretch" valign="center" margin="10" normaltextcolor="darkcolor" textid="STRID_NEW_VERSION_LABEL"/>
+            <Button class="btn_wnd_min" name="minbtn" valign="center"/>
+            <Button class="btn_wnd_close" name="btn_close" valign="center" margin="0,0,5,0"/>
+        </HBox>
+		<Control width="auto" height="auto" halign="center" margin="0,26,0,6" bkimage="logo.png"/>
+		<Label name="version_num" width="auto" height="auto" halign="center" font="20" normaltextcolor="darkcolor"/>
+		<VListBox name="update_detail_list" width="stretch" height="140" halign="center" margin="0,36,0,20" padding="40,0,40,0" childmargin="8"
+				  vscrollbar="true" hscrollbar="false" vscrollunit="40"/>
+		<Control height="stretch" mouse="false"/>
+		<HBox margin="0,0,0,30" width="auto" height="auto" halign="center" childmargin="20">
+			<Button name="dont_update" width="120" height="40"
+					font="2" textid="STRID_NEW_VERSION_DONT_UPDATE" normaltextcolor="btn_global_white" disabledtextcolor="btn_global_white" 
+					normalimage="file='../public/button/btn_global_white_80x30_normal.png' corner='2,2,2,2'" 
+					hotimage="file='../public/button/btn_global_white_80x30_hovered.png' corner='2,2,2,2'" 
+					pushedimage="file='../public/button/btn_global_white_80x30_pushed.png' corner='2,2,2,2'" 
+					disabledimage="file='../public/button/btn_global_white_80x30_normal.png' corner='2,2,2,2' fade='128'"/>
+			<Button name="update_now" width="120" height="40" 
+					font="2" textid="STRID_NEW_VERSION_UPDATE_NOW" normaltextcolor="white" disabledtextcolor="white"
+					normalimage="file='../public/button/btn_global_green_80x30_normal.png' corner='2,2,2,2'"
+					hotimage="file='../public/button/btn_global_green_80x30_hovered.png' corner='2,2,2,2'"
+					pushedimage="file='../public/button/btn_global_green_80x30_pushed.png' corner='2,2,2,2'"
+					disabledimage="file='../public/button/btn_global_green_80x30_normal.png' corner='2,2,2,2' fade='80'"/>
+		</HBox>
+    </VBox>
+</Window>

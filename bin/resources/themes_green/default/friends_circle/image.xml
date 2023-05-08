@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <ButtonBox width="116" height="116" maxwidth="236" maxheight="236" menu="true" cursortype="hand">
+    </ButtonBox>
+</Window>

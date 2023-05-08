@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+    <Box>
+        <HBox height="80" mouse="false">
+            <Button name="event_image" width="80" height="80" cursortype="hand" bkimage="location.png"/>
+            <Label name="location" width="stretch" height="auto" singleline="false" maxheight="80" margin="10,0,0,0" font="3" mouse="false"/>
+        </HBox>
+    </Box>
+</Window>

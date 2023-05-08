@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+    <MsgLogItem width="stretch" height="auto" mouse="true">
+        <MsgLogItemBox name="msg_item_box" pushedcolor="bk_listitem_selected" selectednormalcolor="bk_listitem_selected" fadehot="false" width="stretch" height="auto" padding="20,8,20,8" menu="true">
+            <VBox width="stretch" height="auto" mouse="false" mousechild="true">
+                <HBox width="stretch" height="auto" halign="left" childmargin="8" mouse="false">
+                    <Label name="show_name" font="1" normaltextcolor="green" mouse="false"/>
+                    <Label name="msg_time" font="1" normaltextcolor="lightcolor" mouse="false"/>
+                    <Control width="stretch" mouse="false"/>
+                    <Button name="jump_to_context" cursortype="hand" visible="false" 
+                            text="查看前后消息" font="1" normaltextcolor="green" textpadding="10,0,10,0"/>
+                </HBox>
+                <Box name="msg_container" width="auto" height="auto" margin="0,4,0,0" mouse="false" />
+            </VBox>
+        </MsgLogItemBox>
+    </MsgLogItem>
+</Window>

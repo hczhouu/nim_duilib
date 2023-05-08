@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+    <TreeNode class="listitem" height="56" name="hor_container">
+        <Event type="select" receiver=".\head_image_mask" applyattribute="selected=&quot;true&quot;"/>
+        <Event type="unselect" receiver=".\head_image_mask" applyattribute="selected=&quot;false&quot;"/>
+		<Event type="buttondown" receiver=".\head_image_mask" applyattribute="selected=&quot;true&quot;"/>
+        <BubbledEvent type="mouseenter" receiver=".\head_image_mask" applyattribute="state=&quot;hot&quot;"/>
+        <BubbledEvent type="mouseleave" receiver=".\head_image_mask" applyattribute="state=&quot;normal&quot;"/>
+        
+        <VBox mouse="false">
+            <HBox mouse="false">
+                <Box valign="center" width="auto" height="auto" margin="8,0,0,0" mouse="false">
+                    <Button name="head_image" width="38" height="38" margin="1,1,0,0" borderround="38,38,38,38" cursortype="hand"/>
+                    <CheckBox name="head_image_mask" mouse="false"/>
+                </Box>
+                
+                <VBox margin="10,0,0,0" valign="center" height="auto" mouse="false" mousechild="false">
+                    <Label name ="show_name" width="stretch" font="2" normaltextcolor="darkcolor"/>
+                </VBox>
+            </HBox>
+        </VBox>
+    </TreeNode>
+</Window>

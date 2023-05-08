@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="510,0" mininfo="510,500" heightpercent="0.8" caption="0,0,0,34" sizebox="0,4,0,4" textid="STRID_COLLECT_TITLE">
+    <VBox bkcolor="bk_wnd_lightcolor">
+        <HBox class="caption">
+            <Label class="font_title" name="title" width="stretch" valign="center" normaltextcolor="darkcolor" textid="STRID_COLLECT_TITLE"/>
+            <Button class="btn_refresh" name="btn_refresh" margin="4,6,0,0" tooltiptext="刷新"/>
+            <Button class="btn_wnd_min" name="minbtn" margin="4,6,0,0"/>
+            <Button class="btn_wnd_close" name="closebtn" margin="4,6,0,0"/>
+        </HBox>
+
+        <VBox>
+            <HBox height="32" padding="10,0,10,0">
+                <Control name="search_icon" width="auto" height="auto" valign="center" bkimage="file='../public/icon/icon_search_gray.png'"/>
+                <RichEdit class="simple prompt" name="search" margin="8,0,8,0" height="stretch" valign="center" align="vcenter" font="1"/>
+				<Button class="btn_del_search" name="clear_input" visible="false" valign="center"/>
+            </HBox>
+            <Control class="splitline_hor_level1"/>
+            <Box>
+                <Box name="box_of_collect" visible="false">
+                    <VListBox name="collect_list" vscrollbar="true" hscrollbar="false" vscrollunit="140"/>
+					<!--刷新提示-->
+					<Box name="hbox_top_tip" height="36" margin="5,5,5,0" bkcolor="green" alpha="220" visible="false">
+						<HBox width="auto" height="36" halign="center">
+							<Control width="auto" height="auto" valign="center" bkimage="loading.gif"/>
+							<Label margin="5,0,0,2" valign="center" normaltextcolor="white" font="2" text="加载中..."/>
+						</HBox>
+					</Box>
+                </Box>
+                <Box name="box_of_result" visible="false">
+                    <VListBox name="result_list" vscrollbar="true" hscrollbar="false" vscrollunit="140"/>
+                </Box>
+                <Label name="collect_empty_tip" textid="STRID_COLLECT_COLLECT_EMPTY_TIP" margin="0,20,0,0" halign="center" normaltextcolor="lightcolor" visible="false"/>
+                <Label name="result_empty_tip" textid="STRID_COLLECT_RESULT_EMPTY_TIP" margin="0,20,0,0" halign="center" normaltextcolor="lightcolor" visible="false"/>
+            </Box>
+        </VBox>
+    </VBox>
+</Window>

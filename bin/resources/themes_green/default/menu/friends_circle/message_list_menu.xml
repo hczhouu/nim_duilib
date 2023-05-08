@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+    <!--朋友圈消息列表 右键菜单-->
+    <VListBox class="menu">
+        <MenuElement class="MenuElement" name="infor" width="138">
+            <Button class="menu_text" text="查看详情"/>
+        </MenuElement>
+
+        <MenuElement class="MenuElement" name="delete" width="138">
+            <Button class="menu_text" text="删除消息"/>
+        </MenuElement>
+    </VListBox>
+</Window>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="320,160">
+    <VBox bkcolor="bk_wnd_lightcolor" padding="5,0,0,0">
+        <TileListBox name="tile_emoj" padding="0,5,14,5" itemsize="30,30" vscrollbar="true" vscrollunit="60">
+        </TileListBox>
+    </VBox>
+</Window>

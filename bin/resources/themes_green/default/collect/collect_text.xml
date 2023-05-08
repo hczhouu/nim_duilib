@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Window>
+    <Box>
+        <VBox height="auto" mouse="false">
+            <RichEdit name="talk" width="400" height="auto" font="2" multiline="true" vscrollbar="false" autovscroll="false" readonly="true" rich="true"/>
+        </VBox>
+    </Box>
+</Window>

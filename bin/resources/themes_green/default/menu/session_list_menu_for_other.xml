@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+    <VListBox class="menu">
+        <MenuElement class="MenuElement" name="chat" width="138">
+            <Button class="menu_text" name="lable_chat" text="聊天"/>
+			<Button class="menu_text" name="lable_open" text="打开" visible="false"/>
+			<Button class="menu_text" name="lable_view_message" text="查看消息" visible="false"/>
+        </MenuElement>
+
+        <MenuElement class="MenuElement" name="place_on_top" padding="20,0,34,0" visible="true" height="40" width="138">
+            <Button class="menu_text" name="lable_place_on_top" text="置顶该会话"/>
+			<Button class="menu_text" name="lable_cancel_place_on_top" text="取消置顶" visible="false"/>
+        </MenuElement>
+
+        <MenuElement class="MenuElement" name="remove_from_list" width="138">
+            <Button class="menu_text" text="从列表中删除"/>
+        </MenuElement>
+    </VListBox>
+</Window>

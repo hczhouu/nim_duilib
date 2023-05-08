@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+	<NormalMsgCell padding="0,10,0,0" height="auto">
+		<VBox name="cell_root_vertilayout" height="auto">
+			<HBox name="cell_time_horilayout" height="22" visible="false">
+				<Control />
+				<Label name="cell_time" normaltextcolor="lightcolor" font="1"/>
+				<Control />
+			</HBox>
+			<HBox name="cell_msg_horilayout" height="auto" padding="15,0,25,0">
+                <Box height="auto">
+				    <Label name="notice_text" halign="center" singleline="false" width="auto" height="auto" maxwidth="stretch" textpadding="15,5,15,5" mouse="false" normaltextcolor="message_tip"/>
+					<Button name="notice_text_link" cursortype="hand" halign="center" normaltextcolor="link_green" width="auto" height="auto" maxwidth="stretch" textpadding="15,5,15,5" visible="false"/>
+                    <Box name="bubble_container" visible="false"/> <!-- 无任何作用，只是为了和普通bubble一致 -->
+                </Box>
+			</HBox>
+		</VBox>
+	</NormalMsgCell>
+</Window>

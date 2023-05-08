@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+    <VListBox class="menu">
+        <MenuElement class="MenuElement" name="save" width="138">
+            <Button class="menu_text" text="另存为"/>
+        </MenuElement>
+
+        <MenuElement class="MenuElement" name="copy" width="138">
+            <Button class="menu_text" text="复制"/>
+        </MenuElement>
+
+        <MenuElement class="MenuElement" name="cancel" width="138" visible="false">
+            <Button class="menu_text" text="撤回"/>
+        </MenuElement>
+
+        <MenuElement class="MenuElement" name="collect" width="138">
+            <Button class="menu_text" text="收藏"/>
+        </MenuElement>
+        
+        <MenuElement class="MenuElement" name="forward" width="138" visible="false">
+            <Button class="menu_text" text="转发"/>
+        </MenuElement>
+
+        <MenuElement class="MenuElement" name="setboard" width="138" visible="false">
+            <Button class="menu_text" text="设为群公告"/>
+        </MenuElement>
+        
+        <MenuElement class="MenuElement" name="sms" width="138" visible="false">
+            <Button class="menu_text" text="转为免费短信"/>
+        </MenuElement>
+
+        <MenuElement class="MenuElement" name="post_to_team_circle" width="138" visible="false">
+            <Button class="menu_text" text="发布到群空间"/>
+        </MenuElement>
+
+        <MenuElement class="MenuElement" name="trancode" width="138" visible="false">
+            <Button class="menu_text" text="转文字"/>
+        </MenuElement>
+
+        <MenuElement class="MenuElement" name="hide_trancode" width="138" visible="false">
+            <Button class="menu_text" text="取消显示文字"/>
+        </MenuElement>
+    </VListBox>
+</Window>

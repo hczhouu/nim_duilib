@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="300, 170" caption="0,0,0,34" textid="STRID_GROUP_JOIN_APPLY_TITLE">
+	<VBox bkcolor="bk_wnd_lightcolor">
+		<HBox class="caption">
+			<Label class="font_title" width="stretch" valign="center" textid="STRID_GROUP_JOIN_APPLY_TITLE" normaltextcolor="darkcolor"/>
+			<Button class="btn_wnd_min" name="minbtn" margin="4,6,0,0"/>
+			<Button class="btn_wnd_close" name="closebtn" margin="4,6,0,0"/>
+		</HBox>
+		<HBox>
+			<Label bkimage="../msgbox/question.png" margin="20,32,0,0"/>
+			<Label name="tip" font="20" margin="6,30,0,0" textid="STRID_GROUP_GET_JOIN_TEAM_APPLY"/>
+		</HBox>
+		<Button class="btn_global_green_80x30" name="look" textid="STRING_LOOK" halign="right" margin="0,20,20,20"/>
+	</VBox>
+</Window>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <ListContainerElement height="50">
+        <HBox padding="8,0,16,0">
+            <ButtonBox name="bb_header" width="34" height="34" valign="center" cursortype="hand" mousechild="false">
+                <Control name="header" width="32" height="32" margin="1,1,1,1" borderround="32,32,32,32"/>
+                <Control width="34" height="34" bkimage="mask_34_34.png"/>
+            </ButtonBox>
+
+            <Label name="like_name" width="stretch" valign="center" normaltextcolor="green"/>
+            <Label name="time_t" margin="5,0,0,0" valign="center" normaltextcolor="lightcolor"/>
+        </HBox>
+        <Control class="splitline_hor_level1" float="true" valign="bottom"/>
+    </ListContainerElement>
+</Window>

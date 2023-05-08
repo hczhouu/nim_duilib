@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+    <ButtonBox width="60" height="60" mousechild="false">
+        <Control name="sticker" width="40" height="40" halign="center" valign="center" mouse="false"/>
+        <Control name="dong" width="auto" height="auto" bkimage="animate.png" halign="right" valign="top" margin="0,5,5,0" mouse="false" visible="false"/>
+        <Control name="download" width="auto" height="auto" bkimage="unload.png" halign="right" valign="top" margin="0,5,5,0" mouse="false" visible="false"/>
+    </ButtonBox>
+</Window>

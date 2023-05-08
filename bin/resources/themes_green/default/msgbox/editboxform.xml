@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="350,180" caption="0,0,0,34">
+    <VBox name="edit_box" bkcolor="bk_wnd_lightcolor" width="380" height="auto">
+        <HBox class="caption">
+            <Label class="font_title" name="title" width="stretch" valign="center" normaltextcolor="darkcolor"/>
+            <Button class="btn_wnd_close" name="closebtn" margin="4,6,0,0"/>
+        </HBox>
+
+        <VBox height="auto" margin="20,35,20,35" bkimage="file='../public/edit/edit0.png' corner='10,10,10,10'" padding="2,4,2,4">
+            <RichEdit class="simple" name="edit" height="20" font="2" vscrollbar="false" autovscroll="false" rich="true"/>
+        </VBox>
+
+        <HBox height="30" margin="20,0,20,20">
+            <Control name="left"/>
+            <Button  class="btn_global_white_80x30" name="button_cancel" textid="STRING_NO"/>
+            <Control name="space_1_2" width="10"/>
+            <Button  class="btn_global_green_80x30" name="button_ok" textid="STRING_OK"/>
+        </HBox>
+    </VBox>
+</Window>

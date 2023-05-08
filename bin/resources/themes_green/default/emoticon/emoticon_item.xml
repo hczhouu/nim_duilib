@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+    <ButtonBox width="auto" height="auto" mousechild="false">
+        <VBox width="auto" height="auto" padding="8,8,8,8" mousechild="false">
+            <Control name="sticker" width="160" height="160"/>
+            <Label name="desc" maxwidth="160" height="20" halign="center" align="bottom" visible="false"/>
+        </VBox>
+    </ButtonBox>
+</Window>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window shadowattached="false" size="140,37">
+    <Box padding="0,0,0,10" bkimage="bubble.png">
+      <Label name="tip" halign="center" valign="center" font="1" normaltextcolor="darkcolor"/>
+    </Box>
+</Window>

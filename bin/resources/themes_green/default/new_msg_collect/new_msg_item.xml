@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+    <ButtonBox width="stretch" height="50" hotcolor="bk_listitem_hovered" pushedcolor="bk_listitem_selected" mousechild="false">
+        <HBox padding="8,0,20,0">
+            <Box valign="center" width="auto" height="auto">
+                <Control name="session_head" width="32" height="32" borderround="32,32" margin="1,1,1,1"/>
+                <Control name="head_mask" hotimage="../public/headmask/btn_headimage_mask_34x34_normal.png" 
+                         pushedimage="../public/headmask/btn_team_headimage_mask_34x34_normal.png"/>
+            </Box>
+            <Label name="session_name" width="stretch" height="auto" valign="center" margin="10,0,4,0" font="2"/>
+            <Label name="unread_num" width="auto" height="auto" valign="center" bkimage="file='../public/icon/icon_number.png' corner='8,0,8,0'" 
+                   font="1" align="vcenter" textpadding="4,0,4,2" normaltextcolor="white"/>
+        </HBox>
+    </ButtonBox>
+</Window>

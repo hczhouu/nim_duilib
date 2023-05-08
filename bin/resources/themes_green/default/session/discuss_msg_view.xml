@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+    <ButtonBox height="34" bkcolor="white" mousechild="false" valign="bottom" fadeinoutyfrombottom="true" visible="false">
+        <Control class="splitline_hor_level1" width="stretch"/>
+        <HBox width="stretch" height="stretch" margin="8,1">
+            <Box width="auto" height="auto" valign="center">
+                <Control name="discuss_msg_head" width="28" height="28" borderround="28,28" margin="1,1,1,1"/>
+                <Control width="auto" height="auto" bkimage="../public/headmask/icon_headimage_mask_30x30_normal.png"/>
+            </Box>
+            <RichEdit name="discuss_msg" margin="4" width="stretch" height="stretch" valign="center" 
+                      align="vcenter" readonly="true" rich="true" multiline="false" font="1" normaltextcolor="live_area_bar_text"/>
+            <Control width="auto" height="auto" valign="center" bkimage="msg_view/more0.png" margin="8,0,10,0"/>
+        </HBox>
+    </ButtonBox>
+</Window>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+    
+    <ListContainerElement class="listitem" width="stretch" height="73">
+        <HBox width="stretch" height="stretch" mouse="false" margin="0,0,0,1">
+            <Box width="44" height="54" valign="center" margin="16,0,14,0" mouse="false" mousechild="false">
+                <Control name="file_icon" width="stretch" height="stretch" halign="center" valign="center" bkimage="../session/icons/file_default.png" />
+            </Box>
+            <VBox width="stretch" height="auto" valign="center" padding="0,0,22,0" mouse="false" mousechild="false">
+                <Label name="file_name" width="stretch" height="20" font="2"/>
+                <Label name="file_size" width="stretch" height="auto" margin="0,9" normaltextcolor="message_tip"/>
+            </VBox>
+            <HBox width="162" height="auto" valign="center" padding="0,0,24,0" mouse="false" mousechild="false">
+                <Label name="from_or_send_to"/>
+                <Label name="sender" width="stretch" height="auto"/>
+            </HBox>
+            <Label name="send_time" width="auto" height="auto" valign="center" normaltextcolor="message_tip" mouse="false"/>
+            <Control width="160" mouse="false"/>
+            <Button name="open_file" width="52" height="24" valign="center" cursortype="hand"
+                    text="打开" align="vcenter" hottextcolor="green" forehotimage="file='btn_open_bk.png' corner='1,1,1,1'"/>
+            <Button name="more_operation" width="auto" height="auto" valign="center" margin="12,0,24,0" bkimage="more_operation.png" cursortype="hand"/>
+        </HBox>
+        <Control width="stretch" height="1" valign="bottom" bkcolor="file_assistant_split"/>
+    </ListContainerElement>
+</Window>

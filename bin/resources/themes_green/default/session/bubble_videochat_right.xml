@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+	<Box name="bubble_videochat" width="auto" height="36" menu="true" bkimage="file='bubble_right.png' corner='15,15,23,14'" >
+		<Control name="video_icon" width="auto" height="auto" valign="center" margin="15,0,0,0" mouse="false" bkimage="video_chat_right.png" visible="false"/>
+		<Control name="audio_icon" width="auto" height="auto" valign="center" margin="15,0,0,0" mouse="false" bkimage="audio_chat_right.png" visible="false"/>
+		<Label name="state_label" margin="45,0,21,0" valign="center" font="2" normaltextcolor="white"/>
+	</Box>
+</Window>

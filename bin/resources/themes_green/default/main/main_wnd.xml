@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+
+<Window size="300, 0" mininfo="300, 400" maxinfo="500,9999" heightpercent="0.7" sizebox="4,4,4,4" caption="0,0,0,100" textid="STRID_MIANWINDOW_TITLE">
+    <Class name="main_btn_wnd_change_bg" value="width=&quot;auto&quot; height=&quot;auto&quot; normalimage=&quot;btn_wnd_gray_skin_normal.png&quot; hotimage=&quot;btn_wnd_gray_skin_hovered.png&quot; pushedimage=&quot;btn_wnd_gray_skin_pushed.png&quot;"/>
+    <Class name="main_btn_wnd_white_change_bg" value="width=&quot;auto&quot; height=&quot;auto&quot; normalimage=&quot;btn_wnd_white_skin_normal.png&quot; hotimage=&quot;btn_wnd_white_skin_hovered.png&quot; pushedimage=&quot;btn_wnd_white_skin_pushed.png&quot;"/>
+    <Class name="main_bk_search" value="bkimage=&quot;bk_gray_search.png&quot;"/>
+    <Class name="main_bk_white_search" value="bkimage=&quot;bk_white_search.png&quot;"/>
+    <Class name="main_search_icon" value="bkimage=&quot;../public/icon/icon_search_gray.png&quot;"/>
+    <Class name="main_search_white_icon" value="bkimage=&quot;../public/icon/icon_search.png&quot;"/>
+    <Class name="main_global_text" value="normaltextcolor=&quot;darkcolor&quot;"/>
+    <Class name="main_global_white_text" value="normaltextcolor=&quot;white&quot;"/>
+    <Class name="main_richedit_prompt_text" value="promptcolor=&quot;edit_tip&quot;"/>
+    <Class name="main_richedit_prompt_white_text" value="promptcolor=&quot;search_prompt&quot;"/>
+    <Class name="main_btn_clear" value="normalimage=&quot;..\public\button\btn_del_search_normal_gray.png&quot; hotimage=&quot;..\public\button\btn_del_search_hover_gray.png&quot; pushedimage=&quot;..\public\button\btn_del_search_pushed_gray.png&quot; "/>
+    <Class name="main_btn_white_clear" value="normalimage=&quot;..\public\button\btn_del_search_normal.png&quot; hotimage=&quot;..\public\button\btn_del_search_hover.png&quot; pushedimage=&quot;..\public\button\btn_del_search_pushed.png&quot; "/>
+    <Class name="main_btn_update" value="normalimage=&quot;update_red_tip_gray_normal.png&quot; hotimage=&quot;update_red_tip_gray_hovered.png&quot; pushedimage=&quot;update_red_tip_gray_pushed.png&quot;" />
+    <Class name="main_btn_update_white" value="normalimage=&quot;update_red_tip_white_normal.png&quot; hotimage=&quot;update_red_tip_white_hovered.png&quot; pushedimage=&quot;update_red_tip_white_pushed.png&quot;" />
+    
+    <VBox bkcolor="bk_wnd_lightcolor" borderround="4,4,4,4">
+        <Box name="top_area" height="130" bkimage="../main_bg_form/default.png">
+            <HBox width="auto" height="21" halign="right" margin="0,6,5,0">
+				<Button class="main_btn_wnd_change_bg" name="main_change_bg_button" margin="4,0,4,0"/>
+				<Box width="21">
+                    <Button class="btn_wnd_menu" name="main_menu_button"/>
+                    <Button class="main_btn_update" name="main_update_button" visible="false"/>
+                </Box>
+                <Button class="btn_wnd_min" name="minbtn" margin="4,0,4,0"/>
+                <Button class="btn_wnd_close" name="close_wnd_btn"/>
+            </HBox>
+
+            <HBox height="64" margin="0,20,20,0" mouse="false">
+				<Box width="auto" height="64" margin="10,0,10,0">
+					<Button name="my_head_image" width="62" height="62" margin="1,1,1,1" borderround="62,62,62,62" cursortype="hand"/>
+					<Control class="icon_headimage_mask_64x64" mouse="false"/>
+				</Box>
+                <VBox height="auto" valign="center">
+                    <Label class="main_global_text" name="nick_name" width="stretch" font="3"/>
+                    <Label class="main_global_text" name="my_signature" width="stretch" margin="0,4,0,0" font="1"/>
+                </VBox>
+            </HBox>
+			
+			<HBox class="main_bk_white_search" name="search_frame" margin="0,94,0,0" height="36">
+				<Control class="main_search_icon" name="search_icon" width="auto" height="auto" valign="center" margin="10,0,0,0" alpha="192" />
+				<RichEdit class="simple prompt main_global_text main_richedit_prompt_text" name="search_edit" margin="8,0,10,0" height="stretch" valign="center" align="vcenter" 
+					font="1" prompttext="搜索好友，开始聊天"/>
+				<Button class="main_btn_clear" name="clear_input" visible="false" valign="center" margin="0,0,10,0" />
+			</HBox>
+        </Box>
+
+        <Box>
+			<HBox height="36">
+                <OptionBox group="session_friend_tab" name="session_option" tooltiptext="会话" cursortype="hand">
+                    <Event type="select" receiver=".\select_tab" applyattribute="selectedid=&quot;1&quot;"/>
+                    <Event type="unselect" receiver=".\select_tab" applyattribute="selectedid=&quot;0&quot;"/>
+                    <Event type="select" receiver=".\session_option_icon" applyattribute="state=&quot;pushed&quot;"/>
+                    <Event type="unselect" receiver=".\session_option_icon" applyattribute="state=&quot;normal&quot;"/>
+
+                    <TabBox name="select_tab" mouse="false" mousechild="false">
+                        <HBox>
+                            <Control normalimage="file='bk_tab_unselected.png' source='0,0,15,36' corner='5,5,5,5'"/>
+                            <Control width="20" normalimage="file='bk_tab_unselected.png' source='60,0,80,36' corner='5,5,5,5'"/>
+                            <Control normalimage="file='bk_tab_unselected.png' source='125,0,140,36' corner='5,5,5,5'"/>
+                        </HBox>
+                        <HBox>
+                            <Control normalimage="file='bk_tab_selected.png' source='0,0,15,36' corner='5,5,5,5'"/>
+                            <Control width="20" normalimage="file='bk_tab_selected.png' source='60,0,80,36' corner='5,5,5,5'"/>
+                            <Control normalimage="file='bk_tab_selected.png' source='125,0,140,36' corner='5,5,5,5'"/>
+                        </HBox>
+                    </TabBox>
+
+                    <Control name="session_option_icon" mouse="false" width="auto" height="auto" halign="center" valign="center"
+                             normalimage="file='icon_tab_chat_unselected.png'" hotimage="file='icon_tab_chat_unselected.png'"
+                             pushedimage="file='icon_tab_chat_selected.png'"/>
+                </OptionBox>
+
+                <OptionBox group="session_friend_tab" name="friend_option" tooltiptext="通讯录" cursortype="hand">
+                    <Event type="select" receiver=".\select_tab" applyattribute="selectedid=&quot;1&quot;"/>
+                    <Event type="unselect" receiver=".\select_tab" applyattribute="selectedid=&quot;0&quot;"/>
+                    <Event type="unselect" receiver=".\friend_option_icon" applyattribute="state=&quot;normal&quot;"/>
+                    <Event type="select" receiver=".\friend_option_icon" applyattribute="state=&quot;pushed&quot;"/>
+
+                    <TabBox name="select_tab" mouse="false" mousechild="false">
+                        <HBox>
+                            <Control normalimage="file='bk_tab_unselected.png' source='0,0,15,36' corner='5,5,5,5'"/>
+                            <Control width="20" normalimage="file='bk_tab_unselected.png' source='60,0,80,36' corner='5,5,5,5'"/>
+                            <Control normalimage="file='bk_tab_unselected.png' source='125,0,140,36' corner='5,5,5,5'"/>
+                        </HBox>
+                        <HBox>
+                            <Control normalimage="file='bk_tab_selected.png' source='0,0,15,36' corner='5,5,5,5'"/>
+                            <Control width="20" normalimage="file='bk_tab_selected.png' source='60,0,80,36' corner='5,5,5,5'"/>
+                            <Control normalimage="file='bk_tab_selected.png' source='125,0,140,36' corner='5,5,5,5'"/>
+                        </HBox>
+                    </TabBox>
+
+                    <Control name="friend_option_icon" mouse="false" width="auto" height="auto" halign="center" valign="center"
+                             normalimage="file='icon_tab_user_unselected.png'" hotimage="file='icon_tab_user_unselected.png'"
+                             pushedimage="file='icon_tab_user_selected.png'"/>
+                    <Button name ="unread_number" bkimage="file='../public/icon/icon_number.png' corner='8,0,8,0'" font="1" normaltextcolor="white"
+                            margin="60,0,0,0" halign="center" valign="center" visible="false" mouse="false"/>
+                </OptionBox>
+            </HBox>
+			
+			<Box margin="0,36,0,0">
+				<TabBox name="session_friend_tablayout" fadeswitch="true">
+					<Box>
+						<VListBox class="list" name="session_list" vscrollunit="120"/>
+					</Box>
+					<Box name="friendlist_box">
+						<TreeView class="list" name="friend_list" vscrollunit="120"/>
+					</Box>
+				</TabBox>
+			</Box>
+			
+			<Box margin="0,36,0,0" mouse="false">
+				<VListBox class="list" name="search_result_list" visible="false" vscrollunit="120"/>
+				<Label halign="center" name="tool_tip" visible="false" font="2" normaltextcolor="lightcolor" margin="0,10,0,0"/>
+			</Box>
+        </Box>
+		
+		<!--底部功能图标入口-->
+		<VBox height="35" valign="bottom" bkcolor="bk_mainwnd_bottom">
+			<Control height="1" bkcolor="splitline_hor_level6"/>
+			<HBox height="34">
+                <Box width="auto" height="24" valign="center" margin="10,0,8,0">
+					<Button name="btn_moment" margin="0,0,2,0" valign="center" tooltiptext="查看朋友圈" cursortype="hand" 
+                            text="朋友圈" font="1" normaltextcolor="main_bottom_normal" hottextcolor="main_bottom_hovered" pushedtextcolor="main_bottom_pushed"/>
+					<Control name="fc_red_tip" margin="0,2,0,0" width="8" height="8" halign="right" mouse="false" bkimage="function\red_small.png" visible="false"/>
+				</Box>
+
+                <Control class="splitline_ver_level1" height="16" valign="center"/>
+                
+                <Button name="btn_sms" valign="center" margin="10,0,10,0" tooltiptext="发送免费短信" cursortype="hand"
+                        text="短信" font="1" normaltextcolor="main_bottom_normal" hottextcolor="main_bottom_hovered" pushedtextcolor="main_bottom_pushed"/>
+
+                <Control class="splitline_ver_level1" height="16" valign="center"/>
+                
+                <Button name="btn_olive" valign="center" margin="10,0,10,0" tooltiptext="打开青果" cursortype="hand"
+                        text="青果" font="1" normaltextcolor="main_bottom_normal" hottextcolor="main_bottom_hovered" pushedtextcolor="main_bottom_pushed"/>
+                
+                <Control class="splitline_ver_level1" height="16" valign="center"/>
+                
+                <!--<Button name="btn_collect" valign="center" margin="10,0,10,0" tooltiptext="查看我的收藏" cursortype="hand"
+                        text="收藏" font="1" normaltextcolor="main_bottom_normal" hottextcolor="main_bottom_hovered" pushedtextcolor="main_bottom_pushed"/>-->
+                
+                <Button name="btn_file_assistant" valign="center" margin="10,0,10,0" tooltiptext="打开文件助手" cursortype="hand"
+                        text="文件助手" font="1" normaltextcolor="main_bottom_normal" hottextcolor="main_bottom_hovered" pushedtextcolor="main_bottom_pushed"/>
+                
+                <Control class="splitline_ver_level1" height="16" valign="center"/>
+
+                <Button name="btn_msglog" valign="center" margin="10,0,10,0" tooltiptext="查看消息历史" cursortype="hand"
+                        text="消息历史" font="1" normaltextcolor="main_bottom_normal" hottextcolor="main_bottom_hovered" pushedtextcolor="main_bottom_pushed"/>
+            </HBox>
+		</VBox>
+    </VBox>
+
+</Window>

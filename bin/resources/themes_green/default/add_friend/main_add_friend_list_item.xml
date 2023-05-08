@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+    <TreeNode class="listitem" height="56" mouse="false" mousechild="true">
+        <Event type="select" receiver=".\btn_add_friend" applyattribute="selected=&quot;true&quot;"/>
+        <Event type="unselect" receiver=".\btn_add_friend" applyattribute="selected=&quot;false&quot;"/>
+        <BubbledEvent type="mouseenter" receiver=".\btn_add_friend" applyattribute="state=&quot;hot&quot;"/>
+        <BubbledEvent type="mouseleave" receiver=".\btn_add_friend" applyattribute="state=&quot;normal&quot;"/>
+        
+        <ButtonBox name="add_friend_box" mousechild="false" cursortype="hand" hotcolor="bk_listitem_hovered" pushedcolor="bk_listitem_selected">
+			<Box valign="center" width="auto" height="auto" margin="8,0,0,0" mouse="false">
+				<CheckBox name="btn_add_friend" width="36" height="36" valign="center" margin="2,2,0,0"
+					normalimage="btn_add_friend_normal.png" hotimage="btn_add_friend_hover.png" selectednormalimage="btn_add_friend_hover.png"/>
+			</Box>
+            <Button text="添加好友" normaltextcolor="darkcolor" font="2" valign="center" margin="58,0,0,0"/>
+        </ButtonBox>
+        <Control class="splitline_hor_level2" valign="bottom"/>
+    </TreeNode>
+</Window>

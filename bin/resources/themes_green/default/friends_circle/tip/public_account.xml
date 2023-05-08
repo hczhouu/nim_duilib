@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window >
+    <Box height="36" margin="5,5,5,0" bkcolor="obvious_tip" float="true">
+        <Label name="pa_tip" halign="center" margin="5,0,0,2" valign="center" normaltextcolor="white" font="2"/>
+    </Box>
+</Window>

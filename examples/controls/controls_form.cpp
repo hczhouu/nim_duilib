@@ -152,11 +152,12 @@ void ControlForm::InitWindow()
 	ui::Button* settings = static_cast<ui::Button*>(FindControl(L"settings"));
 	settings->AttachClick([this](ui::EventArgs* args) {
 		RECT rect = args->pSender->GetPos();
-		ui::CPoint point;
-		point.x = rect.left - 175;
-		point.y = rect.top + 10;
-		::ClientToScreen(m_hWnd, &point);
-
+		//ui::CPoint point;
+		//point.x = rect.left - 175;
+		//point.y = rect.top + 10;
+		//::ClientToScreen(m_hWnd, &point);
+		POINT point;
+		GetCursorPos(&point);
 		nim_comp::CMenuWnd* sub_menu = new nim_comp::CMenuWnd(NULL);
 		ui::STRINGorID xml(L"settings_menu.xml");
 		sub_menu->Init(xml, _T("xml"), point);

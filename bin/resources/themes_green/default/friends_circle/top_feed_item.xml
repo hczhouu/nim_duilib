@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window >
+    <ButtonBox width="stretch" height="44" margin="1,0,1,0" padding="10,0,10,0" mousechild="false" cursortype="hand"
+               bkcolor="bk_wnd_lightcolor" hotcolor="bk_listitem_hovered" pushedcolor="bk_listitem_selected">
+        <HBox width="stretch" height="stretch">
+            <Label width="auto" height="auto" valign="center" margin="0,1" bkimage="top_feed_flag.png" text="置顶" font="1" normaltextcolor="green" align="vcenter"/>
+            <Label name="brief_content" width="stretch" height="auto" valign="center" margin="8" font="2"/>
+        </HBox>
+    </ButtonBox>
+</Window>

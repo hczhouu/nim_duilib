@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="680,500" mininfo="680,500" caption="0,0,0,34" sizebox="4,4,4,4">
+    <VBox bkcolor="bk_wnd_lightcolor">
+		<VBox name="top_panel" height="30">
+			<Label name="send_info" halign="center" margin="0,6,0,0" font="3" normaltextcolor="darkcolor" mouse="false" />
+		</VBox>
+		<HBox name="image_view_panel" >
+			<Control />
+			<VBox name="image_view_body" width="600" >
+				<Control />
+				<Control name="gif_image" />
+				<Label name="normal_image" />
+				<Control />
+			</VBox>
+			<Control />
+		</HBox>
+		<Control height="8" />
+		<HBox name="image_preview_button" height="50" >
+			<Control />
+			<Button class="btn_global_white_80x30" name="btn_image_cancel"/>
+            <Control width="12"/>
+			<Button class="btn_global_green_80x30" name="btn_image_send"/>
+			<Control />
+		</HBox>
+	</VBox>
+</Window>

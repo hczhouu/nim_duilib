@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="420, 200" caption="0,0,0,34" textid="STRID_REPLY_VERIFY_MSG">
+    <Class name="TipEdit" value="width=&quot;348&quot; height=&quot;60&quot; font=&quot;20&quot; multiline=&quot;true&quot; vscrollbar=&quot;false&quot; autovscroll=&quot;false&quot; enabled=&quot;false&quot; rich=&quot;false&quot;"/>
+    <Box>
+        <TabBox name="tablayout">
+            <!-- 回复验证消息-->
+            <VBox name="reply_verify_msg_page" bkcolor="bk_wnd_lightcolor">
+                <HBox class="caption">
+                    <Label class="font_title" textid="STRID_REPLY_VERIFY_MSG" width="stretch" valign="center" normaltextcolor="darkcolor"/>
+                </HBox>
+
+                <VBox margin="20,20,0,0">
+                    <HBox margin="0,20,20,20" height="40" bkimage="file='../public/edit/edit0.png' corner='5,5,5,5'">
+                        <RichEdit class="simple" name="reply_words" width="stretch" height="auto" margin="10,0,10,0" valign="center" font="2"/>
+                    </HBox>
+                    <Control />
+                    <HBox width="auto" height="auto" halign="right" margin="0,0,20,20">
+                        <Button  class="btn_global_white_80x30" name="close" text="关 闭"/>
+                        <Control width="10"/>
+                        <Button  class="btn_global_green_80x30" name="send" text="发 送"/>
+                    </HBox>
+                </VBox>
+            </VBox>
+			
+            <!--回复成功-->
+            <VBox name="reply_complete_page" bkcolor="bk_wnd_lightcolor">
+                <HBox class="caption">
+                    <Label class="font_title" textid="STRID_REPLY_VERIFY_MSG" width="stretch" valign="center" normaltextcolor="darkcolor"/>
+                </HBox>
+
+                <HBox height="auto" margin="20,35,20,0">
+                    <Control width="22" height="22" margin="0,7,10,0" bkimage="../msgbox/ok.png"/>
+                    <RichEdit class="TipEdit" name="information" text="回复验证消息成功" margin="0,3,0,0"/>
+                </HBox>
+
+                <Control />
+				
+                <Button class="btn_global_white_80x30" name="close" width="auto" height="auto" halign="right" margin="0,0,20,20" text="关 闭"/>
+            </VBox>
+			
+			<!-- 显示收到的消息 -->
+			<VBox name="display_reply_page" bkcolor="bk_wnd_lightcolor">
+				<HBox class="caption">
+					<Label class="font_title" text="收到新的验证回复消息" width="stretch" valign="center" normaltextcolor="darkcolor"/>
+				</HBox>
+				
+				<HBox width="auto" height="auto" margin="10,10,0,0">
+					<Box width="auto" height="auto">
+						<Button name="btn_head" width="46" height="46" borderround="46,46,46,46" margin="1,1,0,0" mouse="false"/>
+						<Button class="icon_headimage_mask_48x48" mouse="false"/>
+					</Box>
+					<Label name="nick" font="3" margin="10,0,0,0" valign="center"/>
+				</HBox>
+				
+				<Label name="content" font="2" margin="68,10,0,0" normaltextcolor="darkcolor"/>
+				
+				<Control />
+				
+				<HBox width="auto" height="auto" halign="right" margin="0,0,20,20">
+					<Button  class="btn_global_white_80x30" name="close" text="关 闭"/>
+					<Control width="10"/>
+					<Button  class="btn_global_green_80x30" name="reply" text="回 复"/>
+                </HBox>
+			</VBox>
+
+        </TabBox>
+
+        <HBox width="auto" height="auto" halign="right" margin="0,6,5,0">
+            <Button class="btn_wnd_min" name="minbtn"/>
+            <Button class="btn_wnd_close" name="closebtn" margin="4"/>
+        </HBox>
+
+    </Box>
+</Window>

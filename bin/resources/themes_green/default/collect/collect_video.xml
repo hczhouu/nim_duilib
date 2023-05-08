@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+    <Box height="80">
+        <HBox mouse="false">
+            <Button name="event_image" width="80" height="80" cursortype="hand" 
+                    bkimage="video.png" 
+                    forenormalimage="file='video0.png' dest='18,18,62,62'" 
+                    forehotimage="file='video1.png' dest='18,18,62,62'" 
+                    forepushedimage="file='video1.png' dest='18,18,62,62'"/>
+            <Label name="time" margin="10,0,0,0" valign="center" font="3" mouse="false"/>
+        </HBox>
+    </Box>
+</Window>

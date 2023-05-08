@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window >
+    <Box width="stretch" height="stretch" bkcolor="bk_wnd_lightcolor" float="true">
+        <VBox width="auto" height="auto" halign="center" valign="center">
+            <Control width="auto" height="auto" halign="center" bkimage="tc_null_feed.png"/>
+            <Label name="no_feeds_tip" halign="center" margin="0,10,0,0" font="2" text="还没有群空间动态" normaltextcolor="fc_empty"/>
+            <Button name="btn_write_feed" width="50" height="24" halign="center" margin="0,15,0,0" text="发布"
+                    normaltextcolor="white" normalimage="publish0.png" hotimage="publish1.png" pushedimage="publish2.png"/>
+        </VBox>
+    </Box>
+</Window>

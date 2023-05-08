@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+    <TreeNode class="listitem" name="friend_verify_listitem" height="56" bkcolor="bk_lightyellow" mouse="false" mousechild="true">
+        <BubbledEvent type="mouseenter" receiver=".\btn_friend_verify" applyattribute="state=&quot;hot&quot;"/>
+        <BubbledEvent type="mouseleave" receiver=".\btn_friend_verify" applyattribute="state=&quot;normal&quot;"/>
+        
+        <ButtonBox name="friend_verify_item_box" width="stretch" height="stretch" cursortype="hand" mousechild="false" hotcolor="bk_listitem_hovered" pushedcolor="bk_listitem_selected">
+			<HBox>
+				<Button name="btn_friend_verify" width="36" height="36" valign="center" margin="10,0,0,0" normalimage="btn_friend_verify_normal.png" hotimage="btn_friend_verify_hover.png" pushedimage="btn_friend_verify_hover.png"/>
+				<Button text="好友验证" normaltextcolor="darkcolor" font="2" valign="center" margin="10,0,0,0"/>
+				<Control />
+				<Button name ="unread_num" halign="right" valign="center" margin="0,0,20,0" bkimage="file='../public/icon/icon_number.png' corner='8,0,8,0'" font="1" normaltextcolor="white" mouse="false"/>
+			</HBox>
+			<Control class="splitline_hor_level2" valign="bottom"/>
+		</ButtonBox>
+    </TreeNode>
+</Window>

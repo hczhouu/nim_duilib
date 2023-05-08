@@ -1,0 +1,16 @@
+<Window size="380, 180" caption="0,0,0,34" textid="STRID_TEAMLIVE_DEL_MEMBER">
+    <VBox bkcolor="bk_wnd_lightcolor">
+        <HBox class="caption">
+            <Label class="font_title" width="stretch" valign="center" textid="STRID_TEAMLIVE_DEL_MEMBER" normaltextcolor="darkcolor"/>
+            <Button class="btn_wnd_close" name="closebtn" margin="4,6,0,0"/>
+        </HBox>
+		<HBox>
+			<Control bkimage="../msgbox/warning.png"/>
+			<Label text="确定移除该直播区成员？"/>
+		</HBox>
+		<HBox>
+			<Button name="cancel"/>
+			<Button name="ok"/>
+		</HBox>
+    </VBox>
+</Window>

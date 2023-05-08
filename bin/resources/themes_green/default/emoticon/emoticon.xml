@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="550,400">
+    <Class name="EmoticonItem" value="width=&quot;40&quot; height=&quot;40&quot; margin=&quot;220,0,15,0&quot; valign=&quot;center&quot; bkimage=&quot;default.png&quot;"/>
+    <Box>
+	    <VBox bkcolor="bk_wnd_darkcolor">
+	        <Box bkcolor="white">
+	            <Box name="con_emoji" padding="8,0,0,0">
+	                <TileListBox name="emoji" padding="0,8,14,8" itemsize="40,40" vscrollbar="true" vscrollunit="80"/>
+	            </Box>
+
+                <Box name="con_custom_stickers" padding="8,0,0,0">
+                    <TileListBox name="custom_sticker_box" padding="0,8,14,8" itemsize="105,105" vscrollbar="true" vscrollunit="400"/>
+                </Box>
+
+	            <Box name="con_local" padding="8,0,0,0">
+	                <TileListBox name="static_local" padding="0,8,14,8" itemsize="176,176" vscrollbar="true" vscrollunit="260"/>
+	            </Box>
+
+	            <Box name="con_remote" padding="8,0,0,0">
+	                <TileListBox name="static_remote" padding="0,8,14,8" itemsize="176,176" vscrollbar="true" vscrollunit="260"/>
+	            </Box>
+
+	            <Box name="con_animate" padding="8,0,0,0">
+	                <TileListBox name="animate" padding="0,8,14,8" itemsize="176,196" vscrollbar="true" vscrollunit="260"/>
+	            </Box>
+
+	            <VBox name="load">
+	                <HBox height="auto" margin="0,150,0,0">
+	                    <Control class="EmoticonItem" name="when_load"/>
+	                    <Button class="btn_global_green_80x30" name="do_load" valign="center" text="点击下载"/>
+	                </HBox>
+	                <Label name="description_1" singleline="false" width="500" height="100" margin="0,10,0,0" linelimit="true" halign="center" font="1" normaltextcolor="darkcolor" mouse="false"/>
+	            </VBox>
+
+	            <VBox name="loading">
+	                <HBox height="auto" margin="0,150,0,0">
+	                    <Control class="EmoticonItem" name="when_loading"/>
+	                    <Control width="auto" height="auto" valign="center" bkimage="../public/animation/ani_loading_ex.gif"/>
+	                </HBox>
+	                <Label name="description_2" singleline="false" width="500" height="100" margin="0,10,0,0" linelimit="true" halign="center" font="1" normaltextcolor="darkcolor" mouse="false"/>
+	            </VBox>
+
+	            <VBox name="reload">
+	                <HBox height="auto" margin="0,150,0,0">
+	                    <Control class="EmoticonItem" name="when_load_failed"/>
+	                    <Button class="btn_global_green_80x30" name="do_reload" valign="center" text="重新下载"/>
+	                </HBox>
+	                <Label name="description_3" singleline="false" width="500" height="100" margin="0,10,0,0" linelimit="true" halign="center" font="1" normaltextcolor="darkcolor" mouse="false"/>
+	            </VBox>
+
+				<VBox name="custom_sticker_syncing" width="auto" height="auto" halign="center" valign="center">
+					<Control width="auto" height="auto" halign="center" bkimage="../public/animation/ani_loading.gif"/>
+					<Label name="description_4" width="auto" height="auto" halign="center" margin="0,10,0,0" 
+                           font="1" normaltextcolor="edit_tip" mouse="false" text="表情努力同步中..."/>
+				</VBox>
+	        </Box>
+
+	        <Control class="splitline_hor_level1"/>
+
+	        <Box name="sticker_vector_container" height="60">
+	            <StickerVector name="sticker_vector"/>
+	            <Control class="mask_list_left" name="mask_left" visible="false"/>
+	            <Control class="mask_list_right" name="mask_right" visible="false"/>
+	            <Button name="left" valign="center" margin="5,0,0,0" visible="false" normalimage="left0.png" hotimage="left1.png" pushedimage="left2.png"/>
+	            <Button name="right" halign="right" margin="0,0,5,0" valign="center" visible="false" normalimage="right0.png" hotimage="right1.png" pushedimage="right2.png"/>
+	        </Box>
+	    </VBox>
+
+	    <!-- 阴影遮罩层 -->
+    	<HBox name="tip_layout" visible="false" bkimage="drag_tip.png" width="188" height="62" valign="bottom" margin="102,0,0,60" >
+    		<Label text="拖动表情可排序了" normaltextcolor="white" font="2" valign="center" margin="22,0,0,0" />
+    		<Button name="btn_close_tip" normalimage="btn_close_tip_normal.png" hotimage="btn_close_tip_hovered.png" pushedimage="btn_close_tip_hovered.png" margin="24,26,0,0" />
+    	</HBox>
+    </Box>
+</Window>

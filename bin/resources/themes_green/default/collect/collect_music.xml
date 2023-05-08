@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+    <Box>
+        <HBox height="80" mouse="false">
+            <Button name="event_image" width="80" height="80" cursortype="hand" 
+                    bkimage="video.png" 
+                    forenormalimage="file='music0.png' dest='18,18,62,62'" 
+                    forehotimage="file='music1.png' dest='18,18,62,62'" 
+                    forepushedimage="file='music1.png' dest='18,18,62,62'"/>
+            <VBox margin="10,0,0,0" mouse="false" mousechild="false">
+                <Label name="song" width="stretch" font="3"/>
+                <Label name="singer" width="stretch" font="2" normaltextcolor="lightcolor"/>
+            </VBox>
+        </HBox>
+    </Box>
+</Window>

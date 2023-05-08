@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<!--输入状态-->
+<Window>
+	<NormalMsgCell height="auto" padding="0,12,0,0">
+		<VBox name="cell_root_vertilayout" height="auto">
+			<HBox name="cell_time_horilayout" height="32" visible="false"/>  
+			<HBox name="cell_msg_horilayout" height="auto" childmargin="5" padding="9,0,0,0">
+				<Box name="header_panel" width="auto" height="auto" >
+					<Button name="msg_header_button" width="38" height="38" borderround="38,38,38,38" margin="1,1,0,0" forenormalimage="header.png" bkimage="../../../res/faces/default/male_small.png" />
+					<Button class="icon_headimage_mask_40x40" name="head_image_mask" mouse="false"/>
+				</Box>			
+				<VBox name="msg_vertilayout" width="60" height="auto" padding="0,2,0,0">
+					<Box name="bubble_container" height="36">
+						<Control name="typing_ani" bkimage="./ani_bubble_typing.gif"/>
+					</Box>
+				</VBox>
+				<Control minwidth="40"/>
+			</HBox>
+		</VBox>
+	</NormalMsgCell>
+</Window>

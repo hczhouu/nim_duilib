@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<!--新消息预览-->
+<Window>
+    <MessageView height="48" valign="bottom" visible="false" fadeinoutyfrombottom="true">
+		<VBox mouse="false"> 
+			<Box name="newmsg_tip_box" height="stretch" bkimage="bk_tip_dwon.png">
+                <BubbledEvent type="mouseenter" receiver=".\more_info" applyattribute="state=&quot;hot&quot;"/>
+                <BubbledEvent type="mouseleave" receiver=".\more_info" applyattribute="state=&quot;normal&quot;"/>
+
+                <Button name="message_event" width="stretch" height="stretch" cursortype="hand"/>
+                
+				<HBox margin="10,0,10,0" mouse="false" mousechild="false">
+					<Box width="auto" height="auto" margin="0,10,0,0">
+						<Button name="headimage" width="30" height="30" margin="1,1,0,0" borderround="30,30,30,30"/>
+						<Button width="32" height="32" bkimage="msg_view/header_mask.png"/>
+					</Box>
+                    
+                    <Label name="sender_name" margin="5,0,0,0" valign="center" normaltextcolor="dark2color" font="1"/>
+					<Label name="content" width="stretch" margin="5,0,10,0" valign="center" normaltextcolor="darkcolor" font="1" endellipsis="true"/>
+                    
+                    <Control name="more_info" width="auto" height="auto" margin="0,21,0,15" normalimage="msg_view/more0.png" hotimage="msg_view/more1.png"/>
+				</HBox>
+			</Box>
+		</VBox>
+    </MessageView>
+</Window>

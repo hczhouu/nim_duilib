@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <HBox height="auto" margin="10,10,0,0">
+        <Box width="auto" height="auto">
+            <Button name="CircleMenuAudio" width="auto" height="auto" menu="true" cursortype="hand" 
+                    normalimage="voice0.png" hotimage="voice1.png" pushedimage="voice2.png"/>
+        </Box>
+
+        <Label name="feed_time_t" margin="10,0,0,0" valign="center" font="12"/>
+    </HBox>
+</Window>

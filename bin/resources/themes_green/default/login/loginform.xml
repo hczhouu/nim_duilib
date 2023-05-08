@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window caption="0,0,0,160" shadowattached="false" custom_shadow="20,70,20,20" >
+    <Box width="308" height="auto">
+		<Box width="130" height="130" name="head_shadow_box" margin="0,10,0,0" halign="center" >
+			<Control bkimage="head_shadow.png" halign="center" valign="center" width="auto" height="auto" mouse="false" />
+		</Box>
+        <Box height="auto" margin="0,50,0,0" padding="14,14,14,14" bkimage="file='../public/bk/bk_shadow.png' corner='30,30,30,30'">
+			<VBox height="auto" bkcolor="bk_wnd_logincolor" borderround="3,3,3,3" >
+				<VBox height="auto" minheight="190">
+					<!--右上角按钮-->
+					<HBox height="22" margin="0,6,5,53">
+						<Control />
+						<Button name="proxysetting" width="20" height="20" tooltiptext="代理"
+								forenormalimage="file='btn_set.png' source='1,1,21,21'" hotimage="../public/button/btn_wnd_bk_hovered.png" pushedimage="../public/button/btn_wnd_bk_pushed.png"/>
+						<Button class="btn_wnd_min" name="minbtn" margin="4,0,4,0"/>
+						<Button class="btn_wnd_close" name="closebtn"/>
+					</HBox>
+					<!--国家编码-->
+					<HBox name="hor_foreign" height="42" margin="20,0,20,20" bkimage="foreign_code.png" visible="false" padding="0,1,0,1" >
+						<Box width="64">
+							<Label name="area_code" halign="center" valign="center" font="2"/>
+						</Box>
+						<RichEdit class="simple prompt" name="countryname" width="stretch" height="auto" margin="10,0,1,0" valign="center" font="2" prompttext="请输入国家名称"/>
+					</HBox>
+					<!--帐号和密码-->
+					<VBox width="240" height="84" margin="20,0,20,0" bkimage="user_password.png" name="edit_box" >
+						<HBox height="41" padding="14,1,10,0">
+							<Button name="usericon" valign="center" normalimage="user_2.png" disabledimage="user_1.png" enabled="false" mouse="false"/>
+							<RichEdit class="simple prompt" name="username" width="stretch" height="auto" margin="10,0,10,0" valign="center" font="2" prompttext="手机号/易信号/天翼帐号"/>
+							<Button name="accounttip" valign="center" forenormalimage="file='account_tip.png' dest='2,2,18,18'"
+									hotimage="../public/button/btn_wnd_bk_hovered.png" pushedimage="../public/button/btn_wnd_bk_pushed.png"/>
+						</HBox>
+
+						<Control height="2"/>
+
+						<HBox height="41" padding="14,0,10,1">
+							<Button name="passwordicon" valign="center" normalimage="password_2.png" disabledimage="password_1.png" enabled="false" mouse="false"/>
+							<RichEdit class="simple prompt" name="password" width="stretch" height="auto" margin="10,0,10,0" valign="center" font="2" password="true" prompttext="密  码"/>
+						</HBox>
+					</VBox>
+					<!--记住密码-->
+					<HBox height="auto" margin="20,10,20,0">
+						<CheckBox class="checkbox_font12" name="chkbox_rememberme" textid="STRID_LOGINWINDOW_REMEMBER_ME" normaltextcolor="dark2color"/>
+						<Control />
+						<CheckBox class="checkbox_font12" name="chkbox_autologin" textid="STRID_LOGINWINDOW_AUTO_LOGIN" normaltextcolor="dark2color"/>
+						<Control />
+						<Button name="forget_password" cursortype="hand" font="24" normaltextcolor="link_green" textid="STRID_LOGINWINDOW_FORGET_PASSWORD"/>
+					</HBox>
+				</VBox>
+				<!--登录提示-->
+				<Label name="logintip" halign="center" align="vcenter" font="1" singleline="false" margin="0,10,0,0" normaltextcolor="obvious_tip" visible="false" mouse="false" width="236" height="30" fadeheight="true"/>
+				<!--登录和取消按钮-->
+				<Box width="240" height="40" margin="0,10,0,20" halign="center">
+					<HBox name="hor_login">
+						<Button name="loginbtn" height="stretch" font="7" normaltextcolor="white" normalimage="btn_login0.png" hotimage="btn_login1.png" pushedimage="btn_login2.png" textid="STRID_LOGINWINDOW_LOGIN"/>
+						<Button name="login_arrow" height="stretch" normalimage="login_arrow0.png" hotimage="login_arrow1.png" pushedimage="login_arrow2.png"/>
+					</HBox>
+
+					<Box name="cancel_container" visible="false">
+						<Button name="cancelbtn" width="stretch" height="stretch" font="7" normaltextcolor="darkcolor" normalimage="file='../public/button/btn_global_white_80x30_normal.png' corner='5,5,5,5'" hotimage="file='../public/button/btn_global_white_80x30_hovered.png' corner='5,5,5,5'" pushedimage="file='../public/button/btn_global_white_80x30_pushed.png' corner='5,5,5,5'" textid="STRID_LOGINWINDOW_CANCLE_LOGIN"/>
+						<!--<Control width="16" height="16" margin="60,0,0,0" valign="center" bkimage="../public/animation/ani_loading.gif"/>-->
+					</Box>
+				</Box>
+			</VBox>
+        </Box>
+		<!--头像-->
+		<Box margin="0,10,0,0" mouse="false" name="head_box" width="130" height="130" halign="center" >
+			<Control name="login_gif" width="auto" height="auto" halign="center" valign="center" bkimage="pc_loading.gif" visible="false"/>
+			<Control width="auto" height="auto" halign="center" valign="center" bkimage="logo.png"/>
+			<Button name="headicon" width="106" height="106" borderround="106,106,106,106" halign="center" valign="center" mouse="false" fadealpha="true"/>
+			<Control width="auto" height="auto" bkimage="mask.png" halign="center" valign="center" mouse="false"/>
+		</Box>
+        <!--搜索国家-->
+        <VListBox class="list" name="country_select_list" width="183" maxheight="150" height="auto" margin="91,185,0,0" visible="false" vscrollbar="true" bordersize="1" bordercolor="list_border" padding="1,1,1,1" vscrollunit="25"/>
+        <!--CapsLock提示-->
+        <Label name="capslock" width="120" height="30" bkimage="file='capslock.png' corner='15,15,15,15'" textpadding="0,0,0,5" align="vcenter|center" text="大写锁定已打开" font="2" normaltextcolor="obvious_tip" visible="false"/>
+    </Box>
+</Window>

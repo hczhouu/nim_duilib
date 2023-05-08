@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="204,304" caption="0,0,0,1000">
+	<VBox width="stretch" bkimage="file='dimencode_bg.png' corner='2,2,2,2'">
+		<Button name="reset" width="auto" height="auto" halign="right" margin="0,12,12,0" float="true" cursortype="hand" 
+			normalimage="file='icon_refresh_normal.png' dest='0,4,12,16'" hotimage="file='icon_refresh_hovered.png' dest='0,4,12,16'" pushedimage="file='icon_refresh_pushed.png' dest='0,4,12,16'"
+			font="2" normaltextcolor="edit_tip" textpadding="16" textid="STRID_DIMENCODEFORM_RESET"/>
+			
+        <Box height="180" margin="0,42,0,0">
+            <VBox bkcolor="white" width="178" halign="center">
+                <Control name="dimencodepic" height="172" width="172" margin="4,4,4,4"/>
+                <HBox name="hlayout_warn" height="32" margin="30,102,0,0">
+                    <Control name="pic_warn" width="32" height="32" bkimage="file='../msgbox/infor2.png'"/>
+                    <Control width="5"/>
+                    <VBox>
+                        <Control />
+                        <Label name="text_warn" width="168" margin="0,3,0,0" font="12"/>
+                        <Control />
+                    </VBox>
+                </HBox>
+            </VBox>
+            <Box name="floatlayout" mouse="false">
+                <Control name="gifpanel" bkimage="../public/animation/ani_loading.gif" width="16" height="16" margin="95,110,0,0"/>
+            </Box>
+        </Box>
+        
+		<Control height="12"/>
+		<Label halign="center" font="1" normaltextcolor="edit_tip" textid="STRID_DIMENCODE_TIP"/>
+		<Control height="12"/>
+        
+		<HBox height="auto">
+            <Control />
+			<Button class="btn_global_white_80x30" name="close" textid="STRID_DIMENCODEFORM_CANCEL"/>
+			<Control width="18"/>
+			<Button class="btn_global_green_80x30" name="save" font="1" textid="STRID_DIMENCODEFORM_SAVE"/>
+            <Control />
+		</HBox>
+	</VBox>
+</Window>

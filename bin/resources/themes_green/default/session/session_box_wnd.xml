@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="720,600" mininfo="520,600" caption="0,0,0,80" sizebox="4,4,4,4">
+    <HBox bkcolor="bk_wnd_lightcolor">
+        <Box name="session_list_box" width="200" height="stretch" visible="false">
+            <VListBox class="list" name="session_list" vscrollunit="120" bkcolor="session_list_bk" />
+            <Control class="splitline_ver_level1" height="stretch" halign="right" bkcolor="bk_reply_hover"/>
+        </Box>
+
+        <SessionTabBox name="session_tab" width="stretch" height="auto" mouse="false">
+            <!-- SessionForms here -->
+        </SessionTabBox>
+
+        <HBox width="auto" height="auto" childmargin="4" halign="right"  margin="0,6,5,0" float="true">
+            <Box width="auto" height="auto" mouse="false">
+                <Button class="btn_wnd_menu" name="menubtn"/>
+                <Control name="newer_tip" width="auto" height="auto" halign="right" valign="top" mouse="false" bkimage="../public/icon/red_small.png" visible="false"/>
+            </Box>
+            <Button class="btn_wnd_min" name="minbtn"/>
+            <Box width="21">
+                <Button class="btn_wnd_max" name="maxbtn"/>
+                <Button class="btn_wnd_restore" name="restorebtn" visible="false"/>
+            </Box>
+            <Button class="btn_wnd_close" name="closebtn"/>
+        </HBox>
+    </HBox>
+</Window>

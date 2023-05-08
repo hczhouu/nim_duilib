@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window >
+    <Box height="36" margin="5,5,5,0" bkcolor="green" float="true">
+        <HBox width="auto" height="36" halign="center">
+            <Control width="auto" height="auto" valign="center" bkimage="loading.gif"/>
+            <Label margin="5,0,0,2" valign="center" normaltextcolor="white" font="2" text="加载中..."/>
+        </HBox>
+    </Box>
+</Window>

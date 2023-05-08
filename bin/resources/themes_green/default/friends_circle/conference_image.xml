@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <Box width="68" height="68">
+        <Box name="box_fail" bkcolor="transbkblack1" visible="false">
+            <Button name="try_again" halign="center" valign="center" cursortype="hand" font="1" text="重试" normaltextcolor="green"/>
+        </Box>
+
+        <Button name="btn_remove_image" width="18" height="18" halign="right" visible="false" 
+                normalimage="btn_del1.png" hotimage="btn_del1.png" pushedimage="btn_del2.png"/>
+        <Control name="image_ready" width="18" height="18" halign="right" bkimage="image_ready.png" visible="false"/>
+    </Box>
+</Window>

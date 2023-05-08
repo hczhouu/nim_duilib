@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <Box width="stretch" height="stretch" bkcolor="bk_wnd_lightcolor" float="true">
+        <VBox width="auto" height="auto" halign="center" valign="center">
+            <Control width="auto" height="auto" halign="center" bkimage="tc_null_item.png"/>
+            <HBox width="auto" height="auto" halign="center" margin="0,20">
+                <Label font="2" text="动态已经被删除了，" normaltextcolor="fc_empty"/>
+                <Button name="back_to_frontpage1" normaltextcolor="link_green" cursortype="hand" font="2" text="返回"/>
+                <Label font="2" text="查看其它动态吧。" normaltextcolor="fc_empty"/>
+            </HBox>
+        </VBox>
+    </Box>
+</Window>

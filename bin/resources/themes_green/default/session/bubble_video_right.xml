@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+	<Box width="112" height="106" >
+		<Button name="bubble_video" width="stretch" height="stretch" menu="true" cursortype="hand" bkimage="file='bubble1_right.png' corner='15,15,23,14'"/>
+		<Control name="video_thumb" mouse="false" width="stretch" height="stretch" margin="3,3,9,3" bkimage="image_video_default.png" 
+			forenormalimage="file='video0.png' dest='28,28,72,72'" forehotimage="file='icon_download_hovered.png' dest='28,28,72,72'" 
+			forepushedimage="file='icon_download_pressed.png' dest='28,28,72,72'" fadehot="false"/>
+		<Control mouse="false" width="stretch" height="stretch" margin="3,3,9,3" bkimage="file='image_img_foreimage_right.png' corner='11,11,11,11'"/>
+	</Box>	
+</Window>

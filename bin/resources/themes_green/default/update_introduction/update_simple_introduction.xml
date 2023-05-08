@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="460,0" caption="0,0,0,3000" textid="STRID_ABOUTFORM_LABEL_CAPTION_ABOUT">
+    <VBox bkcolor="bk_wnd_lightcolor" width="460" height="auto">
+		<HBox class="caption" width="stretch" height="auto">
+			<Control margin="0,10,4,10" width="auto" height="auto" bkimage="icon_yixin.png"/>
+			<Label font="2" normaltextcolor="darkcolor" valign="center" text="易信更新"/>
+			<Control />
+			<Button class="btn_wnd_close" name="closebtn" valign="center" halign="right"/>
+		</HBox>
+
+		<VBox width="stretch" height="auto">
+            <HBox width="auto" height="auto" halign="center" margin="0,40,0,20">
+                <Label width="auto" height="auto" normaltextcolor="green" font="20" text="已为你更新了新版本"/>
+                <Label name="version" width="auto" height="auto" margin="4" normaltextcolor="green" font="20"/>
+            </HBox>
+			
+			<VBox width="stretch" height="auto" margin="50,0,0,0" childmargin="5">
+				<Label font="2" normaltextcolor="message_tip" text="新版本新增特色：" />
+				<Label font="2" normaltextcolor="darkcolor" text="1. 设置中新增文件默认保存地址修改"/>
+				<Label font="2" normaltextcolor="darkcolor" text="2. 合并窗口新消息会置顶显示了"/>
+				<Label font="2" normaltextcolor="darkcolor" text="3. 其他一些体验优化"/>
+			</VBox>
+		</VBox>
+
+        <Box width="stretch" height="80">
+        	<Button class="btn_global_green_80x30" name="ok" margin="0,30,20,20" halign="right" text="知道了"/>
+		</Box>
+    </VBox>
+</Window>

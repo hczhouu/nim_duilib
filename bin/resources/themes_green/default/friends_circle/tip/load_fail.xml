@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <Box width="stretch" height="stretch" bkcolor="bk_wnd_lightcolor" float="true">
+        <TabBox width="auto" height="auto" halign="center" valign="center">
+            <VBox width="auto" height="auto" name="tc_server_error">
+                <Control width="auto" height="auto" halign="center" bkimage="tc_server_error.png"/>
+                <HBox width="auto" height="22" halign="center" margin="0,10,0,0">
+                    <Label font="2" text="服务器开了点小差，再" normaltextcolor="fc_empty"/>
+                    <Button name="btn1_refresh_feed" normaltextcolor="link_green" cursortype="hand" font="2" text="刷新"/>
+                    <Label font="2" text="试试吧~" normaltextcolor="fc_empty"/>
+                </HBox>
+            </VBox>
+
+            <VBox width="auto" height="auto" name="tc_net_error" visible="false">
+                <Control width="auto" height="auto" halign="center" bkimage="tc_net_error.png"/>
+                <HBox width="auto" height="22" halign="center" margin="0,10,0,0">
+                    <Label font="2" text="网络错误，请检查后再" normaltextcolor="fc_empty"/>
+                    <Button name="btn2_refresh_feed" normaltextcolor="link_green" cursortype="hand" font="2" text="刷新"/>
+                    <Label font="2" text="试试吧~" normaltextcolor="fc_empty"/>
+                </HBox>
+            </VBox>
+        </TabBox>
+    </Box>
+</Window>

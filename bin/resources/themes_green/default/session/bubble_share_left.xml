@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+	<Box width="270" height="auto">
+		<Button name="bubble_share" width="stretch" height="stretch" menu="true" cursortype="hand" bkimage="file='../session/bubble1_left.png' corner='25,15,15,15'"/>
+		<VBox margin="21,15,15,15" childmargin="10" mouse="false" minheight="80" height="auto">
+			<Label name="share_label" singleline="false" width="235" height="auto" minheight="20" maxheight="40" mouse="false" font="3" normaltextcolor="darkcolor"/>
+			<HBox childmargin="10" mouse="false" height="auto" >
+				<Button name="share_image" width="50" height="50" bkimage="../session/icons/icon_share.png" mouse="false"/>
+				<Label name="share_text" singleline="false" width="175" height="50" mouse="false" font="2" normaltextcolor="lightcolor" linelimit="true"/>
+			</HBox>
+		</VBox>
+	</Box>
+</Window>

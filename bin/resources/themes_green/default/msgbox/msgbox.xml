@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="350,180" caption="0,0,0,34">
+    <VBox name="message_box" bkcolor="bk_wnd_lightcolor" width="380" height="auto">
+        <HBox class="caption">
+            <Label class="font_title" name="title" width="stretch" valign="center" normaltextcolor="darkcolor"/>
+            <Button class="btn_wnd_close" name="closebtn" margin="4,6,0,0"/>
+        </HBox>
+
+        <VBox height="auto" margin="20,35,20,35">
+            <HBox height="auto">
+                <Control name="icon" width="22" height="22" margin="0,7,10,0"/>
+                <RichEdit name="information" width="270" font="20" multiline="true" vscrollbar="false" autovscroll="false" enabled="false" rich="true"/>
+            </HBox>
+            <CheckBox class="checkbox_font12" name="checkbox" margin="35,5,0,0" visible="false"/>
+        </VBox>
+
+
+        <HBox height="30" margin="20,0,20,20">
+            <Control name="left"/>
+            <Button  class="btn_global_green_80x30" name="button_1"/>
+            <Control name="space_1_2" width="10"/>
+            <Button  class="btn_global_green_80x30" name="button_2"/>
+            <Control name="space_2_3" width="10"/>
+            <Button  class="btn_global_green_80x30" name="button_3"/>
+        </HBox>
+    </VBox>
+</Window>

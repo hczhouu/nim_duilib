@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+    <ListContainerElement class="listitem" width="170" height="64" margin="0,5,0,5">
+        <HBox mouse="false">
+            <Box width="64" height="auto" mouse="false">
+                <Box width="auto" height="auto" margin="8,8,0,8">
+                    <Button name="headimage_eventhandle" width="46" height="46" margin="1,1,1,1" borderround="46,46,46,46" cursortype="hand" menu="true"/>
+                    <Button class="icon_headimage_mask_48x48" mouse="false"/>
+                </Box>
+                <Control name="owner" width="auto" height="auto" margin="37,34,0,0" bkimage="owner.png" visible="false" mouse="false"/>
+                <Control name="admin" width="auto" height="auto" margin="37,34,0,0" bkimage="admin.png" visible="false" mouse="false"/>
+            </Box>
+            <VBox height="auto" width="stretch" valign="center" mouse="false" mousechild="false">
+                <HBox height="auto">
+                    <Label name="uname" font="2" normaltextcolor="darkcolor" width="auto" maxwidth="80" margin="0,0,8,0" mouse="false"/>
+                    <Control name="icon_mute" bkimage="..\public\icon\icon_mute.png" width="auto" height="auto" visible="false" margin="0,3,0,0"/>
+                </HBox>
+                <Label name="umobile" font="1" normaltextcolor="lightcolor" width="stretch" margin="0,4,8,0" mouse="false"/>
+            </VBox>
+        </HBox>
+    </ListContainerElement>
+
+</Window>

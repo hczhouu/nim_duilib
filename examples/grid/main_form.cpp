@@ -83,21 +83,22 @@ void MainForm::InitWindow()
 	for (int i = 0; i < sizeof(header) / sizeof(header[0]); i++)
 	{
 		GridItem *header_item = grid->AddCol(header[i]);
-		if (i == 2)
-		{
-			header_item->InitTypeCombo(vecTypeString);
-		}
-		else if (i == 5)
-		{
-			header_item->InitTypeCombo(vecEditModeString);
-		}
-		else if (i == 7)
-		{
-			header_item->InitTypeCombo(vecParamTypeString);
-		}
+		grid->SetColumnWidth(i, 110);
+		//if (i == 2)
+		//{
+		//	header_item->InitTypeCombo(vecTypeString);
+		//}
+		//else if (i == 5)
+		//{
+		//	header_item->InitTypeCombo(vecEditModeString);
+		//}
+		//else if (i == 7)
+		//{
+		//	header_item->InitTypeCombo(vecParamTypeString);
+		//}
 	}
 
-	grid->SetRowCount(30);
+	grid->SetRowCount(0);
 	/*for (size_t i = 0; i < 100; i++)
 	{
 		grid->AddRow();

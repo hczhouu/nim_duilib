@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <HBox margin="10,10,10,0" height="46" bkcolor="bk_location">
+        <Button height="46" width="46" bkimage="btn_tc_location.png"/>
+        <Button name="location" margin="4" cursortype="hand" font="2" normaltextcolor="dark_gray" valign="center"/>
+    </HBox>
+</Window>

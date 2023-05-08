@@ -1,0 +1,27 @@
+<!-- 本目录下的图片名必须和main/background下的图片名一一对应。 -->
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Class name="optionAttrib" 
+		value="group=&quot;bgOption&quot; width=&quot;60&quot; height=&quot;60&quot; margin=&quot;2,2,2,2&quot; normalimage=&quot;file='label_bk.png' dest='0,38,60,60'&quot; forehotimage=&quot;hovered_border.png&quot; selectedforenormalimage=&quot;selected_border.png&quot; selectednormalimage=&quot;file='label_bk.png' dest='0,38,60,60'&quot; font=&quot;1&quot; textpadding=&quot;0,38,0,0&quot; align=&quot;center&quot; normaltextcolor=&quot;white&quot;"/>
+	<Class name="holdLabel"
+		value="width=&quot;auto&quot; height=&quot;auto&quot; halign=&quot;center&quot; valign=&quot;center&quot; align=&quot;center&quot; font=&quot;1&quot; normaltextcolor=&quot;lightcolor&quot;"/>
+	<VBox width="auto" height="auto" bkcolor="bk_wnd_lightcolor" padding="3,3,3,3">
+		<HBox width="auto" height="auto">
+			<OptionBox class="optionAttrib" name="option1" bkimage="default.png" text="默认背景"/>
+			<OptionBox class="optionAttrib" name="option2" text="朦胧头像"/>
+			<OptionBox class="optionAttrib" name="option3" bkimage="bgimage03.png" text="孤山夜色"/>
+		</HBox>
+		
+		<HBox width="auto" height="auto">
+			<OptionBox class="optionAttrib" name="option4" bkimage="bgimage04.png" text="朝阳曙光"/>
+			<OptionBox class="optionAttrib" name="option5" bkimage="bgimage05.png" text="清澈晨露"/>
+			<VBox width="60" height="60" margin="2,2,2,2" childmargin="4" bkcolor="bk_gray1">
+				<Control />
+				<Label class="holdLabel" text="敬 请"/>
+				<Label class="holdLabel" text="期 待"/>
+				<Control />
+			</VBox>
+		</HBox>
+	</VBox>	
+</Window>
+

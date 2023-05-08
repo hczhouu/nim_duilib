@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+    <TreeNode class="listitem" height="56" mouse="false" mousechild="true">
+        <BubbledEvent type="mouseenter" receiver=".\btn_search_result_add_friend" applyattribute="state=&quot;hot&quot;"/>
+        <BubbledEvent type="mouseleave" receiver=".\btn_search_result_add_friend" applyattribute="state=&quot;normal&quot;"/>
+
+		<ButtonBox name="add_friend_box" mousechild="false" cursortype="hand" hotcolor="bk_listitem_hovered" pushedcolor="bk_listitem_selected">
+			<HBox mouse="false" mousechild="false">
+				<Button name="btn_search_result_add_friend" width="36" height="36" valign="center" margin="10,0,0,0" 
+					normalimage="btn_search_result_add_friend_normal.png" hotimage="btn_search_result_add_friend_hover.png"/>
+				<Label text="搜索添加： " normaltextcolor="darkcolor" font="2" valign="center" margin="10,0,0,0"/>
+				<Label name="search_key" normaltextcolor="darkcolor" font="2" valign="center" width="stretch" margin="0,0,10,0"/>
+			</HBox>
+		</ButtonBox>
+    </TreeNode>
+</Window>

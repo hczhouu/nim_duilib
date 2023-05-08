@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+    <VListBox class="menu">
+        <MenuElement class="MenuElement" name="select_pass" width="88" padding="0">
+            <Button class="menu_text" width="auto" height="auto" halign="left" margin="10" text="通过验证"/> 
+        </MenuElement>
+
+        <MenuElement class="MenuElement" name="select_reject" width="88" padding="0">
+            <Button class="menu_text" width="auto" height="auto" halign="left" margin="10" text="拒绝通过"/>
+        </MenuElement>
+    </VListBox>
+</Window>

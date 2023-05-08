@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+    <VListBox class="menu">
+		<MenuElement class="MenuElement" name="image_src" width="138" visible="false">
+            <HBox name="horlayout">
+				<Button class="menu_text" text="选择原图" mouse="false"/>
+				<Control width="25" mouse="false"/>
+				<CheckBox class="option" name="image_src_sgin" valign="center" mouse="false"/>
+            </HBox>
+        </MenuElement>
+        <MenuElement class="MenuElement" name="save" width="138" visible="false">
+            <Button class="menu_text" text="另存为"/>
+        </MenuElement>
+		
+        <MenuElement class="MenuElement" name="copy" width="138">
+            <Button class="menu_text" text="复制"/>
+        </MenuElement>
+
+        <MenuElement class="MenuElement" name="paste" width="138">
+            <Button class="menu_text" text="粘贴"/>
+        </MenuElement>
+    </VListBox>
+</Window>

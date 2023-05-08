@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window caption="0,0,0,1000" textid="STRID_ABOUTFORM_LABEL_CAPTION_ABOUT">
+    <VBox bkcolor="bk_wnd_lightcolor" width="auto" height="auto">
+        <Box width="auto" height="auto">
+			<Box width="auto" height="auto">
+				<TabBox name="tabbox" width="auto" height="auto" fadeswitch="true">
+					<Control width="auto" height="auto" normalimage="first_background.png"/>
+					<Control width="auto" height="auto" normalimage="second_background.png"/>
+				</TabBox>
+				
+				<!--<Control name="hor_line" width="stretch" height="1" valign="bottom" margin="0,0,0,42" bkcolor="line_color1"/>-->
+				<HBox width="stretch" height="42" valign="bottom" bkcolor="transbkwhite">
+					<Box width="stretch" height="stretch">
+						<HBox width="auto" halign="center" mouse="false">
+							<Control name="first_background_control" width="auto" height="auto" valign="center" normalimage="first_selected.png"/>
+							<Label name="first_background_label" font="2" normaltextcolor="white" valign="center" margin="8" text="青果直播" align="vcenter"/>
+						</HBox>
+						
+						<OptionBox name="option_first" group="new_functions" width="stretch" height="stretch" selected="true" cursortype="hand" />
+					</Box>
+					
+					<Control name="ver_line" width="1" height="20" valign="center" bkcolor="line_color2"/>
+					
+					<Box width="stretch" height="stretch">
+						<HBox width="auto" halign="center">
+							<Control name="second_background_control" width="auto" height="auto" valign="center" margin="0,1,0,0" normalimage="second_normal.png"/>
+							<Label name="second_background_label" font="2" normaltextcolor="translucent_white" valign="center" margin="8" text="文件助手" align="vcenter"/>
+						</HBox>
+						
+						<OptionBox name="option_second" group="new_functions" width="stretch" height="stretch" cursortype="hand" />
+					</Box>
+				</HBox>
+			</Box>
+			
+			<HBox  width="auto" height="auto" margin="0,6,5,0" halign="right">
+				<Button class="btn_wnd_white_min" name="minbtn" margin="0,0,4,0"/>
+				<Button class="btn_wnd_white_close" name="closebtn"/>
+			</HBox>
+		</Box>
+
+        <VBox name="bottom_box" height="120" visible="false" bkcolor="bk_wnd_darkcolor">
+            
+            <Control class="splitline_hor_level1"/>
+            
+            <VBox  height="auto">
+                <HBox height="auto">
+                    <HBox name="gif_load_panel" width="auto" height="24" margin="10,8,0,0"/>
+                    <HBox height="35" margin="10,5,0,0">
+                        <Label name="new_version_tip" font="1" width="stretch" margin="0,9,0,9"  normaltextcolor="darkcolor"/>
+                        <Button class="btn_global_white_80x30" name="check_update"/>
+                    </HBox>
+                </HBox>
+            </VBox>
+
+            <VBox  padding="20,0,0,0">
+                <HBox  height="22">
+                    <Button name="official_link" normaltextcolor="link_green" cursortype="hand" font="24"/>
+                    <Control width="15"/>
+                    <Button name="weibo_link" normaltextcolor="link_green" cursortype="hand" font="24"/>
+                </HBox>
+                <Label name="corporation" margin="0,5,0,10" font="1" normaltextcolor="darkcolor"/>
+                <Label font="11" normaltextcolor="darkcolor" text="China Yixin Corporation All Rights Reserved"/>
+            </VBox>
+        </VBox>
+        
+    </VBox>
+</Window>

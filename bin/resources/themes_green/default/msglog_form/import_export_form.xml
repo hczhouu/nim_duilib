@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="350,180" caption="0,0,0,34" textid="STRID_MSGLOGFORM_IMPORT_MSGS">
+    <VBox width="stretch" height="stretch" bkcolor="bk_wnd_lightcolor">
+        <HBox class="caption" height="34">
+            <Label class="font_title" name="title" width="auto" valign="center" normaltextcolor="darkcolor"/>
+            <Control width="stretch"/>
+            <Button class="btn_wnd_close" name="closebtn" margin="4,6,0,0"/>
+        </HBox>
+        <Box width="stretch" height="stretch" padding="20,0,20,0">
+            <VBox name="progress_box" width="stretch" height="auto" valign="center">
+                <HBox width="stretch" height="auto" margin="0,0,0,20">
+                    <Label name="progress_tip" font="2" normaltextcolor="textdefaultcolor"/>
+                    <Control width="stretch"/>
+                    <Label name="progress_value" font="2" normaltextcolor="textdefaultcolor" text="0%"/>
+                </HBox>
+                <Progress name="progress_bar" width="stretch" height="10" margin="0,0,0,20" bkcolor="bk_progress_bk" progresscolor="bk_progress_progress" mouse="false"/>
+            </VBox>
+            <VBox name="result_box" width="stretch" height="auto" valign="center" visible="false">
+                <HBox width="auto" height="auto" halign="left" margin="0,0,0,20">
+                    <Control name="result_icon" width="auto" height="auto" margin="0,0,10,0"/>
+                    <Label name="result_tip" font="4" normaltextcolor="textdefaultcolor"/>
+                </HBox>
+                <Button class="btn_global_green_80x30" name="ok" text="确定" halign="right"/>
+            </VBox>
+        </Box>
+    </VBox>
+</Window>

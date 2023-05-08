@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window >
+    <Box width="stretch" height="stretch" bkcolor="bk_wnd_lightcolor" float="true">
+        <VBox width="auto" height="auto" halign="center" valign="center">
+            <Control width="auto" height="auto" halign="center" bkimage="loading.png"/>
+            <HBox width="auto" height="auto" halign="center" margin="0,10">
+                <Control width="auto" height="auto" valign="center" bkimage="loading3.gif"/>
+                <Label valign="center" margin="10" normaltextcolor="fc_empty" font="2" text="动态载入中..."/>
+            </HBox>
+        </VBox>
+    </Box>
+</Window>

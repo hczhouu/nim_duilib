@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <HBox name="box_reply_audio" width="64" height="auto" mouse="false">
+        <Button name="btn_reply_audio" width="auto" height="auto" cursortype="hand" normalimage="voice0.png" hotimage="voice1.png" pushedimage="voice2.png"/>
+        <Label name="reply_time_t" width="28" margin="6,0,0,0" valign="center" font="2" mouse="false"/>
+    </HBox>
+</Window>

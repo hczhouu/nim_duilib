@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="800,560" mininfo="800,560" caption="0,0,0,34" sizebox="4,4,4,4" textid="STRID_MSGLOGFORM_TITLE">
+    <Class name="option_attrib" value="group=&quot;user_list&quot; width=&quot;stretch&quot; height=&quot;stretch&quot; valign=&quot;center&quot; font=&quot;1&quot; normaltextcolor=&quot;dark2color&quot; selectedtextcolor=&quot;green&quot; selectednormalimage=&quot;file='contact_tab_bottom.png' corner='0,0,92,2'&quot; cursortype=&quot;hand&quot;"/>
+    <Class name="combo_attrib" value="width=&quot;135&quot; height=&quot;stretch&quot; valign=&quot;center&quot; bkimage=&quot;file='combo_arrow.png' dest='115,15,125,21'&quot; vscrollbar=&quot;true&quot; bordersize=&quot;1&quot; bordercolor=&quot;splitline_hor_level6&quot;"/>
+    <Class name="combo_item_atrrib" value="textpadding=&quot;10,1,1,1&quot; height=&quot;34&quot; font=&quot;1&quot;"/>
+    <Class name="page_turner_attrib" value="width=&quot;20&quot; height=&quot;20&quot; hotimage=&quot;file='../public/button/btn_wnd_bk_hovered.png' corner='5,5,5,5'&quot; pushedimage=&quot;file='../public/button/btn_wnd_bk_pushed.png' corner='5,5,5,5'&quot; enabled=&quot;false&quot;"/>
+    <Class name="empty_tip_attrib" value="halign=&quot;center&quot; margin=&quot;0,12,0,0&quot; font=&quot;1&quot; normaltextcolor=&quot;message_tip&quot;"/>
+    
+    <VBox width="stretch" height="stretch" bkcolor="bk_wnd_lightcolor">
+        <HBox class="caption" height="34">
+            <Label class="font_title" name="title" width="auto" valign="center" normaltextcolor="darkcolor" textid="STRID_MSGLOGFORM_TITLE"/>
+            <Control width="stretch"/>
+            <Box width="auto" height="auto" margin="4,6,0,0">
+                <Button class="btn_wnd_menu" name="menubtn"/>
+                <Control name="newer_tip" width="auto" height="auto" halign="right" valign="top" mouse="false" bkimage="../public/icon/red_small.png" visible="false"/>
+            </Box>
+            <Button class="btn_wnd_min" name="minbtn" margin="4,6,0,0"/>
+            <Box width="21" margin="4,6,0,0">
+                <Button class="btn_wnd_max" name="maxbtn"/>
+                <Button class="btn_wnd_restore" name="restorebtn" visible="false"/>
+            </Box>
+            <Button class="btn_wnd_close" name="closebtn" margin="4,6,0,0"/>
+        </HBox>
+        
+        <Box width="stretch" height="auto" padding="10,10,10,10" bkcolor="bk_listitem_hovered">
+            <HBox width="stretch" height="34" bkcolor="bk_wnd_lightcolor">
+                <Combo class="list combo_attrib" name="range" dropboxattrib="bordercolor=&quot;splitline_hor_level6&quot;">
+                    <ListContainerElement class="listitem combo_item_atrrib" name="current" text="当前" textpadding="10,1,20,1"/>
+                    <ListContainerElement class="listitem combo_item_atrrib" name="all" text="全部" selected="true"/>
+                    <ListContainerElement class="listitem combo_item_atrrib" name="all_friend" text="全部好友"/>
+                    <ListContainerElement class="listitem combo_item_atrrib" name="all_group" text="全部群组"/>
+                </Combo>
+
+                <Combo class="list combo_attrib" margin="-1" name="time" dropboxattrib="bordercolor=&quot;splitline_hor_level6&quot;">
+                    <ListContainerElement class="listitem combo_item_atrrib" name="all_time" text="全部时间" selected="true"/>
+                    <ListContainerElement class="listitem combo_item_atrrib" name="last_month" text="最近1个月"/>
+                    <ListContainerElement class="listitem combo_item_atrrib" name="last_3_month" text="最近3个月"/>
+                    <ListContainerElement class="listitem combo_item_atrrib" name="last_half_year" text="最近半年"/>
+                </Combo>
+
+                <HBox width="stretch" height="stretch" margin="-1" bordersize="1" bordercolor="splitline_hor_level6">
+                    <Control name="search_icon" width="auto" height="auto" valign="center" margin="10" bkimage="file='../public/icon/icon_search_gray.png'"/>
+                    <RichEdit class="simple prompt" name="keyword" width="stretch" height="stretch" valign="center" margin="8,0,8,0"
+                            align="vcenter" font="1" prompttext="请输入关键字" wantreturnmsg="true"/>
+                    <Button class="btn_del_search" name="clear_input" valign="center" margin="0,0,8,0" visible="false"/>
+                </HBox>
+
+                <Button name="search" width="44" height="stretch" valign="center" margin="-1" cursortype="hand" enabled="false" bordersize="1" bordercolor="splitline_hor_level6" 
+                        text="搜索" font="1" normaltextcolor="textdefaultcolor" disabledtextcolor="textdefaultdisablecolor"
+                        normalcolor="bk_wnd_lightcolor" hotcolor="bk_btn_hovered" pushedcolor="bk_btn_pushed"/>
+            </HBox>
+        </Box>
+        
+        <Control width="stretch" height="1" bkcolor="splitline_hor_level6"/>
+
+        <HBox width="stretch" height="stretch">
+            <VBox width="278" height="stretch">
+                <HBox width="stretch" height="44" valign="center">
+                    <Option class="option_attrib" name="recent" text="最近联系人" selected="true"/>
+                    <Control class="splitline_ver_level1" height="stretch" margin="0,12,0,12"/>
+                    <Option class="option_attrib" name="friend" text="好友"/>
+                    <Control class="splitline_ver_level1" height="stretch" margin="0,12,0,12"/>
+                    <Option class="option_attrib" name="group" text="群聊"/>
+                </HBox>
+
+                <Control class="splitline_hor_level1" width="stretch"/>
+                
+                <Box>
+                    <TabBox name="list_tabbox" fadeswitch="true">
+                        <TabBox width="stretch" height="stretch">
+                            <VListBox class="list" name="recent_list" width="stretch" vscrollunit="120"/>
+                            <VBox width="auto" height="auto" halign="center" valign="center" margin="0,0,0,30" visible="false">
+                                <Control width="auto" height="auto" normalimage="empty_friend_list.png"/>
+                                <Label class="empty_tip_attrib" text="还没有最近联系人"/>
+                            </VBox>
+                        </TabBox>
+                        <TabBox width="stretch" height="stretch">
+                            <TreeView class="list" name="friend_list" width="stretch" vscrollunit="120"/>
+                            <VBox width="auto" height="auto" halign="center" valign="center" margin="0,0,0,30" visible="false">
+                                <Control width="auto" height="auto" normalimage="empty_friend_list.png"/>
+                                <Label class="empty_tip_attrib" text="还没有好友"/>
+                            </VBox>
+                        </TabBox>
+                        <TabBox width="stretch" height="stretch">
+                            <TreeView class="list" name="group_list" width="stretch" vscrollunit="120"/>
+                            <VBox width="auto" height="auto" halign="center" valign="center" margin="0,0,0,30" visible="false">
+                                <Control width="auto" height="auto" normalimage="empty_friend_list.png"/>
+                                <Label class="empty_tip_attrib" text="还没有群聊"/>
+                            </VBox>
+                        </TabBox>
+                    </TabBox>
+                </Box>
+            </VBox>
+
+            <Control class="splitline_ver_level1" height="stretch"/>
+            
+            <TabBox name="msg_tabbox" width="stretch" height="stretch">
+                <VBox width="stretch" height="stretch">
+                    <VBox width="stretch" height="stretch" >
+                        <HBox width="stretch" height="44" margin="20,0,20,0">
+                            <Label name="with_who" width="auto" valign="center" font="1" normaltextcolor="dark2color"/>
+                            <Control width="stretch"/>
+                            <Button name="return" width="auto" height="30" valign="center" bkimage="file='btn_return.png' dest='0,10,6,20'" cursortype="hand" visible="false" 
+                                    text="返回" textpadding="10,0,0,0" font="1" normaltextcolor="dark2color" hottextcolor="main_bottom_hovered" pushedtextcolor="main_bottom_pushed"/>
+                            <HBox name="team_live_tip" float="true" visible="false" width="auto" height="44" halign="right" valign="center" bkimage="file='team_live_tip_bk.png' corner='24,0,18,0'">
+                                <Label width="auto" height="auto" valign="center" margin="28" textid="STRID_MSGLOGFORM_TEAM_LIVE_TIP" font="2" normaltextcolor="team_live_intro_tip"/>
+                                <Button class="btn_wnd_close" name="close_team_live_tip" valign="center" margin="8,0,19,0"/>
+                            </HBox>
+                        </HBox>
+                    
+                        <Control class="splitline_hor_level1" width="stretch" margin="20,0,20,0"/>
+                    
+                        <Box name="msg_list_box" width="stretch" height="stretch" >
+                            <VListBox name="msg_list" width="stretch" vscrollbar="true" hscrollbar="false" vscrollunit="200"/>
+                        </Box>
+                    </VBox>
+                
+                    <Control class="splitline_hor_level1" width="stretch"/>
+                
+                    <Box width="stretch" height="50" bkcolor="bk_listitem_hovered">
+                        <Label name="cur_page" font="1" normaltextcolor="dark2color" width="auto" height="auto" halign="left" valign="center" margin="20"/>
+                        <HBox width="auto" height="auto" halign="right" valign="center" margin="0,0,25,0">
+                            <Button class="page_turner_attrib" name="first_page" forenormalimage="file='first_normal.png' dest='6,5,14,15'" foredisabledimage="file='first_disabled.png' dest='6,5,14,15'" tooltiptext="首页"/>
+                            <Button class="page_turner_attrib" name="previous_page" margin="17" forenormalimage="file='previous_normal.png' dest='7,5,13,15'" foredisabledimage="file='previous_disabled.png' dest='7,5,13,15'" tooltiptext="上一页"/>
+                            <Button class="page_turner_attrib" name="next_page" margin="20" forenormalimage="file='next_normal.png' dest='7,5,13,15'" foredisabledimage="file='next_disabled.png' dest='7,5,13,15'" tooltiptext="下一页"/>
+                            <Button class="page_turner_attrib" name="final_page" margin="17" forenormalimage="file='final_normal.png' dest='6,5,14,15'" foredisabledimage="file='final_disabled.png' dest='6,5,14,15'" tooltiptext="末页"/>
+                        </HBox>
+                    </Box>
+                </VBox>
+            
+                <Box width="stretch" height="stretch">
+                    <VBox width="auto" height="auto" halign="center" valign="center" margin="0,0,0,30">
+                        <Control width="auto" height="auto" normalimage="empty_msg_list.png"/>
+                        <Label class="empty_tip_attrib" text="还没有聊天记录"/>
+                    </VBox>
+                </Box>
+                
+                <Box width="stretch" height="stretch">
+                    <HBox width="auto" height="auto" halign="center" valign="center" margin="0,0,0,30">
+                        <Control name="animation" width="auto" height="auto" bkimage="../public/animation/ani_loading.gif"/>
+                        <Label class="empty_tip_attrib" name="loading_tip" margin="10,0,0,0"/>
+                    </HBox>
+                </Box>
+            </TabBox>
+        </HBox>
+    </VBox>
+</Window>

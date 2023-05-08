@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+    <ListContainerElement width="stretch" height="40" normalcolor="bk_video_content" selectednormalcolor="bk_olive_name_selected" fadehot="false" dataid="olive_name_item"
+        normaltextcolor="textcolor_olive_name_normal" selectedtextcolor="white" font="2" textpadding="14,0,14,0">
+        <BubbledEvent type="mouseenter" receiver=".\remove_item" applyattribute="visible=&quot;true&quot;"/>
+        <BubbledEvent type="mouseleave" receiver=".\remove_item" applyattribute="visible=&quot;false&quot;"/>
+        <Button name="remove_item" bkimage="file='../public/button/btn_del_search_normal.png'" halign="right" valign="center" margin="0,0,14,0" visible="false"/>
+    </ListContainerElement>
+</Window>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="340,418" caption="0,0,0,34" textid="STRID_FC_MESSAGE_TITLE">
+    <VBox bkcolor="bk_wnd_lightcolor">
+        <HBox class="caption">
+            <Label class="font_title" name="title" width="stretch" valign="center" normaltextcolor="darkcolor" textid="STRID_FC_MESSAGE_TITLE"/>
+            <Button class="btn_recycle" name="btn_recycle" margin="4,6,0,0" tooltiptext="清空列表"/>
+            <Button class="btn_refresh" name="btn_refresh" margin="4,6,0,0" tooltiptext="刷新列表"/>
+            <Button class="btn_wnd_close" name="closebtn" margin="4,6,0,0"/>
+        </HBox>
+
+        <Box>
+            <VListBox name="message_list" vscrollbar="true" hscrollbar="false" vscrollunit="120"/>
+
+            <!--没有动态消息-->
+            <VBox name="empty" height="auto" valign="center" float="true" bkcolor="bk_wnd_lightcolor" visible="false">
+                <Control width="auto" height="auto" halign="center" valign="center" bkimage="tc_null_feed.png"/>
+                <Label name="empty_tip" halign="center" text="暂时没有朋友圈消息" font="2" normaltextcolor="fc_empty"/>
+            </VBox>
+
+            <!--刷新提示-->
+            <Box name="hbox_top_tip" height="36" margin="5,5,5,0" bkcolor="green" alpha="220" visible="false">
+                <HBox width="auto" height="36" halign="center">
+                    <Control width="auto" height="auto" valign="center" bkimage="loading.gif"/>
+                    <Label margin="5,0,0,2" valign="center" normaltextcolor="white" font="2" text="加载中..."/>
+                </HBox>
+            </Box>
+        </Box>
+    </VBox>
+</Window>

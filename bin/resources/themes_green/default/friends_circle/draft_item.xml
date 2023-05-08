@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+    <ListContainerElement width="stretch" height="auto" padding="0,0,0,10">
+        <VBox name="vbox_feed" width="stretch" height="auto" bkcolor="bk_wnd_lightcolor" bordersize="1,1,1,1" bordercolor="splitline_hor_level5" mouse="false">
+            <HBox height="42" margin="7,14,10,0" mouse="false">
+                <Box width="42" height="42" mouse="false">
+                    <Button name="CircleItemHeader" width="40" height="40" borderround="40,40,40,40" margin="1,1,1,1" cursortype="hand"/>
+                    <Control width="42" height="42" mouse="false" bkimage="mask_42_42.png"/>
+                </Box>
+                <VBox margin="5,2,8,0" mouse="false" mousechild="false">
+                    <Label name="feed_friend_name" width="auto" valign="center" text="好友名字" font="2" normaltextcolor="green"/>
+                    <Label name="conference_time" maxwidth="100" valign="center" text="1分钟前" normaltextcolor="lightcolor"/>
+                </VBox>
+                <TabBox name="post_state_box" width="auto" height="auto" halign="right" valign="center" visible="false" mouse="false">
+                    <Control name="sending" width="auto" height="auto" halign="center" valign="center" bkimage="../public/animation/ani_loading2.gif" mouse="false"/>
+                    <Button name="failed" width="auto" height="auto" halign="center" valign="center" bkimage="../public/icon/icon_number.png"
+                            text="!" normaltextcolor="white" align="vcenter"/>
+                    <Button name="resend" width="auto" height="auto" halign="center" valign="center" bkimage="file='../public/icon/icon_number.png' corner='8,0,8,0'"
+                            text="重发" normaltextcolor="white" textpadding="6,0,6,2"/>
+                </TabBox>
+            </HBox>
+
+            <!--正文-->
+            <!--图片或文件-->
+            <!--喜欢、评论、删除-->
+        </VBox>
+    </ListContainerElement>
+</Window>

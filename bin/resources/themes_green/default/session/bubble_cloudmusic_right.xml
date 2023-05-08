@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+	<Box width="auto" height="auto">
+		<Button name="bubble_cloudmusic" width="210" height="74" bkimage="file='bubble1_right.png' corner='15,15,23,14'" menu="true" cursortype="hand"/>
+		<HBox width="stretch" height="stretch" mouse="false">
+			<Box width="48" height="48" margin="13,13,0,13" mouse="false">
+				<Button name="music_image" width="46" height="46" borderround="46,46,46,46" margin="1,1,0,0" mouse="false" bkimage="icons/icon_music.png" 
+					forenormalimage="file='image_cloudmusic_fore.png' dest='1,1,45,45'" forehotimage="file='play_hovered.png' dest='1,1,45,45'" 
+					forepushedimage="file='play_pushed.png' dest='1,1,45,45'" fadehot="false"/>
+				<Control class="icon_headimage_mask_48x48" mouse="false"/>
+			</Box>
+			<VBox width="stretch" height="auto" margin="8,0,19,0" valign="center" mouse="false">
+				<Label name="music_label_1" width="stretch" mouse="false" font="3" singleline="true" normaltextcolor="darkcolor"/>
+				<Control height="4" mouse="false"/>
+				<Label name="music_label_2" width="stretch" mouse="false" font="1" singleline="true" normaltextcolor="darkcolor"/>
+			</VBox>
+		</HBox>
+	</Box>
+</Window>

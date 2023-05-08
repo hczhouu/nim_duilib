@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<!-- "口囧" -->
+<Window>
+	<BubbleBase width="auto" height="auto">
+		<HBox name="bubble_content" childmargin="5" width="auto" height="auto" >
+			<VBox name="status_vertilayout" width="auto">
+				<!--AudioBubble&VoiceBubble--><Control name="play_status" visible="false" width="7" height="7" margin="0,15,0,0" bkimage="../session/image_audio_unread.png"/>
+				<VBox name="load_status_vertilayout" width="auto" visible="false">
+					<Control />
+					<Box name="loading_container" height="20" width="auto" padding="0,2,0,2" visible="false">
+						<Control name="loading_animation" width="16" height="16" bkimage="../public/animation/ani_loading.gif"/>
+					</Box>
+					<Box name="result_container" height="18" width="auto" visible="false">
+						<Button name="load_retry" normaltextcolor="link_red" cursortype="hand" font="24" visible="false"/>
+						<Button name="load_resend" normaltextcolor="link_red" cursortype="hand" font="24" visible="false"/>
+						<Label name="load_error" normaltextcolor="link_red" font="1" visible="false"/>
+					</Box>
+					<Control />
+				</VBox>
+				<!--AudioBubble-->
+				<VBox name="read_status_vertilayout" width="auto" visible="false">
+					<Control />
+					<Label name="read_label" normaltextcolor="lightcolor" font="1"/>
+					<Control />
+				</VBox>
+			</VBox>
+		</HBox>
+		<HBox name="extra_horilayout" width="auto" height="auto" >
+			<HBox name="smstype_horilayout" width="auto" height="21" margin="5,5,5,5" padding="10,0,10,0" bkimage="file='../session/bk_share_src.png' corner='10,10,10,10'" visible="false">
+				<Label name="smstype_label" valign="center" normaltextcolor="lightcolor" font="1"/>
+			</HBox>
+			<HBox name="source_horilayout" width="auto" height="auto" valign="center" margin="5,5,5,5" visible="false">
+				<Label name="source_label" valign="center" normaltextcolor="lightcolor" font="1"/>
+			</HBox>
+		</HBox>
+	</BubbleBase>
+</Window>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="870,573" mininfo="350,281" caption="0,0,0,34" sizebox="4,4,4,4" textid="STRID_OLIVE_TITLE">
+	<Box bkcolor="bk_wnd_lightcolor">
+		<HBox name="main_panel" margin="0,34">
+            <Box bkcolor="bk_video">
+                <TabBox name="player_bk" bkcolor="bk_video" margin="0,0,0,50">
+		            <Player name="player"/>
+                    
+                    <Box width="stretch" height="stretch" bkimage="olive_bk.png" mouse="false" mousechild="false">
+                        <VBox width="auto" height="auto" halign="center" valign="center">
+                            <Control name="loading" width="auto" height="auto" halign="center" bkimage="loading/1_00000.png"/>
+                            <Label width="auto" height="auto" halign="center" margin="0,16" 
+                                   font="3" normaltextcolor="white" textid="STRID_OLIVE_PLAY_LOADING"/>
+                        </VBox>
+                    </Box>
+
+                    <Box width="stretch" height="stretch" bkimage="olive_bk.png" mouse="false" mousechild="false">
+                        <VBox width="auto" height="auto" halign="center" valign="center">
+                            <Control width="auto" height="auto" halign="center" bkimage="olive_logo_white.png"/>
+                            <Label width="auto" height="auto" halign="center" margin="0,16"
+                                   font="3" normaltextcolor="white" textid="STRID_OLIVE_SLOGAN"/>
+                        </VBox>
+                    </Box>
+                        
+                    <HBox width="auto" height="auto" halign="center" valign="center" mouse="false">
+                        <Control width="auto" height="auto" bkimage="icon_error.png" mouse="false"/>
+                        <VBox name="err_box" width="auto" height="auto" valign="center" margin="16">
+                            <Label name="reason" font="2" normaltextcolor="message_tip" mouse="false"/>
+                            <HBox name="operation_box" width="auto" height="auto" margin="0,1">
+                                <Label name="operation1" font="2" normaltextcolor="message_tip" mouse="false"/>
+                                <Button name="refresh" font="26" normaltextcolor="green" text="刷新" cursortype="hand"/>
+                                <Label name="operation2" font="2" normaltextcolor="message_tip" mouse="false"/>
+                            </HBox>
+                        </VBox>
+                    </HBox>
+	            </TabBox>
+        
+                <HBox name="bottom_bar" height="50" valign="bottom" bkcolor="bk_video_title" mouse="false"> <!--底部工具栏-->
+                    <CheckBox name="pause_resume_check" width="16" height="22" valign="center" margin="20" cursortype="hand"
+                              normalimage="file='btn_pause.png' dest='2,0,14,22'" selectednormalimage="file='btn_resume.png' dest='0,1,16,21'"/>
+                    <Control width="stretch" mouse="false"/>
+                    <CheckBox name="sound_switch" width="22" height="22" valign="center" selectednormalimage="speaker20.png" normalimage="speaker10.png" cursortype="hand"/>
+                    <Slider name="volume_slider" width="160" height="14" margin="12,0,58,0" valign="center" thumbsize="14,14" min="0" max="100" value="100" progressbarpadding="0,6,0,6" cursortype="hand"
+                            bkimage="file='slider_hor_bk.png' dest='0,6,160,8'" progresscolor="bk_progress_progress" thumbnormalimage="slider_thumb.png" smooth="true"/>
+                    <CheckBox name="full_screen" valign="center" margin="0,0,16,0" normalimage="full_screen.png" selectednormalimage="quit_full_screen.png" tooltiptext="全屏" cursortype="hand"/>
+                </HBox>
+            </Box>
+            
+            <VListBox name="camera_name_list" width="180" height="stretch" bkcolor="bk_video_content" visible="false" vscrollbar="true" hscrollbar="false" vscrollunit="100"/>
+        </HBox>
+    
+        <HBox name="top_bar" height="34" valign="top" padding="14,0,5,0" bkcolor="bk_video_title" mouse="false"> <!--顶部标题栏-->
+            <Label class="font_title" name="camera_name" width="auto" valign="center" normaltextcolor="white"/>
+            <Control width="stretch" mouse="false"/>
+            
+            <CheckBox name="stick" width="21" height="21" margin="4,6,0,0" tooltiptext="置顶"
+                      normalimage="file='btn_stick.png' dest='3,4,17,18'" selectednormalimage="file='btn_stick_selected.png' dest='3,4,17,18'"
+                      forehotimage="../public/button/btn_wnd_white_bk_hovered.png" forepushedimage="../public/button/btn_wnd_white_bk_pushed.png"
+                      selectedforehotimage="../public/button/btn_wnd_white_bk_hovered.png" selectedforepushedimage="../public/button/btn_wnd_white_bk_pushed.png"/>
+            <CheckBox name="simplify" width="21" height="21" margin="4,6,0,0" tooltiptext="极简模式"
+                      normalimage="file='btn_simplify.png' dest='3,4,17,18'" selectednormalimage="file='btn_complete.png' dest='3,4,17,18'"
+                      forehotimage="../public/button/btn_wnd_white_bk_hovered.png" forepushedimage="../public/button/btn_wnd_white_bk_pushed.png"
+                      selectedforehotimage="../public/button/btn_wnd_white_bk_hovered.png" selectedforepushedimage="../public/button/btn_wnd_white_bk_pushed.png"/>
+            
+            <Button class="btn_wnd_white_min" name="minbtn" margin="4,6,0,0"/>
+			<Box name="max_restore_box" width="21" margin="4,6,0,0">
+				<Button class="btn_wnd_white_max" name="max_btn"/>
+				<Button class="btn_wnd_white_restore" name="restore_btn" visible="false"/>
+			</Box>
+            <Button class="btn_wnd_white_close" name="closebtn" margin="4,6,0,0"/>
+        </HBox>
+	</Box>	
+</Window>

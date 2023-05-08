@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <VBox name="team_circle_file" width="stretch" height="auto" bkimage="file='file_bk.png' corner='12,12,12,12'" margin="10,10,10,0" mouse="false">
+        <HBox width="stretch" height="79" mouse="false" mousechild="false">
+            <Control name="file_icon" width="auto" height="auto" margin="12,12,0,10" bkimage="../session/icons/file_default.png"/>
+            <VBox name="fileinfo_vertlayout" width="stretch" height="stretch" margin="10,10,10,8">
+                <Label name="file_info_name" width="stretch" height="auto" singleline="true" font="3" normaltextcolor="darkcolor"/>
+                <Label name="file_info_size" width="stretch" height="auto" singleline="true" font="2" normaltextcolor="lightcolor"/>
+                <VBox name="progress_vertlayout" width="stretch" height="12" margin="0,10,0,0" visible="false">
+                    <Progress name="http_progress" width="stretch" height="2" bkcolor="bk_progress_bk" progresscolor="bk_progress_progress"/>
+                    <Control height="10"/>
+                </VBox>
+            </VBox>
+        </HBox>
+
+        <Control class="splitline_hor_level1" width="stretch" mouse="false"/>
+
+        <HBox height="34" width="stretch" margin="12" mouse="false">
+            <Label name="http_status" width="55" valign="center" font="1" normaltextcolor="lightcolor" mouse="false"/>
+            <Control width="stretch" mouse="false"/>
+            <Button halign="right" valign="center" margin="0,0,12,0" cursortype="hand" font="1" normaltextcolor="btn_green" visible="false" name="pause_upload" text="暂停发布"/>
+            <Button halign="right" valign="center" margin="0,0,12,0" cursortype="hand" font="1" normaltextcolor="btn_green" visible="false" name="resume_upload" text="继续发布"/>
+            <Button halign="right" valign="center" margin="0,0,12,0" cursortype="hand" font="1" normaltextcolor="btn_green" visible="false" name="retry_upload" text="重新发布"/>
+            <Button halign="right" valign="center" margin="0,0,12,0" cursortype="hand" font="1" normaltextcolor="btn_green" visible="false" name="open_file" text="打开"/>
+            <Button halign="right" valign="center" margin="0,0,12,0" cursortype="hand" font="1" normaltextcolor="btn_green" visible="false" name="open_dir" text="打开文件夹"/>
+            <Button halign="right" valign="center" margin="0,0,12,0" cursortype="hand" font="1" normaltextcolor="btn_green" visible="false" name="saveas" text="另存"/>
+            <Button halign="right" valign="center" margin="0,0,12,0" cursortype="hand" font="1" normaltextcolor="btn_green" visible="false" name="save" text="接收"/>
+            <Button halign="right" valign="center" margin="0,0,12,0" cursortype="hand" font="1" normaltextcolor="btn_green" visible="false" name="pause_download" text="暂停下载"/>
+            <Button halign="right" valign="center" margin="0,0,12,0" cursortype="hand" font="1" normaltextcolor="btn_green" visible="false" name="resume_download" text="继续下载"/>
+            <Button halign="right" valign="center" margin="0,0,12,0" cursortype="hand" font="1" normaltextcolor="btn_green" visible="false" name="retry_download" text="重新下载"/>
+        </HBox>
+    </VBox>
+</Window>

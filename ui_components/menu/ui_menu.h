@@ -107,6 +107,7 @@ class CMenuElementUI : public ui::ListContainerElement
 	friend CMenuWnd;
 public:
 	CMenuElementUI();
+	CMenuElementUI(const std::wstring& strXml);
 	~CMenuElementUI();
 
 	virtual bool ButtonUp(EventArgs& msg) override;
@@ -125,11 +126,11 @@ public:
 	virtual int GetSubMenuItemCount() const{ return (int)m_child_menus.size(); };
 
 	virtual bool Add(Control* pControl) override;
-
+	void SetInitXml(const std::wstring& strXml);
 private:
 	void CreateMenuWnd();
 	CMenuWnd*	m_pSubWindow;
-
+	std::wstring m_strSubMenuXml;
 protected:
 	std::vector<CMenuElementUI*> m_child_menus;
 };

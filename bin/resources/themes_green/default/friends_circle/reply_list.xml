@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <VBox width="stretch" height="auto" padding="10,0,10,10" bkcolor="bk_reply" bordersize="1,1,1,1" bordercolor="splitline_hor_level5">
+        <HBox name="hbox_like" height="auto" margin="0,8,0,0" visible="false">
+            <Control width="14" height="14" margin="0,4,6,6" bkimage="like5.png"/>
+            <RichEdit name="like_people" width="340" font="1" rich="true" multiline="true"
+                        hscrollbar="false" autohscroll="false" vscrollbar="false" autovscroll="true" readonly="true"/>
+        </HBox>
+
+        <Control name="like_vs_reply" height="1" bkcolor="splitline_hor_level5" visible="false"/>
+            
+        <VListBox name="reply_list" height="auto" margin="0,8,0,0" visible="false"/>
+        <Button name="btn_all_reply" margin="0,5,0,0" cursortype="hand" font="2" normaltextcolor="link_green" text="全部评论" visible="false"/>
+
+        <Box name="box_of_reply_input" height="95" margin="0,10,0,0" bkcolor="bk_wnd_lightcolor" bordersize="1,1,1,1" bordercolor="splitline_hor_level5">
+            <VBox nofocus="true">
+                <RichEdit class="prompt" name="input_reply" width="stretch" height="52" margin="10,8,5,3"
+                            font="1" prompttext="我也说一句..." rich="false" vscrollbar="true" autovscroll="true" wanttab="false" wantreturnmsg="false"/>
+
+                <HBox name="hbox_tool" height="26" margin="6,0,8,5" nofocus="true">
+                    <CheckBox name="ckb_emoj" width="26" height="26" nofocus="true"
+                                forenormalimage="file='btn_face.png' dest='3,3,23,23'" foredisabledimage="file='btn_face.png' dest='3,3,23,23' fade='80'"
+                                hotimage="icon_hover.png" pushedimage="icon_pushed.png" selectednormalimage="icon_pushed.png"
+                                selectedforenormalimage="file='btn_face.png' dest='3,3,23,23'" selectedforedisabledimage="file='btn_face.png' dest='3,3,23,23' fade='80'"/>
+                    <Control nofocus="true"/>
+                    <Label name="words_number" margin="0,4,0,0" valign="center" nofocus="true" normaltextcolor="lightcolor"/>
+                    <Button name="btn_conference" width="50" height="24" margin="10,0,0,2" nofocus="true" valign="bottom" text="发布" enabled="false"
+                            normaltextcolor="white" disabledtextcolor="white" normalimage="publish0.png" hotimage="publish1.png" pushedimage="publish2.png" disabledimage="publish3.png"/>
+                </HBox>
+            </VBox>
+            
+            <Box name="box_of_reply_fail" visible="false">
+                <Box height="30" margin="5,5,5,0" bkcolor="obvious_tip">
+                    <Label name="comment_fail_tip" margin="0,0,0,2" halign="center" valign="center" text="发布失败，请重试" font="2" normaltextcolor="white"/>
+                </Box>
+            </Box>
+        </Box>
+       
+    </VBox>
+</Window>

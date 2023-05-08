@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window caption="0,0,0,34" textid="STRID_ACCOUNT_EMPTY_FORM_TITLE">
+    <VBox width="220" height="auto" bkcolor="bk_wnd_lightcolor">
+        <HBox class="caption">
+            <Label class="font_title" name="title" width="stretch" valign="center" normaltextcolor="darkcolor" textid="STRID_ACCOUNT_EMPTY_FORM_TITLE"/>
+            <Button class="btn_wnd_close" name="closebtn" margin="4,6,0,0"/>
+        </HBox>
+        
+        <VBox height="auto" margin="20,20,20,20">
+            <Label width="190" height="auto" singleline="false" 
+                   normaltextcolor="darkcolor" font="1" text="在此输入手机版注册易信时所设置的易信帐号（手机号或易信号）"/>
+            <Label width="stretch" margin="0,15,0,5" normaltextcolor="darkcolor" font="1" text="还没有易信帐号？"/>
+            <Button name="weblink" normaltextcolor="link_green" cursortype="hand" font="24" text="下载手机版易信并注册易信帐号"/>
+        </VBox>
+    </VBox>
+</Window>

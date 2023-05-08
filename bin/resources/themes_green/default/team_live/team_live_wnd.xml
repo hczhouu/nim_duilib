@@ -1,0 +1,48 @@
+<!-- 点击群聊窗口的“群直播”按钮，弹出本窗口 -->
+<Window size="330,0" caption="0,0,0,34" textid="STRID_TEAMLIVE_TITLE">
+    <VBox bkcolor="bk_wnd_lightcolor" width="330" height="auto">
+        <VBox width="stretch" height="auto">
+            <HBox class="caption">
+                <Label class="font_title" width="stretch" valign="center" textid="STRID_TEAMLIVE_TITLE" normaltextcolor="darkcolor"/>
+                <Button class="btn_wnd_close" name="closebtn" margin="4,6,0,0"/>
+            </HBox>
+            <Control width="175" height="90" halign="center" margin="0,44" bkimage="team_live_illustration.png"/><!--配图-->
+            
+            <VBox name="tip_box" width="stretch" height="auto">
+                <Label width="auto" height="auto" halign="center" margin="0,25" textid="STRID_TEAMLIVE_WND_TIP" font="1" normaltextcolor="live_area_bar_text"/>
+                <Button name="what" width="auto" height="auto" halign="center" margin="0,3,0,2" text=" 了解更多>" font="1" normaltextcolor="green" cursortype="hand"/>
+            </VBox>
+            
+            <TabBox name="live_switch" width="auto" height="auto" halign="center" margin="0,20,0,2">
+                <Button class="btn_global_green_80x30" name="start_live" text="开启直播"/>
+                <Button class="btn_global_red_80x30" name="stop_live" text="结束直播"/>
+                <Control width="auto" height="auto" bkimage="team_live_starting.gif"/>
+                <Control width="auto" height="auto" bkimage="team_live_stopping.gif"/>
+            </TabBox>
+            
+            <Label name="no_authority_tip" width="auto" height="auto" halign="center" margin="0,5" textid="STRID_TEAMLIVE_WND_NO_AUTHORITY" font="1" normaltextcolor="team_live_wnd_tip1" visible="false"/>
+            <Control height="34"/>
+        </VBox>
+
+        <VBox name="live_members_box" width="stretch" height="auto">
+            <HBox width="auto" height="auto" margin="20,0,0,5">
+                <Label name="live_members_tip" normaltextcolor="live_area_bar_text" width="auto" height="auto" valign="center" margin="0,0,0,1"/>
+                <Control name="interrogation" width="auto" height="auto" margin="4" valign="center" normalimage="interrogation_normal.png" hotimage="interrogation_hover.png" pushedimage="interrogation_pushed.png"/>
+            </HBox>
+            
+            <Control class="splitline_hor_level1" width="stretch"/>
+            
+            <TileListBox name="live_member_list" width="stretch" height="auto" margin="0,0,0,4" maxheight="228" columns="2" vscrollbar="true"/>
+            <Control height="12"/>
+        </VBox>
+        
+        <Box name="hover_tip" width="262" height="90" padding="13,13,13,13" bkimage="file='../public/bk/bk_shadow.png' corner='30,30,30,30'" visible="false" float="true" mouse="false">
+            <Label width="stretch" height="stretch" bkimage="file='../public/button/btn_wnd_bk_hovered.png' corner='2,2,2,2'" 
+                   font="2" normaltextcolor="dark2color" textpadding="10,0,10,0" align="vcenter" singleline="false" textid="STRID_TEAMLIVE_HOVER_TIP"/>
+        </Box>
+
+        <Box name="yellow_tip" width="stretch" height="36" margin="5,39,5,0" bkcolor="bk_lightyellow" float="true" fadealpha="true" visible="false">
+            <Label name="tip" width="stretch" height="stretch" align="vcenter" font="2"/>
+        </Box>
+    </VBox>
+</Window>

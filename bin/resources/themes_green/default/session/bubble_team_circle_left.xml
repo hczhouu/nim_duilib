@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+	<Box width="auto" height="auto">
+		<Button name="bubble_team_circle" width="212" height="103" bkimage="file='../session/bubble1_left.png' corner='23,15,15,14'" menu="true" cursortype="hand"/>
+        <VBox width="stretch" height="stretch"  margin="9,3,3,3" padding="10,0,10,0" mouse="false" mousechild="false">
+            <Label width="auto" height="auto" margin="0,11,0,8" font="1" normaltextcolor="lightcolor" text="群动态"/>
+            <Control class="splitline_hor_level1" width="stretch"/>
+            <HBox width="stretch" height="stretch">
+                <Control name="tc_icon" width="44" height="44" valign="center" bkimage="../session/team_circle_text.png"/>
+                <RichEdit name="tc_content" width="stretch" height="auto" valign="center" margin="10" font="2" rich="true" multiline="false" normaltextcolor="darkcolor"/>
+            </HBox>
+        </VBox>
+	</Box>
+</Window>

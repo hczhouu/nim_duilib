@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <HBox height="24" margin="5,8,10,14" mouse="false">
+        <CheckBoxBox name="ckb_like" width="auto" height="24" 
+                     hotimage="file='hovered.png' corner='5,5,5,5'" pushedimage="file='hovered.png' corner='5,5,5,5'" 
+                     selectedhotimage="file='hovered.png' corner='5,5,5,5'" selectedpushedimage="file='hovered.png' corner='5,5,5,5'" 
+                     forenormalimage="file='like0.png' dest='5,5,19,19'" forehotimage="file='like1.png' dest='5,5,19,19'" 
+                     forepushedimage="file='like1.png' dest='5,5,19,19'" 
+                     selectedforenormalimage="file='like2.png' dest='5,5,19,19'" selectedforehotimage="file='like2.png' dest='5,5,19,19'" 
+                     selectedforepushedimage="file='like2.png' dest='5,5,19,19'">
+            <Label name="label_like" margin="23,0,5,0" valign="center" mouse="false" normaltextcolor="gray" text="喜欢"/>
+        </CheckBoxBox>
+        
+        <Control width="1" height="14" valign="center" bkcolor="splitline_hor_level5" margin="6,0,6,0" mouse="false"/>
+        
+        <ButtonBox name="btn_comment" width="auto" height="24" nofocus="true" 
+                   hotimage="file='hovered.png' corner='5,5,5,5'" pushedimage="file='hovered.png' corner='5,5,5,5'" 
+                   forenormalimage="file='comment0.png' dest='5,5,19,19'" forehotimage="file='comment1.png' dest='5,5,19,19'" 
+                   forepushedimage="file='comment2.png' dest='5,5,19,19'">
+            <Label name="label_comment" margin="23,0,5,0" valign="center" mouse="false" normaltextcolor="gray" text="评论"/>
+        </ButtonBox>
+        
+        <Control mouse="false"/>
+        
+        <ButtonBox name="btn_del_infor" width="55" height="24" 
+                   hotimage="file='hovered.png' corner='5,5,5,5'" pushedimage="file='hovered.png' corner='5,5,5,5'" 
+                   forenormalimage="file='del0.png' dest='5,5,19,19'" forehotimage="file='del1.png' dest='5,5,19,19'" 
+                   forepushedimage="file='del1.png' dest='5,5,19,19'">
+            <BubbledEvent type="mouseenter" receiver=".\label_del" applyattribute="normaltextcolor=&quot;obvious_tip&quot;"/>
+            <BubbledEvent type="mouseleave" receiver=".\label_del" applyattribute="normaltextcolor=&quot;gray&quot;"/>
+            <Label name="label_del" margin="23,0,0,0" valign="center" mouse="false" normaltextcolor="gray" text="删除"/>
+        </ButtonBox>
+    </HBox>
+</Window>

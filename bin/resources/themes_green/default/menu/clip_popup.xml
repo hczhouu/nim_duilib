@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+    <VListBox class="menu">
+		<MenuElement class="MenuElement" name="hide_session_item" width="190">
+            <HBox name="horlayout">
+				<Button class="menu_text" text="截图时隐藏窗口" mouse="false"/>
+				<Control width="18" mouse="false"/>
+				<CheckBox class="option" name="hide_session" valign="center" mouse="false"/>
+            </HBox>
+        </MenuElement>
+    </VListBox>
+</Window>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<!--其他人的消息-->
+<Window>
+	<NormalMsgCell padding="0,12,0,0" height="auto">
+		<VBox name="cell_root_vertilayout" height="auto">
+			<HBox name="cell_time_horilayout" height="31" visible="false">
+				<Control />
+				<Label name="cell_time" normaltextcolor="lightcolor" font="1" margin="0,5,0,0"/>
+				<Control />
+			</HBox>
+      
+			<HBox name="cell_msg_horilayout" childmargin="5" padding="9,0,0,0" height="auto">
+				<Box name="header_panel" width="auto" height="auto" >
+					<Button name="msg_header_button" width="38" height="38" borderround="38,38,38,38" margin="1,1,0,0" cursortype="hand" forenormalimage="header.png" bkimage="../../../res/faces/default/male_small.png" menu="true"/>
+					<Button class="icon_headimage_mask_40x40" name="head_image_mask" mouse="false"/>
+				</Box>
+				<VBox name="msg_vertilayout" width="auto" height="auto">
+					<Label name="sender_label" font="1" normaltextcolor="lightcolor" visible="false" margin="0,0,0,3"/>
+					<Control height="2"/>
+					<Box name="bubble_container" width="auto" height="auto" />
+				</VBox>
+				<Control />
+			</HBox>
+		</VBox>
+	</NormalMsgCell>
+</Window>

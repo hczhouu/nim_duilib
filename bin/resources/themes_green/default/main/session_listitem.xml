@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+    <ListContainerElement class="listitem" height="64" name="hor_container">        
+        <Event type="select" receiver=".\head_image_mask" applyattribute="selected=&quot;true&quot;"/>
+        <Event type="unselect" receiver=".\head_image_mask" applyattribute="selected=&quot;false&quot;"/>
+		<Event type="buttondown" receiver=".\head_image_mask" applyattribute="selected=&quot;true&quot;"/>
+        <BubbledEvent type="mouseenter" receiver=".\head_image_mask" applyattribute="state=&quot;hot&quot;"/>
+        <BubbledEvent type="mouseleave" receiver=".\head_image_mask" applyattribute="state=&quot;normal&quot;"/>
+		
+		<VBox mouse="false">
+			<HBox height="stretch" padding="8,0,20,0" mouse="false">
+				<Box valign="center" width="auto" height="auto" mouse="false">
+					<Button name="session_head_image" width="46" height="46" borderround="46,46,46,46" margin="1,1,0,0" cursortype="hand"/>
+					<CheckBox name="head_image_mask" mouse="false"/>
+				</Box>
+				<VBox margin="8,0,0,0" height="auto" width="stretch" valign="center" mouse="false" mousechild="false">
+					<HBox height="auto">
+						<Label name ="show_name" width="stretch" font="2" normaltextcolor="darkcolor" margin="0,0,8,0"/>
+						<Control name="mute" width="auto" height="auto" halign="right" bkimage="mute.png" margin="0,5,5,0"/>
+					</HBox>
+
+					<HBox height="auto" margin="0,4,0,0" mouse="false" mousechild="false">
+						<Control name="icon_state" visible="false" bkimage="file='icon_msg_default.png'" width="auto" height="auto" valign="center" margin="0,0,3,0"/>
+						<Label name ="at_me_label" text="[有人@我] " visible="false" width="auto" valign="center" normaltextcolor="link_red" font="1"/> 
+						<Label name ="new_message_label" width="stretch" valign="center" normaltextcolor="lightcolor" font="1"/>
+					</HBox>
+				</VBox>
+				<VBox name ="vertical_layout_3" width="auto" height="stretch" valign="center" mouse="false" mousechild="false">
+					<Label name ="message_time" font="1" halign="right" margin="0,14,0,0" normaltextcolor="lightcolor"/>
+					<Button name ="unread_num" valign="center" halign="right" margin="0,5,0,0" font="1" normaltextcolor="white" textpadding="0,0,0,2" mouse="false"
+                            hotimage="file='../public/icon/icon_number.png' corner='8,0,8,0'" pushedimage="file='../public/icon/icon_number_gray.png' corner='8,0,8,0'" />
+                    <!-- hotimage保存红色背景，pushedimage保存灰色背景，不会显示，仅用作保存 -->
+				</VBox>
+			</HBox>
+		</VBox>
+    </ListContainerElement>
+</Window>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+	<MsgBubble width="68" height="38">
+		<VBox name="BubbleInsideVerLayout" width="68" height="38">
+			<!--TODO(litianyi) Support relative path-->
+			<Control name="TypingStatusAnimation" width="68" height="38"/> <!-- bkimage="ani_bubble_typing.gif"/-->
+		</VBox>
+	</MsgBubble>
+</Window>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="320,160" caption="0,0,0,34" textid="STRING_TIPS">
+    <VBox bkcolor="bk_wnd_lightcolor" width="320" height="auto">
+        <HBox class="caption">
+            <Label class="font_title" name="caption" width="stretch" valign="center" textid="STRING_TIPS" normaltextcolor="darkcolor"/>
+            <Button class="btn_wnd_min" name="minbtn" margin="4,6,0,0"/>
+            <Button class="btn_wnd_close" name="closebtn" margin="4,6,0,0"/>
+        </HBox>
+
+        <HBox height="auto" margin="0,20,0,20">
+            <Control width="22" height="22" margin="50,0,10,0" bkimage="../msgbox/infor.png"/>
+
+            <VBox height="auto">
+                <Label font="1" text="对不起，下载更新失败，"/>
+                <Label font="1" margin="0,8,0,8" text="您可至官网下载最新版本安装包："/>
+                <Button name="downloadlink" normaltextcolor="link_green" cursortype="hand" font="24"/>
+            </VBox>
+        </HBox>
+
+        <VBox height="auto" margin="0,0,0,15">
+            <Button class="btn_global_green_80x30" name="closewindow"  halign="center" text="关闭"/>
+        </VBox>
+    </VBox>
+</Window>

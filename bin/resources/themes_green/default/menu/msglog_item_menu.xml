@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+    <VListBox class="menu">
+        <MenuElement class="MenuElement" name="copy" width="138">
+            <Button class="menu_text" text="复制"/>
+        </MenuElement>
+
+        <MenuElement class="MenuElement" name="del_chosen" width="138">
+            <Button class="menu_text" text="删除选中记录"/>
+        </MenuElement>
+		
+		<MenuElement class="MenuElement" name="empty_all" width="138">
+            <Button class="menu_text" text="清空全部记录"/>
+        </MenuElement>
+    </VListBox>
+</Window>

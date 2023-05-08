@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window caption="0,0,0,34" textid="STRID_SELECT_FRIEND_TITLE">
+    <VBox bkcolor="bk_wnd_lightcolor" width="614" height="auto">
+        <HBox class="caption">
+            <Label class="font_title" name="title" width="stretch" valign="center" 
+                   normaltextcolor="darkcolor" textid="STRID_SELECT_FRIEND_TITLE"/>
+            <Button class="btn_wnd_close" name="closebtn" margin="4,6,0,0"/>
+        </HBox>
+
+        <VBox height="auto">
+            <HBox name="search_frame" height="32">
+                <Control name="search_icon" width="auto" height="auto" valign="center" margin="10,0,0,0" bkimage="file='../public/icon/icon_search_gray.png'"/>
+                <RichEdit class="simple prompt" name="search" margin="10,0,10,0" height="auto" valign="center" font="1" prompttext="搜索"/>
+				<Button class="btn_del_search" name="clear_input" visible="false" valign="center" margin="0,0,10,0"/>
+			</HBox>
+
+            <Control class="splitline_hor_level1"/>
+
+            <Box height="auto">
+                <VBox height="auto">
+                    <VBox name="select_range" height="auto">
+                        <HBox height="55">
+                            <VBox margin="20,0,0,0" width="auto">
+                                <BubbledEvent type="select" receiver=".\line" applyattribute="visible=&quot;true&quot;"/>
+                                <BubbledEvent type="unselect" receiver=".\line" applyattribute="visible=&quot;false&quot;"/>
+                                <Option name="recentcontact" cursortype="hand" margin="0,16,0,0" text="最近联系人" group="contact_list"
+                                        font="3" normaltextcolor="lightcolor" hottextcolor="green" selectedtextcolor="green"/>
+                                <Control name="line" height="3" bkcolor="green" margin="0,3,0,0"/>
+                            </VBox>
+                            <Control class="splitline_ver_level1" margin="21,0,0,0" height="16" valign="center"/>
+                            <VBox margin="21,0,0,0" width="auto">
+                                <BubbledEvent type="select" receiver=".\line" applyattribute="visible=&quot;true&quot;"/>
+                                <BubbledEvent type="unselect" receiver=".\line" applyattribute="visible=&quot;false&quot;"/>
+                                <Option name="addressbook" cursortype="hand" margin="0,16,0,0" text="通讯录" group="contact_list"
+                                        font="3" normaltextcolor="lightcolor" hottextcolor="green" selectedtextcolor="green"/>
+                                <Control  name="line" height="3" bkcolor="green" margin="0,3,0,0" visible="false"/>
+                            </VBox>
+                        </HBox>
+                        <Control class="splitline_hor_level1"/>
+                    </VBox>
+                            
+                    <TabBox name="tabbox" fadeswitch="true" height="404">
+                        <Box name="recentcontact_page">
+                            <TileListBox class="list" name="recentcontact_list" columns="3" padding="0,0,14,0" vscrollunit="75"/>
+                        </Box>
+
+                        <Box name="addressbook_page">
+                            <TreeView name="friend_list" vscrollbar="true" vscrollunit="75"/>
+                        </Box>
+                    </TabBox>
+                </VBox>
+
+                <TileListBox class="list" name="search_result" visible="false" columns="3" padding="0,0,14,0" vscrollunit="75"/>
+                <VBox mouse="false">
+                    <Label name="tool_tip" visible="false" halign="center" margin="0,10,0,0" font="2" normaltextcolor="lightcolor"/>
+                </VBox>
+            </Box>
+                
+        </VBox>
+
+        <Control class="splitline_hor_level1"/>
+
+        <HBox bkcolor="bk_wnd_darkcolor" height="80">
+            <Control />
+            <Button class="btn_global_white_80x30" name="cancel" valign="center" text="取消"/>
+            <Control width="10"/>
+            <Button class="btn_global_green_80x30" name="send" valign="center" text="确定" enabled="false"/>
+            <Control />
+        </HBox>
+    </VBox>
+    
+</Window>

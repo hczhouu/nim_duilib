@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+    <ListContainerElement class="listitem" width="264" height="auto">      
+        <VBox name="btn_olive" width="240" height="auto" halign="center" margin="0,24,0,25" cursortype="hand" mousechild="false">
+            <Box width="stretch" height="135" bkcolor="bk_listitem_hovered">
+				<Control width="auto" height="auto" halign="center" valign="center" bkimage="icon_olive.png"/>
+                <Control name="bkimg" width="stretch" height="stretch"/>
+				<Control name="camera_state_bk" width="auto" height="auto" hotimage="camera_onlive_bk.png" pushedimage="camera_offline_bk.png"/>
+				<Label name="camera_state" width="auto" height="auto" valign="top" margin="7,2,0,0" normaltextcolor="white"/>
+			</Box>
+            <Label name="camera_name" width="stretch" height="auto" margin="0,6,0,0" font="2"/>
+        </VBox>            
+    </ListContainerElement>
+</Window>

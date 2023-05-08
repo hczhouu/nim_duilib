@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="260,290">
+    <VBox bkcolor="bk_wnd_lightcolor">
+        <VListBox name="like_list" vscrollbar="true" hscrollbar="false" vscrollunit="50">
+        </VListBox>
+    </VBox>
+</Window>

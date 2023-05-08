@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+    <Box width="auto" height="auto" maxwidth="400" minheight="50" mouse="false">
+        <Button name="event_image" maxwidth="400" maxheight="100" cursortype="hand" bkimage="image.png"/>
+        <Control name="loading" width="auto" height="auto" halign="center" valign="center" bkimage="loading.gif" visible="false" mouse="false"/>
+    </Box>
+</Window>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+    <VListBox class="menu">
+        <MenuElement class="MenuElement" name="enter" width="180">
+            <Event type="mouseenter" receiver=".\sendckb_1" applyattribute="state=&quot;hot&quot;"/>
+            <Event type="mouseleave" receiver=".\sendckb_1" applyattribute="state=&quot;normal&quot;"/>
+            
+            <HBox>
+                <Button class="menu_text" text="Enter发送"/>
+                <Control width="61"/>
+                <CheckBox class="option" name="sendckb_1" valign="center" mouse="false"/>
+            </HBox>
+        </MenuElement>
+        
+        <MenuElement class="MenuElement" name="enter_shift" width="180">
+            <Event type="mouseenter" receiver=".\sendckb_2" applyattribute="state=&quot;hot&quot;"/>
+            <Event type="mouseleave" receiver=".\sendckb_2" applyattribute="state=&quot;normal&quot;"/>
+            
+            <HBox>
+                <Button class="menu_text" text="Ctrl+Enter发送"/>
+                <Control width="28"/>
+                <CheckBox class="option" name="sendckb_2" valign="center" mouse="false"/>
+            </HBox>
+        </MenuElement>
+    </VListBox>
+
+</Window>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+    <VListBox class="menu">
+        <MenuElement class="MenuElement" name="copy" width="138">
+            <Button class="menu_text" text="复制"/>
+        </MenuElement>
+
+        <MenuElement class="MenuElement" name="collect" width="138">
+            <Button class="menu_text" text="收藏"/>
+        </MenuElement>
+    </VListBox>
+</Window>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+    <VListBox class="menu">
+        <MenuElement class="MenuElement" name="import_msgs" width="138">
+            <Button class="menu_text" text="导入消息记录"/>
+        </MenuElement>
+
+        <MenuElement class="MenuElement" name="export_msgs" width="138">
+            <Button class="menu_text" text="导出消息记录"/>
+        </MenuElement>
+
+        <MenuElement class="MenuElement" name="export_as_text" width="138">
+            <Button class="menu_text" text="导出文本记录"/>
+        </MenuElement>
+    </VListBox>
+</Window>

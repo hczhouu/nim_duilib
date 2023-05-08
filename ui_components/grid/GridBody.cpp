@@ -439,7 +439,7 @@ namespace ui
 			m_vecRow.reserve(count + 100);
 			int add_count = count - row_count;
 			int row_index = row_count;
-			for (; row_index < count; row_index++)
+			for (; row_index < count + 1; row_index++)
 			{
 				GridRow *pRow = new GridRow();
 				//GridItem *item_arr = new GridItem[col_count];
@@ -1468,7 +1468,7 @@ namespace ui
 
 	void GridBody::PaintBorder(IRenderContext* pRender)
 	{
-		__super::PaintBorder(pRender);
+		
 		if (m_pGrid->m_bPaintGridLine && m_hLayout.size() > 0 && m_vLayout.size() > 0)
 		{
 			CSize szOff = m_pGrid->GetScrollPos();
@@ -1543,6 +1543,8 @@ namespace ui
 			
 			pRender->SetWindowOrg(ptOldOrg);
 		}
+
+		__super::PaintBorder(pRender);
 	}
 
 	void GridBody::PaintBody(IRenderContext* pRender)

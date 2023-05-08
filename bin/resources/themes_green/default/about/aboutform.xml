@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window caption="0,0,0,1000" size="480,390" textid="STRID_ABOUTFORM_LABEL_CAPTION_ABOUT">
+    <VBox bkcolor="bk_wnd_lightcolor">
+	    <HBox height="250" halign="right" bkimage="bg.png" padding="0,6,5,0">
+            <Control />
+		    <Button class="btn_wnd_white_min" name="minbtn" margin="0,0,4,0"/>
+		    <Button class="btn_wnd_white_close" name="closebtn"/>
+	    </HBox>
+        
+        <VBox name="bottom_box" bkcolor="bk_wnd_lightcolor">
+            <!--<VBox  height="auto">
+                <HBox height="auto">
+                    <HBox name="gif_load_panel" width="auto" height="24" margin="10,8,0,0"/>
+                    <HBox height="35" margin="10,5,0,0">
+                        <Label name="new_version_tip" font="1" width="stretch" margin="0,7,0,11"  normaltextcolor="darkcolor"/>
+                        <Button class="btn_global_white_80x30" name="check_update"/>
+                    </HBox>
+                </HBox>
+            </VBox>-->
+			
+			<HBox width="auto" height="40" margin="20">
+				<Label name="version_num" font="1" width="auto" height="auto" valign="center" normaltextcolor="darkcolor"/>
+				<TabBox name="version_tab" width="auto" height="auto" valign="center" margin="6">
+					<Label font="1" width="auto" height="auto" valign="center" textid="STRID_ABOUTFORM_LABEL_LATEST_VERSION"/>
+					<HBox width="auto" height="auto" valign="center">
+						<Control width="auto" height="auto" valign="center" bkimage="../menu/update_new.png"/>
+						<Button class="btn_global_white_80x30" name="check_update" valign="center" margin="8" textid="STRID_ABOUTFORM_BTN_UPDATE"/>
+					</HBox>
+				</TabBox>
+			</HBox>
+
+            <VBox  padding="20,0,0,0">
+                <HBox  height="22">
+                    <Button name="official_link" normaltextcolor="link_green" cursortype="hand" font="24"/>
+                    <Control width="15"/>
+                    <Button name="weibo_link" normaltextcolor="link_green" cursortype="hand" font="24"/>
+                </HBox>
+                <Label name="corporation" margin="0,5,0,10" font="1" normaltextcolor="darkcolor"/>
+                <Label font="11" normaltextcolor="darkcolor" text="China Yixin Corporation All Rights Reserved"/>
+            </VBox>
+        </VBox>
+        
+    </VBox>
+</Window>

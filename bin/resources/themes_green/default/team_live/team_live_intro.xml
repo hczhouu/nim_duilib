@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="600, 480" caption="0,0,0,438" textid="STRID_TEAMLIVE_INTRO">
+    <Class name="option_attrib" value="width=&quot;stretch&quot; height=&quot;stretch&quot; font=&quot;2&quot; normaltextcolor=&quot;message_tip&quot; selectedtextcolor=&quot;team_live_intro_tip&quot; align=&quot;vcenter&quot; group=&quot;intro_options&quot; cursortype=&quot;hand&quot;"/>
+    <Box>
+        <TabBox name="bkimage_tab" fadeswitch="true">
+            <Control bkimage="centralized_chat.png"/>
+            <Control bkimage="divided_screen.png"/>
+            <Control bkimage="live_and_discuss.png"/>
+            <Control bkimage="member_managing.png"/>
+        </TabBox>
+        
+        <HBox width="auto" height="auto" halign="right" valign="top" margin="0,6,4,0" childmargin="2">
+            <Button class="btn_wnd_min" name="minbtn"/>
+            <Button class="btn_wnd_close" name="closebtn"/>
+        </HBox>
+
+        <Control class="splitline_hor_level1" width="stretch" valign="bottom" margin="0,0,0,42"/>
+        
+        <HBox name="option_box" width="stretch" height="42" valign="bottom">
+            <OptionBox class="option_attrib" name="centralized_chat" text="中心化聊天" selected="true"/>
+            <Control class="splitline_ver_level1" height="20" valign="center"/>
+            <OptionBox class="option_attrib" name="divided_screen" text="群直播"/>
+            <Control class="splitline_ver_level1" height="20" valign="center"/>
+            <OptionBox class="option_attrib" name="live_and_discuss" text="直播区"/>
+            <Control class="splitline_ver_level1" height="20" valign="center"/>
+            <OptionBox class="option_attrib" name="member_managing" text="成员管理"/>
+        </HBox>
+    </Box>
+</Window>

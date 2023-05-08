@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <Box name="yellow_tip_box" width="auto" height="32" halign="center" padding="20,0,20,0" mouse="false" mousechild="false" float="true"
+          bordersize="1" bordercolor="fc_tip_border" bkcolor="fc_tip_bk">
+        <HBox width="auto" height="auto" halign="center" valign="center">
+            <Control width="auto" height="auto" bkimage="conference_tip.png"/>
+            <Label name="tip_label" width="auto" height="auto" margin="5"/>
+        </HBox>
+    </Box>
+</Window>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+	<Button name="bubble_location" width="132" height="106" menu="true" cursortype="hand" bkimage="bubble_location_right.png" 
+		textpadding="14,67,20,0" align="center" singleline="false" linelimit="true" font="1" normaltextcolor="white"/>
+</Window>

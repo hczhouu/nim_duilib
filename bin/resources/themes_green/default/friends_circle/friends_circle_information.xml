@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="400,500" caption="0,0,0,34" textid="STRID_FC_INFORMATION_TITLE">
+    <VBox bkcolor="bk_wnd_lightcolor">
+        <HBox class="caption">
+            <Label class="font_title" name="title" width="stretch" valign="center" normaltextcolor="darkcolor" textid="STRID_FC_INFORMATION_TITLE"/>
+            <Button class="btn_refresh" name="btn_refresh" margin="4,6,0,0" tooltiptext="刷新列表"/>
+            <Button class="btn_wnd_min" name="minbtn" margin="4,6,0,0"/>
+            <Button class="btn_wnd_close" name="closebtn" margin="4,6,0,0"/>
+        </HBox>
+
+        <Box name="box_of_content" bkcolor="bk_moment">
+            <VListBox name="information" padding="0,10" vscrollbar="true" hscrollbar="false" vscrollunit="50"/>
+        </Box>
+    </VBox>
+</Window>

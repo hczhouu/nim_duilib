@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+    <Box height="50">
+        <Button name="event_image" width="stretch" height="stretch" cursortype="hand"/>
+        <HBox mouse="false" mousechild="false">
+            <Control name="share_icon" width="50" height="50" bkimage="share.png"/>
+            <VBox margin="10,0,0,0">
+                <Label name="title" width="stretch" font="3"/>
+                <Label name="source" width="stretch" font="2" normaltextcolor="lightcolor"/>
+            </VBox>
+        </HBox>
+    </Box>
+</Window>

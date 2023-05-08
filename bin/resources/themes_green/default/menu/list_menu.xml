@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+    <VListBox class="menu">
+        <MenuElement class="MenuElement" name="chat" width="138">
+            <Button class="menu_text" text="聊天"/>
+        </MenuElement>
+
+        <MenuElement class="MenuElement" name="see_info" width="138">
+            <Button class="menu_text" text="查看资料"/>
+        </MenuElement>
+		
+		<MenuElement class="MenuElement" name="msg_notify_item" width="138">
+            <HBox name="horlayout" width="auto">
+				<Button class="menu_text" text="消息提醒" mouse="false"/>
+				<Control width="39" mouse="false"/>
+				<CheckBox class="option" name="msg_notify" valign="center" mouse="false"/>
+            </HBox>
+        </MenuElement>
+
+        <MenuElement class="MenuElement" name="modif_alias" width="138">
+            <Button class="menu_text" text="修改备注名"/>
+        </MenuElement>
+		
+		<MenuElement class="MenuElement" name="del_friend" width="138">
+            <Button class="menu_text" text="删除好友"/>
+        </MenuElement>
+    </VListBox>
+</Window>

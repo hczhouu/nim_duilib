@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window caption="0,0,0,34" textid="STRID_LOGINTRUSTDEVICE_CAPTION">
+    <Class name="Label" value="normaltextcolor=&quot;obvious_tip&quot; font=&quot;1&quot;"/>
+
+    <VBox bkcolor="bk_wnd_lightcolor" width="280" height="auto">
+		<HBox class="caption">
+			<Label class="font_title" name="title" width="stretch" valign="center" normaltextcolor="darkcolor" textid="STRID_LOGINTRUSTDEVICE_CAPTION"/>
+			<Button class="btn_wnd_min" name="minbtn" margin="4,6,0,0"/>
+			<Button class="btn_wnd_close" name="closebtn" margin="4,6,0,0"/>
+		</HBox>
+		<Box height="200" >
+			<Control valign="center" halign="center" bkimage="pc.png" width="auto" height="auto" />
+		</Box>
+		<VBox name="start_page" height="100" >
+			<Label margin="0,0,0,0" font="2" normaltextcolor="darkcolor" halign="center" textid="STRID_LOGINTRUSTDEVICE_START1" />
+			<Label margin="0,5,0,0" font="2" normaltextcolor="darkcolor" halign="center" textid="STRID_LOGINTRUSTDEVICE_START2" />
+			<Label margin="0,10,0,0" font="2" normaltextcolor="lightcolor" halign="center" textid="STRID_LOGINTRUSTDEVICE_START3" />
+			<Label margin="0,5,0,0" name="verify_phone" font="2" normaltextcolor="lightcolor" halign="center" width="auto"/>
+		</VBox>
+		<VBox name="code_page" height="100" visible="false" >
+			<Box name="layout_mobile" margin="20,10,0,0" height="32" >
+				<Label valign="center" font="2" normaltextcolor="darkcolor" text="手机号" />
+				<HBox bkimage="file='../public/edit/edit01.png' corner='1,1,1,1'" margin="60,0,0,0" width="180" height="32">
+					<RichEdit class="simple" normaltextcolor="lightcolor" margin="10,0,0,0" height="auto" valign="center" name="mobile" readonly="true" font="2" />
+					<Box width="43">
+						<Button bkimage="file='../public/edit/edit0.png' corner='1,1,1,1'" width="43" height="32" name="sendcodebtn" valign="center" disabledtextcolor="lightcolor" hottextcolor="link_green" textid="STRID_LOGINTRUSTDEVICE_RESEND"/>
+						<Label name="counter" valign="center" halign="center" font="2" normaltextcolor="lightcolor" visible="false"/>
+					</Box>
+				</HBox>
+			</Box>
+			<Box name="layout_code" margin="20,10,0,0" height="32">
+				<Label valign="center" font="2" normaltextcolor="darkcolor" text="验证码" />
+				<HBox bkimage="file='../public/edit/edit0.png' corner='1,1,1,1'" margin="60,0,0,0" width="180" height="32">
+					<RichEdit class="simple prompt" margin="10,0,0,0" height="auto" valign="center" name="verifycode" number="true" font="2"/>
+				</HBox>
+			</Box>
+		</VBox>
+		<Label class="Label" name="resulttip" margin="0,0,0,5" visible="false" halign="center"/>
+		<Control height="15" />
+		<Button class="btn_global_green_80x30" margin="0,0,20,20" name="next_btn" halign="right" textid="STRID_LOGINTRUSTDEVICE_NEXT_STEP"/>
+		<Button class="btn_global_green_80x30" margin="0,0,20,20" name="login_btn" halign="right" textid="STRID_LOGINTRUSTDEVICE_NEXT_STEP" visible="false" />
+    </VBox>
+</Window>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="224,200">
+    <VListBox class="menu">
+        <MenuElement class="MenuElement" name="chinauserlogin" width="180">
+            <Event type="mouseenter" receiver=".\sendckb_1" applyattribute="state=&quot;hot&quot;"/>
+            <Event type="mouseleave" receiver=".\sendckb_1" applyattribute="state=&quot;normal&quot;"/>
+            
+            <HBox name="horlayout">
+                <Button class="menu_text" text="中国用户登录" mouse="false"/>
+                <Control width="39" mouse="false"/>
+                <CheckBox class="option" name="sendckb_1" valign="center" mouse="false"/>
+            </HBox>
+        </MenuElement>
+
+        <MenuElement class="MenuElement" name="foreignuserlogin" width="180">
+            <Event type="mouseenter" receiver=".\sendckb_2" applyattribute="state=&quot;hot&quot;"/>
+            <Event type="mouseleave" receiver=".\sendckb_2" applyattribute="state=&quot;normal&quot;"/>
+            
+            <HBox>
+                <Button class="menu_text" text="海外用户登录" mouse="false"/>
+                <Control width="39" mouse="false"/>
+                <CheckBox class="option" name="sendckb_2" valign="center" mouse="false"/>
+            </HBox>
+        </MenuElement>
+    </VListBox>
+</Window>

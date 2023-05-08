@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+    <VListBox class="menu">
+        <MenuElement class="MenuElement" name="chat" width="152">
+            <Button normalimage="create_team_normal.png" valign="center" mouse="false" />
+            <Label class="menu_text" textid="STRING_INVOKECHATFORM_CAPTION" margin="27,0,0,0" mouse="false"/>
+        </MenuElement>
+		
+		<MenuElement class="MenuElement" name="file_helper" width="152">
+            <Button normalimage="icon_file_trans_normal.png" valign="center" mouse="false" />
+            <Label class="menu_text" text="传文件到手机" margin="27,0,0,0" mouse="false"/>
+        </MenuElement>
+
+        <MenuElement class="MenuElement" name="collect" width="152">
+            <Button normalimage="collect.png" valign="center" mouse="false" />
+            <Label class="menu_text" text="我的收藏" margin="27,0,0,0" mouse="false"/>
+        </MenuElement>
+
+        <MenuElement class="MenuElement" name="sms" width="152">
+            <Button normalimage="icon_sms.png" valign="center" mouse="false" />
+            <Label class="menu_text" text="免费短信" margin="27,0,0,0" mouse="false"/>
+        </MenuElement>
+        
+        <MenuElement width="152" height="1">
+            <Control class="splitline_hor_level1"/>
+        </MenuElement>
+        
+        <MenuElement class="MenuElement" name="set" width="152">
+            <Button normalimage="icon_setting_normal.png" valign="center" mouse="false" />
+            <Label class="menu_text" text="设置" margin="27,0,0,0"/>
+            <Control name="new_func_tip" width="auto" height="auto" halign="right" valign="center" 
+                     bkimage="../public/icon/red_small.png" mouse ="false" visible="false"/>
+        </MenuElement>
+
+        <MenuElement class="MenuElement" name="feedback" width="152">
+            <Button normalimage="icon_feedback_normal.png" valign="center" mouse="false" />
+            <Label class="menu_text" text="意见反馈" margin="27,0,0,0"/>
+        </MenuElement>
+        
+        <MenuElement class="MenuElement" name="about" width="152" padding="20">
+		    <HBox name="horlayout_update">
+                <Button normalimage="icon_about_yixin_normal.png" valign="center" mouse="false" />
+                <Label class="menu_text" text="关于易信" margin="10,0,0,0"/>
+				<Control name="update_tip_control" width="auto" height="auto" valign="center" margin="2" bkimage="update_new.png"/>
+		    </HBox>
+		</MenuElement>
+
+        <MenuElement width="152" height="1">
+            <Control class="splitline_hor_level1"/>
+        </MenuElement>
+        
+        <MenuElement class="MenuElement" name="logoff" width="152">
+            <Button normalimage="icon_logout_normal.png" valign="center" mouse="false" />
+            <Label class="menu_text" text="注销" margin="27,0,0,0"/>
+        </MenuElement>
+
+        <MenuElement class="MenuElement" name="quit" width="152">
+            <Button normalimage="icon_exit_normal.png" valign="center" mouse="false" />
+            <Label class="menu_text" text="退出" margin="27,0,0,0"/>
+        </MenuElement>
+    </VListBox>
+</Window>

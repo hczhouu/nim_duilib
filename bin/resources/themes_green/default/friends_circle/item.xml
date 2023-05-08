@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <ListContainerElement width="stretch" height="auto" padding="10,0,10,10">
+        <ButtonBox name="feed_btn" width="stretch" height="auto" mouse="false" bkcolor="bk_wnd_lightcolor">
+            <VBox name="vbox_feed" width="stretch" height="auto" bordersize="1,1,1,1" bordercolor="splitline_hor_level5" mouse="false">
+                <HBox height="42" margin="7,14,10,0" mouse="false">
+                    <Box width="42" height="42" mouse="false">
+                        <Button name="CircleItemHeader" width="40" height="40" borderround="40,40,40,40" margin="1,1,1,1" cursortype="hand"/>
+                        <Control width="42" height="42" mouse="false" bkimage="mask_42_42.png"/>
+                    </Box>
+                    <VBox margin="5,2,8,0" mouse="false" mousechild="false">
+                        <Label name="feed_friend_name" width="auto" valign="center" text="好友名字" font="2" normaltextcolor="green"/>
+                        <HBox>
+                            <Label name="conference_time" maxwidth="100" valign="center" text="1分钟前" normaltextcolor="lightcolor"/>
+                            <Label name="conference_location" width="stretch" valign="center" margin="5,0,0,0" text="杭州市" normaltextcolor="lightcolor" visible="false"/>
+                        </HBox>
+                    </VBox>
+                    <TabBox name="put_top_box" width="auto" height="auto" halign="right" valign="center" visible="false" mouse="false">
+                        <Button name="put_top" text="置顶(0/3)" font="1" normaltextcolor="live_area_bar_text" cursortype="hand"/>
+                        <Button name="cancel_put_top" text="取消置顶" font="1" normaltextcolor="live_area_bar_text" cursortype="hand"/>
+                    </TabBox>
+                </HBox>
+
+                <!--正文-->
+                <!--图片、语音、分享等-->
+
+                <!--喜欢-->
+                <!--评论-->
+            </VBox>
+        </ButtonBox>
+    </ListContainerElement>
+</Window>

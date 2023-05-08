@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <VBox margin="10,3,10,0" height="auto">
+        <RichEdit name="CircleMenuText" height="auto" font="2" menu="true" multiline="true"
+                     vscrollbar="false" autovscroll="false" readonly="true" rich="true"/>
+        <Button name="look_all" margin="0,5,0,0" cursortype="hand" font="2" normaltextcolor="link_green" text="查看全部"/>
+        <!--<Label name="ellipsis" width="30" height="26" halign="right" valign="top" bkcolor="white" text="..." visible="false" float="true"/>-->
+    </VBox>
+</Window>

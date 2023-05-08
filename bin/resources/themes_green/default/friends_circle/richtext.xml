@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window >
+    <ButtonBox name="CircleItemRichText" width="360" height="auto" margin="10,10,10,0" padding="10,10,10,10" cursortype="hand" mousechild="false" bkcolor="bk_share">
+        <HBox height="50">
+            <Control name="rich_icon" width="50" height="50" margin="0,0,10,0" bkimage="img_def_share.jpg"/>
+            <VBox >
+                <Label name="rich_title" width="stretch" margin="0,3,0,0" font="7"/>
+                <Label name="rich_infor" width="stretch" margin="0,3,0,0" normaltextcolor="lightcolor"/>
+            </VBox>
+        </HBox>
+    </ButtonBox>
+</Window>

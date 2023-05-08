@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="400,140" caption="0,0,0,34" textid="STRID_RESETPWD_RESETPWD">
+    <Class name="Label" value="normaltextcolor=&quot;obvious_tip&quot; font=&quot;1&quot;"/>
+    <Class name="edit_box" value="bkimage=&quot;file='../public/edit/edit0.png' corner='1,1,1,1'&quot; width=&quot;220&quot; height=&quot;32&quot;"/>
+
+    <VBox bkcolor="bk_wnd_lightcolor" width="400" height="auto" minheight="140">
+        <HBox class="caption" height="34" >
+            <Label class="font_title" name="title" width="stretch" valign="center" normaltextcolor="darkcolor" textid="STRID_RESETPWD_RESETPWD"/>
+            <Button class="btn_wnd_min" name="minbtn" margin="4,6,0,0"/>
+            <Button class="btn_wnd_close" name="closebtn" margin="4,6,0,0"/>
+        </HBox>
+
+        <Box name="clientwnd" padding="0,1,0,0" height="auto">
+            <!--first step:get verify code-->
+            <VBox name="layout_step1" height="auto">
+                <HBox  name="layout_mobile" halign="center" margin="0,25,0,0" width="auto" height="auto">
+                    <HBox class="edit_box" >
+                        <Control margin="2,0,2,0" bkimage="phone.png" valign="center" width="24" height="24"/>
+                        <RichEdit class="simple prompt" height="stretch" valign="center" align="vcenter" name="mobile" number="true" font="1" prompttext="请输入你的手机号码"/>
+						<Box width="43">
+							<Button bkimage="file='../public/edit/edit0.png' corner='1,1,1,1'" width="43" height="stretch" name="sendcodebtn2" valign="center" disabledtextcolor="lightcolor" hottextcolor="link_green"  visible="false" textid="STRID_RESETPWD_RESEND"/>
+							<Label name="counter" valign="center" halign="center" font="2" normaltextcolor="darkcolor" visible="false"/>
+						</Box>
+                    </HBox>
+					<Button class="btn_global_green_80x30" margin="10,0,0,0" name="sendcodebtn" valign="center" textid="STRID_RESETPWD_SEND_CODE"/>
+                </HBox>
+				<Label name="foreign_phone_tip" margin="45,10,0,0" normaltextcolor="lightcolor" textid="STRID_RESETPWD_FOREIGN_PHONE_TIP"/>
+                <HBox class="edit_box" name="layout_code" halign="center" margin="0,15,0,0" visible="false" >
+                    <Control  margin="2,0,2,0" bkimage="verifycode.png" valign="center" width="24" height="24"/>
+                    <RichEdit class="simple prompt" name="verifycode" width="162" height="stretch" number="true" valign="center" align="vcenter" font="1" prompttext="请输入验证码"/>
+                </HBox>
+                <Label class="Label" halign="center" name="verifyresulttip" visible="false" margin="0,10,0,0"/>
+                <Button class="btn_global_green_80x30" halign="center" name="nextstep" margin="0,15,0,20" enabled="false" visible="false" textid="STRID_RESETPWD_NEXTSTEP"/>
+            </VBox>
+            <!--third step:reset password-->
+            <VBox name="layout_step2" visible="false" height="auto">
+                <HBox class="edit_box" name="layout_" halign="center" margin="0,25,0,0" >
+					<Control margin="2,0,2,0" bkimage="password.png" valign="center" width="24" height="24"/>
+					<RichEdit class="simple prompt" width="162" height="stretch" valign="center" align="vcenter" name="newpassword" font="1" password="true" prompttext="设置新的登陆密码"/>
+                </HBox>
+                <HBox class="edit_box" name="layout_123" halign="center" margin="0,15,0,0" >
+					<Control margin="2,0,2,0" bkimage="password.png" valign="center" width="24" height="24"/>
+					<RichEdit class="simple prompt" name="passwordagain" width="162" height="stretch" valign="center" align="vcenter" font="1" password="true" prompttext="再次输入新密码"/>
+                </HBox>
+                <Label class="Label" visible="false" margin="0,10,0,0" halign="center" font="1" name="verifypasswordtip"/>
+                <Button class="btn_global_green_80x30" name="resetpassword" textid="STRID_RESETPWD_RESETPWD" margin="0,15,0,20" halign="center" />
+            </VBox>
+        </Box>
+    </VBox>
+</Window>

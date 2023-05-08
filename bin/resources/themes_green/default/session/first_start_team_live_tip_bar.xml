@@ -1,0 +1,6 @@
+<Window>
+	<HBox name="first_time_start_live_tip" float="true" width="auto" height="70" halign="right" margin="0,60" padding="15,18,15,15" bkimage="file='first_time_start_live_tip_bk.png' corner='30,0,70,0'">
+        <Label width="auto" height="auto" valign="center" margin="10" textid="STRID_SESSION_FIRST_START_TEAM_LIVE_TIP" font="2" normaltextcolor="team_live_intro_tip"/>
+        <Button class="btn_wnd_close" name="close_team_live_tip" valign="center" margin="6,0,4,0"/>
+    </HBox>
+</Window>

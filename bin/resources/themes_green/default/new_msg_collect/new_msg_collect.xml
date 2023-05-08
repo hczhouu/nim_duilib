@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="239,0">
+    <VBox bkcolor="bk_wnd_lightcolor" width="239" height="auto">
+        <VListBox name="new_msg_list" width="stretch" height="auto" maxheight="250" vscrollbar="true" hscrollbar="false" vscrollunit="80"/>
+        <Control class="splitline_hor_level1" width="stretch"/>
+        <HBox width="stretch" height="33" padding="10,0,10,0">
+            <Button name="ignore_all" width="auto" height="auto" valign="center" text="忽略全部" font="1" normaltextcolor="green" cursortype="hand"/>
+            <Control width="stretch"/>
+            <Button name="open_all" width="auto" height="auto" valign="center" text="查看全部" font="1"  normaltextcolor="green" cursortype="hand"/>
+        </HBox>
+    </VBox>
+</Window>

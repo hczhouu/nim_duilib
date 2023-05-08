@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+	<Box name="bubble_msg_box" width="auto" height="auto">
+        <ButtonBox name="bubble_audio" width="auto" minwidth="100" height="auto" bkimage="file='../session/bubble_left.png' corner='23,15,15,14'" menu="true" cursortype="hand">
+            <Box width="stretch" height="38" mouse="false" mousechild="false">
+                <Control name="audio_icon" width="auto" height="auto" valign="center" margin="15" bkimage="../session/image_audio_left.png"/>
+		        <Control name="play_icon" width="auto" height="auto" valign="center" margin="15" bkimage="../session/ani_msg_audio_left.gif" visible="false"/>
+                <VBox name="second_vertilayout" width="auto" height="auto" halign="right" valign="center" margin="0,0,15,0" visible="false">
+			        <Label name="second_label" width="auto" height="auto" normaltextcolor="darkcolor" font="1"/>
+		        </VBox>
+            </Box>
+            <VBox name="trancode_area" width="auto" minwidth="100" height="auto" margin="0,38,0,0" padding="21,0,15,0" visible="false">
+                <Control width="stretch" height="1" bkcolor="msg_bubble_splitline_left" mouse="false"/>
+                <Box name="trancoding_box" width="auto" height="40" halign="center" mouse="false">
+                    <Control width="auto" height="auto" halign="center" valign="center" bkimage="../session/ani_bubble_loading_left.gif" mouse="false"/>
+                </Box>
+                <RichEdit name="trancode_edit" width="280" maxwidth="280" height="auto" margin="0,5,0,7" menu="true" visible="false" multiline="true" rich="false" font="2" normaltextcolor="dark2color"/>
+            </VBox>
+        </ButtonBox>
+	</Box>
+</Window>

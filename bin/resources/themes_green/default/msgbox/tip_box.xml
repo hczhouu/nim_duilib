@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="300,180" caption="0,0,0,34">
+    <VBox bkcolor="bk_wnd_lightcolor" width="300" height="auto">
+        <HBox class="caption">
+            <Label class="font_title" name="title" width="stretch" valign="center" normaltextcolor="darkcolor"/>
+            <Button class="btn_wnd_close" name="closebtn" margin="4,6,0,0"/>
+        </HBox>
+	
+		<HBox height="auto" margin="20,20,20,35">
+			<Control bkimage="infor.png" width="22" height="22" margin="0,7,10,0"/>
+			<RichEdit name="information" width="230" font="20" multiline="true" vscrollbar="false" autovscroll="false" enabled="false" rich="true"/>
+		</HBox>
+    </VBox>
+</Window>

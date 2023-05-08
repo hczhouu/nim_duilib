@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<!--其他人的消息-->
+<Window>
+	<TeamBoard visible="false" height="auto" fadeinoutyfromtop="true">
+		<Box name="tb_team_board_hbox" height="auto" width="stretch" bkimage="bk_tip.png">
+			<Button name="tb_head_image" width="auto" height="auto" margin="10,12,0,0" bkimage="team_board_icon.png" mouse="false" />
+			<VBox name="tb_content_panel" childmargin="6" padding="40,12,40,16" height="auto">
+                <HBox height="auto">
+                    <Label name="tb_sender_label" font="1" normaltextcolor="lightcolor"/>
+                    <Label name="tb_timer_label" font="1" normaltextcolor="lightcolor"/>
+                </HBox>
+				<Box height="auto">
+					<BoardText name="tb_board_text" width="stretch" height="auto" maxheight="50" mouse="false" font="1" normaltextcolor="darkcolor"/>
+					<Button name="tb_board_link_more" margin="0,0,0,2" width="86" height="auto" valign="bottom" normaltextcolor="link_blue" cursortype="hand" font="24" textid="STRID_SESSION_TB_LINK_MORE" />
+				</Box>
+			</VBox>
+			<Button name="team_board_close" halign="right" margin="0,11,10,0" 
+				forenormalimage="tip_close_normal.png" normalimage="" hotimage="tip_close_hovered.png" pushedimage="tip_close_pushed.png"/>
+		</Box>
+	</TeamBoard>
+</Window>

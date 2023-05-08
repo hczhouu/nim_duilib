@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+    <VListBox class="menu">
+        <MenuElement class="MenuElement" name="clear_screen" width="138">
+            <Button class="menu_text" text="清屏"/>
+        </MenuElement>
+    </VListBox>
+</Window>

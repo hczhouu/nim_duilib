@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="380,225" caption="0,0,0,34" textid="STRID_FILETRANS_TITLE">
+    <VBox bkcolor="bk_wnd_lightcolor">
+        <HBox class="caption">
+            <Label class="font_title" name="title" width="stretch" height="stretch" normaltextcolor="darkcolor" textid="STRID_FILETRANS_TITLE"/>
+            <Button class="btn_wnd_min" name="minbtn" margin="4,6,0,0"/>
+            <Button class="btn_wnd_close" name="closebtn" margin="4,6,0,0"/>
+        </HBox>
+        
+        <VBox margin="20,40,20,20">
+            <Label name="name" font="7" normaltextcolor="darkcolor" textid="STRID_FILETRANS_NAME"/>
+            <Label name="info_1" font="1" margin="0,5,0,0" textid="STRID_FILETRANS_INFO_1"/>
+            <Label name="info_2" font="1" margin="0,5,0,0" textid="STRID_FILETRANS_INFO_2"/>
+            <Control />
+            <Button class="btn_global_green_80x30" name="talkbtn" halign="right" textid="STRID_FILETRANS_BTN_SEND"/>
+        </VBox>
+    </VBox>
+</Window>

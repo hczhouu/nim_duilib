@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+    <TabBox height="40">
+        <Label width="auto" height="auto" halign="center" valign="center" font="2" normaltextcolor="fc_empty" text="没有更多动态了"/>
+        
+        <HBox width="auto" height="auto" halign="center" valign="center">
+            <Label font="2" text="服务器开了点小差，再" normaltextcolor="fc_empty"/>
+            <Button name="load_more_refresh" normaltextcolor="link_green" cursortype="hand" font="2" text="刷新"/>
+            <Label font="2" text="试试吧~" normaltextcolor="fc_empty"/>
+        </HBox>
+
+        <HBox width="auto" height="22" halign="center" valign="center">
+            <Label font="2" text="网络错误，请检查后再" normaltextcolor="fc_empty"/>
+            <Button name="load_more_refresh" normaltextcolor="link_green" cursortype="hand" font="2" text="刷新"/>
+            <Label font="2" text="试试吧~" normaltextcolor="fc_empty"/>
+        </HBox>
+    </TabBox>
+</Window>

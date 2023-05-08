@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window mininfo="520,600" shadowattached="false">
+    <Box bkcolor="bk_wnd_lightcolor" width="stretch" height="stretch">
+        <Control name="canvas" width="auto" height="auto"/>
+    </Box>
+</Window>

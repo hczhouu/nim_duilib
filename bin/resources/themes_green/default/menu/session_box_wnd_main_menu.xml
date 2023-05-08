@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+    <VListBox class="menu">
+        <MenuElement class="MenuElement" name="merge_session" width="148">
+            <Event type="mouseenter" receiver=".\check_icon" applyattribute="state=&quot;hot&quot;"/>
+            <Event type="mouseleave" receiver=".\check_icon" applyattribute="state=&quot;normal&quot;"/>
+            <Button class="menu_text" text="合并会话窗口"/>
+            <CheckBox class="option" name="check_icon" width="auto" height="auto" valign="center" margin="96" mouse="false"/>
+        </MenuElement>
+    </VListBox>
+</Window>

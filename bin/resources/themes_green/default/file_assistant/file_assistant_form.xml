@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="800,560" mininfo="800,560" caption="0,0,0,80" sizebox="4,4,4,4" textid="STRID_FILEASSISTANT_TITLE">
+    <Class name="from_side" value="group=&quot;from_side&quot; width=&quot;auto&quot; height=&quot;auto&quot; font=&quot;2&quot; textpadding=&quot;0,0,0,13&quot; normaltextcolor=&quot;recv_sent_font_color&quot; selectedtextcolor=&quot;green&quot; selectednormalimage=&quot;file='file_source_bottom.png' corner='0,0,0,2'&quot; cursortype=&quot;hand&quot; mouse=&quot;false&quot;"/>
+    <Class name="with_who" value="group=&quot;with_who&quot; width=&quot;auto&quot; height=&quot;stretch&quot; valign=&quot;center&quot; font=&quot;1&quot; normaltextcolor=&quot;message_tip&quot; selectedtextcolor=&quot;green&quot; cursortype=&quot;hand&quot; mouse=&quot;false&quot;"/>
+    <Class name="page_turner_attrib" value="width=&quot;20&quot; height=&quot;20&quot; hotimage=&quot;file='../public/button/btn_wnd_bk_hovered.png' corner='5,5,5,5'&quot; pushedimage=&quot;file='../public/button/btn_wnd_bk_pushed.png' corner='5,5,5,5'&quot; enabled=&quot;false&quot;"/>
+    <Class name="empty_tip_attrib" value="halign=&quot;center&quot; margin=&quot;0,12,0,0&quot; font=&quot;1&quot; normaltextcolor=&quot;message_tip&quot;"/>
+    
+    <VBox width="stretch" height="stretch" bkcolor="bk_wnd_lightcolor">
+        <VBox height="80" bkimage="file='../public/caption/caption_public.png' corner='0,0,0,1'" padding="16,0,5,0">
+            <HBox height="34">
+                <Label class="font_title" width="auto" valign="center" normaltextcolor="darkcolor" textid="STRID_FILEASSISTANT_TITLE"/>
+                <Control width="stretch"/>
+                <Button class="btn_wnd_min" name="minbtn" margin="4,6,0,0"/>
+                <Box width="21" margin="4,6,0,0">
+                    <Button class="btn_wnd_max" name="maxbtn"/>
+                    <Button class="btn_wnd_restore" name="restorebtn" visible="false"/>
+                </Box>
+                <Button class="btn_wnd_close" name="closebtn" margin="4,6,0,0"/>
+            </HBox>
+            <Control height="stretch" mouse="false"/>
+            <HBox width="auto" height="auto">
+                <Option class="from_side" name="file_received" text="已接收的文件" selected="true"/>
+                <Control width="60" mouse="false"/>
+                <Option class="from_side" name="file_sent" text="已发送的文件"/>
+            </HBox>
+        </VBox>
+        
+        <HBox width="auto" height="33" halign="center">
+            <Option class="with_who" name="all_sources" text="全部来源" selected="true"/>
+            <Control width="1" height="stretch" margin="16,8,16,8" bkcolor="file_assistant_split"/>
+            <Option class="with_who" name="my_mobile" text="我的手机"/>
+            <Control width="1" height="stretch" margin="16,8,16,8" bkcolor="file_assistant_split"/>
+            <Option class="with_who" name="contacts" text="联系人"/>
+        </HBox>
+
+        <Control class="splitline_hor_level2" width="stretch"/>
+        
+        <TabBox name="file_list_area" width="stretch" height="stretch">
+            <VBox width="stretch" height="stretch">
+                <VListBox class="list" name="file_list" width="stretch" height="stretch" vscrollbar="true" hscrollbar="false" vscrollunit="200"/>
+                <Box width="stretch" height="44" bkcolor="file_assistant_bottom_bk">
+                    <Control class="splitline_hor_level2" width="stretch"/>
+                    <Label name="cur_page" font="1" normaltextcolor="dark2color" width="auto" height="auto" halign="left" valign="center" margin="20"/>
+                    <HBox width="auto" height="auto" halign="right" valign="center" margin="0,0,25,0">
+                        <Button class="page_turner_attrib" name="first_page" forenormalimage="file='../msglog_form/first_normal.png' dest='6,5,14,15'" foredisabledimage="file='../msglog_form/first_disabled.png' dest='6,5,14,15'" tooltiptext="首页"/>
+                        <Button class="page_turner_attrib" name="previous_page" margin="17" forenormalimage="file='../msglog_form/previous_normal.png' dest='7,5,13,15'" foredisabledimage="file='../msglog_form/previous_disabled.png' dest='7,5,13,15'" tooltiptext="上一页"/>
+                        <Button class="page_turner_attrib" name="next_page" margin="20" forenormalimage="file='../msglog_form/next_normal.png' dest='7,5,13,15'" foredisabledimage="file='../msglog_form/next_disabled.png' dest='7,5,13,15'" tooltiptext="下一页"/>
+                        <Button class="page_turner_attrib" name="final_page" margin="17" forenormalimage="file='../msglog_form/final_normal.png' dest='6,5,14,15'" foredisabledimage="file='../msglog_form/final_disabled.png' dest='6,5,14,15'" tooltiptext="末页"/>
+                    </HBox>
+                </Box>
+            </VBox>
+            
+            <Box width="stretch" height="stretch">
+                <VBox width="auto" height="auto" halign="center" valign="center" margin="0,0,0,30">
+                    <Control width="auto" height="auto" normalimage="../msglog_form/empty_msg_list.png"/>
+                    <Label class="empty_tip_attrib" text="还没有文件记录"/>
+                </VBox>
+            </Box>
+
+            <Box width="stretch" height="stretch">
+                <HBox width="auto" height="auto" halign="center" valign="center" margin="0,0,0,30">
+                    <Control name="animation" width="auto" height="auto" valign="center" bkimage="../public/animation/ani_loading2.gif"/>
+                    <Label class="empty_tip_attrib" name="label_loading" text="正在加载..." margin="10,0,0,0"/>
+                </HBox>
+            </Box>
+        </TabBox>
+    </VBox>
+</Window>

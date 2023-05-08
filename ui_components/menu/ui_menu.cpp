@@ -460,9 +460,15 @@ void CMenuWnd::InitWindow()
 // MenuElementUI
 const TCHAR* const kMenuElementUIInterfaceName = _T("MenuElement");
 
+CMenuElementUI::CMenuElementUI(const std::wstring& strXml)
+{
+	m_strSubMenuXml = strXml;
+}
+
 CMenuElementUI::CMenuElementUI() :
 m_pSubWindow(nullptr)
 {
+	m_strSubMenuXml.clear();
 	m_bMouseChildEnabled = false;
 }
 
@@ -644,8 +650,12 @@ void CMenuElementUI::CreateMenuWnd()
 	param.hWnd =GetWindow()->GetHWND();
 	param.wParam = eMenuCloseThis;
 	CMenuWnd::GetMenuObserver().RBroadcast(param);
+    m_pSubWindow->Init(_T("submenu.xml"), _T(""), CPoint(), CMenuWnd::RIGHT_BOTTOM, false, this);
+}
 
-	m_pSubWindow->Init(_T("submenu.xml"), _T(""), CPoint(), CMenuWnd::RIGHT_BOTTOM, false, this);
+void CMenuElementUI::SetInitXml(const std::wstring& strXml)
+{
+	m_strSubMenuXml = strXml;
 }
 
 } // namespace ui

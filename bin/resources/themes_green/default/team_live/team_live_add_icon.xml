@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+    <HBox width="stretch" height="76" padding="0,6,0,6" mouse="false">
+		<Button name="InviteBtn" normalimage="../groupinfo/invite_normal.png" hotimage="../groupinfo/invite_hover.png" pushedimage="../groupinfo/invite_pushed.png" 
+			width="44" height="44" margin="20,10,0,10" cursortype="hand"/>
+		<Label name="uname" font="2" normaltextcolor="darkcolor" textid="STRID_TEAM_ICON_INVITE" width="stretch" maxwidth="90" margin="10,0,0,0" valign="center" mouse="false"/>
+    </HBox>
+</Window>

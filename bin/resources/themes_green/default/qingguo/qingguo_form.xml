@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="800,560" mininfo="800,560" caption="0,0,0,80" sizebox="4,4,4,4" textid="STRID_OLIVE_TITLE">
+    <Class name="from_side" value="group=&quot;from_side&quot; width=&quot;auto&quot; height=&quot;auto&quot; font=&quot;2&quot; textpadding=&quot;0,0,0,13&quot; normaltextcolor=&quot;dark2color&quot; selectedtextcolor=&quot;green&quot; selectednormalimage=&quot;file='file_source_bottom.png' corner='0,0,0,2'&quot; cursortype=&quot;hand&quot;"/>
+    <Class name="btn_buy_attrib" value="font=&quot;2&quot; normaltextcolor=&quot;textdefaultcolor&quot; hottextcolor=&quot;link_green&quot; pushedtextcolor=&quot;textdefaultcolor&quot; cursortype=&quot;hand&quot;"/>
+    <VBox bkcolor="bk_wnd_lightcolor">
+		<!--<WebBrowser name="webview" margin="0,30,0,0" clsid="{8856F961-340A-11D0-A96B-00C04FD705A2}" delaycreate="false"/> -->
+		<VBox name="top_area" height="80" bkimage="file='../public/caption/caption_public.png' corner='0,0,0,1'" padding="14,0,5,0">
+			<HBox height="34">
+                <Label class="font_title" width="auto" valign="center" normaltextcolor="darkcolor" textid="STRID_OLIVE_TITLE"/>
+                <Control width="stretch"/>
+                <Button class="btn_wnd_min" name="minbtn" margin="4,6,0,0"/>
+                <Box width="21"  margin="4,6,0,0">
+					<Button class="btn_wnd_max" name="maxbtn"/>
+					<Button class="btn_wnd_restore" name="restorebtn" visible="false"/>
+				</Box>
+                <Button class="btn_wnd_close" name="closebtn" margin="4,6,0,0"/>
+            </HBox>
+			<Control height="stretch" mouse="false"/>
+			<HBox width="auto" height="auto">
+                <Option class="from_side" name="cameralist_option" text="我的青果" selected="true"/>
+                <Control width="60" mouse="false"/>
+                <Option class="from_side" name="favorites_option"  text="我的收藏"/>
+            </HBox>
+        </VBox>
+        
+		<TabBox name="cameralist_tablayout" width="stretch" height="stretch" mouse="false">
+            <!-- 0. 我的青果 -->
+            <Box name="page_my_cameras" mouse="false">
+                <!-- 窗口大小变化时，camera_list的padding要随之变化，保证列表居中显示 -->
+				<TileListBox name="camera_list" margin="0,10,0,10" padding="3,0,3,0" columns="3" vscrollbar="true" vscrollunit="100"/>
+            </Box>
+			
+            <!-- 1. 我的收藏 -->
+            <Box name="page_my_favorites" mouse="false">
+                <!-- 窗口大小变化时，favorites_list的padding要随之变化，保证列表居中显示 -->
+				<TileListBox name="favorites_list" margin="0,10,0,10" padding="3,0,3,0" columns="3" vscrollbar="true" vscrollunit="100"/>
+            </Box>
+            
+            <!-- 2. 网络连接失败 -->
+            <VBox name="page_net_error" width="auto" height="auto" halign="center" valign="center" mouse="false" visible="false">
+                <Control width="auto" height="auto" bkimage="net_error.png" halign="center" mouse="false"/>
+                <Label halign="center" margin="0,20" font="1" normaltextcolor="message_tip" mouse="false" textid="STRID_OLIVE_NETERROR"/>
+                <Button class="btn_global_green_80x30" name="refresh" halign="center" margin="0,30" text="刷新"/>
+            </VBox>
+            
+            <!-- 3. 去购买青果 -->
+            <VBox name="page_buy_olive" width="auto" height="auto" halign="center" valign="center" mouse="false" visible="false">
+                <Control width="auto" height="auto" bkimage="buy_olive.png" halign="center" mouse="false"/>
+                <Label halign="center" margin="0,10" font="2" normaltextcolor="message_tip" mouse="false" textid="STRID_OLIVE_BUY_OLIVE_TIP1"/>
+                <Label halign="center" font="2" normaltextcolor="message_tip" mouse="false" textid="STRID_OLIVE_BUY_OLIVE_TIP2"/>
+                <HBox width="auto" height="auto" halign="center" margin="0,30,30" mouse="false">
+                    <Button class="btn_global_green_80x30" name="buy_on_official" textid="STRID_OLIVE_OFFICIAL"/>
+                    <!--<Control class="splitline_ver_level1" margin="20,0,20,0" mouse="false"/>
+                    <Button class="btn_buy_attrib" name="buy_on_jd" textid="STRID_OLIVE_JD"/>
+                    <Control class="splitline_ver_level1" margin="20,0,20,0" mouse="false"/>
+                    <Button class="btn_buy_attrib" name="buy_on_tmall" textid="STRID_OLIVE_TMALL"/>-->
+                </HBox>
+            </VBox>
+            
+            <!-- 4. 去青果广场收藏青果 -->
+            <VBox name="page_goto_olive_square" width="auto" height="auto" halign="center" valign="center" mouse="false" visible="false">
+                <Control width="auto" height="auto" bkimage="buy_olive.png" halign="center" mouse="false"/>
+                <Label halign="center" margin="0,10" font="2" normaltextcolor="message_tip" mouse="false" textid="STRID_OLIVE_GOTO_OLIVE_SQUARE"/>
+                <Button class="btn_global_green_80x30" name="goto_olive_square" halign="center" margin="0,30,30" text="去青果广场"/>
+            </VBox>
+            
+            <!-- 5. 正在加载 -->
+            <HBox name="page_loading" width="auto" height="auto" halign="center" valign="center" mouse="false" mousechild="false" visible="false">
+                <Control width="auto" height="auto" valign="center" bkimage="../public/animation/ani_loading2.gif"/>
+                <Label text="正在加载..." font="2" normaltextcolor="message_tip" margin="10,0,0,0"/>
+            </HBox>	
+		</TabBox>
+
+        <!-- 加载更多时显示菊花 -->
+        <HBox name="loading_more" width="auto" height="auto" halign="center" margin="0,20,0,20" mouse="false" mousechild="false" visible="false">
+            <Control width="auto" height="auto" bkimage="../public/animation/ani_loading.gif"/>
+            <Label text="正在加载..." font="2" normaltextcolor="message_tip" margin="10,0,0,0"/>
+        </HBox>
+	</VBox>	
+</Window>

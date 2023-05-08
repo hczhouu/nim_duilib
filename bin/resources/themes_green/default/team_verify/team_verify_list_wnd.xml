@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="380, 310" caption="0,0,0,34" textid="STRID_GROUP_JOIN_APPLY_TITLE">
+    <VBox bkcolor="bk_wnd_lightcolor">
+        <HBox class="caption">
+            <Label class="font_title" width="stretch" valign="center" textid="STRID_GROUP_JOIN_APPLY_TITLE" normaltextcolor="darkcolor"/>
+			<Button class="btn_recycle" name="recycle_btn" margin="4,6,0,0"/>
+            <Button class="btn_wnd_min" name="minbtn" margin="4,6,0,0"/>
+            <Button class="btn_wnd_close" name="closebtn" margin="4,6,0,0"/>
+        </HBox>
+
+        <Box>
+            <VListBox class="list" name="team_verify_list" vscrollunit="64"/>
+			<VBox name="empty" bkcolor="bk_wnd_lightcolor" visible="false" margin="0,30">
+				<Control width="auto" height="auto" halign="center" bkimage="null_item.png"/>
+				<Label halign="center" font="2" text="还没有群验证通知" normaltextcolor="fc_empty"/>
+			</VBox>
+        </Box>
+        
+    </VBox>
+    
+</Window>
